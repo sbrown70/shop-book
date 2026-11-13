@@ -681,6 +681,18 @@
       "title": "Unused switched 12 V wire and a three-prong illumination plug under the dash",
       "date_approx": true,
       "text": "An unused switched 12 V wire under the dash, probably the factory radio feed. Also a three-prong plug that seemed to be for illuminating something. Wire color, key positions and location are not recorded yet."
+    },
+    {
+      "id": "2026-11-13-label-caps-and-shells",
+      "date": "2026-11-13",
+      "kind": "work",
+      "project": "engine-302",
+      "subproject": "crank",
+      "area": "engine",
+      "title": "Rod caps, main caps and bearing shells laid out in order and marked",
+      "text": "",
+      "task": "crank/label-caps-and-shells",
+      "auto": true
     }
   ]
 }
