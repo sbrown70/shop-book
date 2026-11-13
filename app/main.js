@@ -63,8 +63,9 @@ window.addEventListener('online', () => syncNow());
 window.addEventListener('offline', updateSync);
 
 document.addEventListener('click', e => {
+  // Forms carry data-act for their submit action only; taps inside them must not trigger it.
   const el = e.target.closest('[data-act]');
-  if (!el || !document.body.contains(el)) return;
+  if (!el || el.tagName === 'FORM' || !document.body.contains(el)) return;
   const fn = actions[el.dataset.act];
   if (fn) { e.preventDefault(); fn(el.dataset, el); }
 });
