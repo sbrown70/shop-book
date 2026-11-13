@@ -1,0 +1,4 @@
+from_chats/
+proposals/
+.claude/
+*.zip

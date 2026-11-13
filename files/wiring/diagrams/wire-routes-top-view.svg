@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" style="color:#111;background:#fff" viewBox="0 0 760 320" role="img" aria-label="Top view of the car showing wire routes: feed from the battery on the passenger side through the firewall to the fuse block, amp power down the passenger side, RCA and turn-on down the center tunnel, tach signal from the coil through the firewall to the tach."><style>text{font-family:"Source Sans 3","Segoe UI",Arial,sans-serif;font-size:13px;fill:#111}.b{font-weight:700}.s{font-size:11.5px;fill:#4a4a4a}.z{font-family:"IBM Plex Mono",Consolas,monospace;font-size:11px;letter-spacing:.08em;fill:#4a4a4a}</style><rect width="760" height="320" fill="#fff"/>
+      <defs>
+        <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker>
+      </defs>
+      <text x="24" y="26" class="z">FRONT</text>
+      <text x="736" y="26" text-anchor="end" class="z">REAR</text>
+      <text x="400" y="26" text-anchor="middle" class="z">PASSENGER SIDE</text>
+      <text x="400" y="306" text-anchor="middle" class="z">DRIVER SIDE</text>
+
+      <g fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="24" y="40" width="712" height="240" rx="70" stroke-width="2.5"/>
+        <line x1="250" y1="44" x2="250" y2="276" stroke-dasharray="2 4" stroke-width="2"/>
+        <line x1="560" y1="44" x2="560" y2="276" stroke-dasharray="2 6"/>
+        <rect x="70" y="104" width="150" height="112" rx="6"/>
+        <rect x="168" y="116" width="44" height="24" rx="3"/>
+        <rect x="44" y="52" width="104" height="30" rx="3"/>
+        <rect x="160" y="52" width="70" height="30" rx="3"/>
+        <rect x="270" y="52" width="92" height="30" rx="3" stroke-width="2.5"/>
+        <rect x="280" y="145" width="70" height="30" rx="3"/>
+        <rect x="270" y="226" width="80" height="30" rx="3"/>
+        <rect x="600" y="135" width="100" height="50" rx="3"/>
+        <!-- runs -->
+        <path d="M148 67H158" marker-end="url(#ar2)"/>
+        <path d="M230 67H268" marker-end="url(#ar2)"/>
+        <path d="M362 67H650V133" marker-end="url(#ar2)"/>
+        <path d="M350 160H598" stroke-dasharray="6 4" marker-end="url(#ar2)"/>
+        <path d="M212 128H236V241H268" stroke-dasharray="1.5 4" stroke-linecap="round" stroke-width="2" marker-end="url(#ar2)"/>
+      </g>
+      <g fill="#ffffff" stroke="currentColor" stroke-width="1.5">
+        <circle cx="250" cy="67" r="5"/>
+        <circle cx="250" cy="241" r="5"/>
+      </g>
+      <text x="96" y="72" text-anchor="middle">Battery</text>
+      <text x="195" y="72" text-anchor="middle" class="s">Breaker</text>
+      <text x="190" y="132" text-anchor="middle" class="s">Coil</text>
+      <text x="125" y="172" text-anchor="middle" class="s">Engine</text>
+      <text x="316" y="72" text-anchor="middle" class="b">Fuse block</text>
+      <text x="315" y="165" text-anchor="middle">Radio</text>
+      <text x="310" y="246" text-anchor="middle">Tach</text>
+      <text x="650" y="165" text-anchor="middle" class="b">Amplifier</text>
+      <text x="484" y="60" text-anchor="middle" class="s">amp power, 12 ga, under the sill plates</text>
+      <text x="470" y="152" text-anchor="middle" class="s">RCA + turn-on, center tunnel</text>
+      <text x="150" y="234" text-anchor="middle" class="s">tach signal</text>
+      <text x="256" y="208" class="s">firewall</text>
+      <text x="566" y="270" class="s">trunk</text>
+    </svg>

@@ -1,0 +1,469 @@
+{
+  "name": "1966 Mustang",
+  "subtitle": "Blue · 302 V8 · C4 automatic",
+  "updated": "2026-11-13",
+  "sections": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "fields": [
+        {
+          "label": "Vehicle",
+          "value": "1966 Ford Mustang",
+          "notes": "",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Exterior color",
+          "value": "Blue",
+          "notes": "Shade not recorded.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Body style",
+          "value": "Unknown",
+          "notes": "Hardtop, fastback or convertible? Look at the roofline or check the data plate body code.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "VIN",
+          "value": "Unknown",
+          "notes": "Stamped on the door data plate / VIN plate; check the registration or title.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Mileage",
+          "value": "Unknown",
+          "notes": "Read the odometer (it may have rolled over).",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Current state",
+          "value": "Engine out of the car and torn down on a stand; wiring being redone",
+          "notes": "Ignition switch and headlight switch are out of the dash for testing.",
+          "updated": "2026-11-13",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "engine",
+      "title": "Engine",
+      "fields": [
+        {
+          "label": "Engine",
+          "value": "1968 Ford 302 V8 (small-block Windsor), from a Fairlane",
+          "notes": "Not the car's original engine. An older chat called it a 289; that was wrong.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Cam / lifters",
+          "value": "Flat tappet, hydraulic lifters",
+          "notes": "Not a new cam. Use high-zinc oil or a ZDDP additive.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Timing set",
+          "value": "Chain, no tensioner; dot to dot",
+          "notes": "",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Firing order",
+          "value": "1-5-4-2-6-3-7-8",
+          "notes": "Standard 302.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Rear main seal",
+          "value": "Two-piece (rubber, replacing the original rope)",
+          "notes": "Leaking; a previous owner siliconed the upper half in. Being replaced (engine-302 project).",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Thrust bearing",
+          "value": "#3 main",
+          "notes": "",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Journal sizes",
+          "value": "Mains about 2.249 in., rods about 2.123 in.",
+          "notes": "Approximate standard sizes; the crank has not been measured yet.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Carburetor / intake",
+          "value": "Unknown",
+          "notes": "Make, model and CFM; read the carb tag and intake casting.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Water pump",
+          "value": "Unknown",
+          "notes": "Old pump type; a new standard-rotation cast-iron pump is planned. Compare inlet side and length.",
+          "updated": "2026-11-13",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "ignition",
+      "title": "Ignition",
+      "fields": [
+        {
+          "label": "Distributor",
+          "value": "Stock front-mounted distributor with an electronic conversion",
+          "notes": "",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Electronic conversion",
+          "value": "Pertronix-style module in the stock distributor",
+          "notes": "Exact model not recorded; check the module or the invoice.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Coil feed",
+          "value": "Pink resistance wire in RUN; full 12 V from the starter relay I terminal while cranking",
+          "notes": "Check the electronic ignition's voltage requirement before reconnecting the coil.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Coil",
+          "value": "Unknown",
+          "notes": "Brand and type (internal resistor or external).",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Initial timing / advance",
+          "value": "Unknown",
+          "notes": "Set with a timing light after the rebuild; record the value.",
+          "updated": "2026-11-13",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "transmission",
+      "title": "Transmission",
+      "fields": [
+        {
+          "label": "Transmission",
+          "value": "C4 3-speed automatic",
+          "notes": "Stays in the car while the engine is out; support it and strap the converter.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Torque converter",
+          "value": "Attaches to the flexplate with typically 4 nuts/bolts",
+          "notes": "Verify the count on the car.",
+          "updated": "2026-11-13",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "rear-end",
+      "title": "Rear end",
+      "fields": [
+        {
+          "label": "Axle ratio",
+          "value": "Unknown",
+          "notes": "Read the axle code on the data plate, or count turns of the driveshaft per wheel turn.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Axle size",
+          "value": "Unknown",
+          "notes": "8 in. or 9 in.; check the housing and the number of cover bolts.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Differential type",
+          "value": "Unknown",
+          "notes": "Open or limited slip; the tag and a wheel-spin test will tell.",
+          "updated": "2026-11-13",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "suspension-steering",
+      "title": "Suspension and steering",
+      "fields": [
+        {
+          "label": "Front suspension",
+          "value": "Unknown",
+          "notes": "Stock or modified? Note springs, shocks and any upgrades.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Rear suspension",
+          "value": "Unknown",
+          "notes": "Stock leaf springs or modified? Note shocks and any traction aids.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Power steering",
+          "value": "Unknown",
+          "notes": "Is the car equipped with power steering? Look for a pump and hoses on the engine and a control valve at the linkage.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Steering box / linkage",
+          "value": "Unknown",
+          "notes": "Manual or power, ratio; check the box and the data plate.",
+          "updated": "2026-11-13",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "brakes",
+      "title": "Brakes",
+      "fields": [
+        {
+          "label": "Front brakes",
+          "value": "Unknown",
+          "notes": "Drum or disc?",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Rear brakes",
+          "value": "Unknown",
+          "notes": "Drum (likely) or disc?",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Power booster",
+          "value": "Unknown",
+          "notes": "Power or manual brakes? Check for a booster behind the master cylinder.",
+          "updated": "2026-11-13",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "wheels-tires",
+      "title": "Wheels and tires",
+      "fields": [
+        {
+          "label": "Wheel size",
+          "value": "Unknown",
+          "notes": "Diameter and width; check the rims.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Tire size",
+          "value": "Unknown",
+          "notes": "Read the sidewall.",
+          "updated": "2026-11-13",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "electrical",
+      "title": "Electrical",
+      "fields": [
+        {
+          "label": "System",
+          "value": "12 V, negative ground",
+          "notes": "",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Charging",
+          "value": "Alternator with an external voltage regulator",
+          "notes": "Regulator plug must be connected at reinstall.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Battery location",
+          "value": "Passenger-side front",
+          "notes": "",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Starter relay",
+          "value": "Fender-mounted Ford starter relay, passenger side",
+          "notes": "Terminals left to right: battery stud, S, I, starter stud. Grounds through its mounting bolt, which also carries the engine-to-body ground cable.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Accessory fuse block",
+          "value": "Painless CirKit Boss 70107 (planned)",
+          "notes": "Under the dash, fed through its breaker from the starter-relay battery stud, triggered from accessory circuit 297. See the wiring project.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Known faults",
+          "value": "Short on circuit 11 (passenger front parking light), turn-signal fault, dead heater fan switch, loose red wire at the starter relay",
+          "notes": "Being diagnosed in the wiring project.",
+          "updated": "2026-11-13",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "audio-gauges",
+      "title": "Audio and gauges",
+      "fields": [
+        {
+          "label": "Head unit",
+          "value": "Retro-style modern unit (planned)",
+          "notes": "Needs a constant memory feed and a switched feed.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Amplifier",
+          "value": "Phase Linear UPA224, 2-channel, 120 W peak",
+          "notes": "Screw terminal strip; onboard blade fuse appears red / 10 A (verify).",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Tachometer",
+          "value": "Aftermarket, signal from coil negative",
+          "notes": "Set the cylinder selector to 8.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "12 V socket",
+          "value": "Dropped from the plan",
+          "notes": "Cigarette-lighter socket removed from the plan.",
+          "updated": "2026-11-13",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "body-paint",
+      "title": "Body and paint",
+      "fields": [
+        {
+          "label": "Paint color code",
+          "value": "Unknown",
+          "notes": "Read the exterior paint code on the door data plate.",
+          "updated": "2026-11-13",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "interior",
+      "title": "Interior",
+      "fields": [
+        {
+          "label": "Heater",
+          "value": "Factory heater with blower and resistor",
+          "notes": "Blower motor and resistor work; the heater fan switch is being replaced.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Air conditioning",
+          "value": "Unknown",
+          "notes": "Is the car equipped with A/C? Look for a compressor on the engine and a condenser at the radiator.",
+          "updated": "2026-11-13",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "fluids-capacities",
+      "title": "Fluids and capacities",
+      "fields": [
+        {
+          "label": "Engine oil capacity",
+          "value": "Unknown",
+          "notes": "Check the manual; an earlier chat quoted about 5 quarts with a filter for the 289, unverified for this 302.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Oil type",
+          "value": "High-zinc oil or ZDDP additive",
+          "notes": "Flat-tappet cam.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Coolant capacity",
+          "value": "Unknown",
+          "notes": "Drain and measure at the next coolant change.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Transmission fluid",
+          "value": "Unknown",
+          "notes": "Type and capacity for the C4; check the manual.",
+          "updated": "2026-11-13",
+          "history": []
+        }
+      ]
+    },
+    {
+      "id": "references",
+      "title": "References",
+      "fields": [
+        {
+          "label": "Haynes manual",
+          "value": "Haynes 36048 (Ford Mustang 1964 1/2 thru 1973, V8)",
+          "notes": "",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Wiring diagrams",
+          "value": "Printed set labeled 1965 Mustang",
+          "notes": "The car is a 1966; a 1966-specific wiring diagram is needed.",
+          "updated": "2026-11-13",
+          "history": []
+        },
+        {
+          "label": "Factory shop manual",
+          "value": "Unknown",
+          "notes": "Do you own a Ford shop manual for the 1966 Mustang?",
+          "updated": "2026-11-13",
+          "history": []
+        }
+      ]
+    }
+  ]
+}

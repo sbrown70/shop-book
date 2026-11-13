@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" style="color:#111;background:#fff" viewBox="0 0 760 548" role="img" aria-label="Wiring overview: battery feeds the kit circuit breaker, which feeds the Painless fuse block under the dash; the key's ACC circuit triggers the block's relay; the radio, tach and amp take fused circuits from the block; the tach signal comes from the coil negative terminal."><style>text{font-family:"Source Sans 3","Segoe UI",Arial,sans-serif;font-size:13px;fill:#111}.b{font-weight:700}.s{font-size:11.5px;fill:#4a4a4a}.z{font-family:"IBM Plex Mono",Consolas,monospace;font-size:11px;letter-spacing:.08em;fill:#4a4a4a}</style><rect width="760" height="548" fill="#fff"/>
+      <defs>
+        <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker>
+      </defs>
+      <text x="16" y="48" class="z">ENGINE BAY</text>
+      <text x="256" y="48" class="z">UNDER DASH</text>
+      <text x="556" y="48" class="z">ACCESSORIES</text>
+
+      <g fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="236" y1="64" x2="236" y2="510" stroke-dasharray="2 4" stroke-width="2"/>
+        <!-- battery to breaker, breaker to block -->
+        <path d="M116 128V158" marker-end="url(#ar)"/>
+        <path d="M216 182H272V152H314" marker-end="url(#ar)"/>
+        <!-- inside block -->
+        <path d="M360 172V194" marker-end="url(#ar)"/>
+        <path d="M360 236V258" stroke-dasharray="6 4" marker-end="url(#ar)"/>
+        <!-- trigger -->
+        <path d="M290 356V216H314" stroke-dasharray="6 4" marker-end="url(#ar)"/>
+        <!-- block ground -->
+        <path d="M480 320V392"/>
+        <path d="M462 392H498M468 399H492M474 406H486"/>
+        <!-- radio memory (constant) -->
+        <path d="M508 146H536V118H554" marker-end="url(#ar)"/>
+        <!-- switched to radio and tach -->
+        <path d="M508 280H544V138H554" stroke-dasharray="6 4" marker-end="url(#ar)"/>
+        <path d="M544 208H554" stroke-dasharray="6 4" marker-end="url(#ar)"/>
+        <!-- amp feed (constant), hops over switched line -->
+        <path d="M508 162H528V274a6 6 0 0 1 0 12V430H554" marker-end="url(#ar)"/>
+        <!-- tach signal -->
+        <path d="M216 478H744V208H730" stroke-dasharray="1.5 4" stroke-linecap="round" stroke-width="2" marker-end="url(#ar)"/>
+      </g>
+      <circle cx="544" cy="208" r="3" fill="currentColor"/>
+
+      <g fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="16" y="76" width="200" height="52" rx="4"/>
+        <rect x="16" y="160" width="200" height="44" rx="4"/>
+        <rect x="16" y="456" width="200" height="44" rx="4"/>
+        <rect x="300" y="96" width="224" height="224" rx="6" stroke-width="2.5"/>
+        <rect x="316" y="132" width="192" height="40" rx="3"/>
+        <rect x="316" y="196" width="88" height="40" rx="3"/>
+        <rect x="316" y="260" width="192" height="40" rx="3"/>
+        <rect x="256" y="356" width="196" height="48" rx="4" fill="#ffffff"/>
+        <rect x="556" y="100" width="172" height="52" rx="4"/>
+        <rect x="556" y="186" width="172" height="44" rx="4"/>
+        <rect x="556" y="404" width="172" height="52" rx="4"/>
+      </g>
+      <!-- firewall grommets -->
+      <g fill="#ffffff" stroke="currentColor" stroke-width="1.5">
+        <circle cx="236" cy="182" r="5"/>
+        <circle cx="236" cy="478" r="5"/>
+      </g>
+      <text transform="translate(228 300) rotate(-90)" text-anchor="middle" class="z">FIREWALL</text>
+
+      <text x="116" y="99" text-anchor="middle" class="b">Battery +</text>
+      <text x="116" y="117" text-anchor="middle" class="s">or starter relay battery stud</text>
+      <text x="116" y="187" text-anchor="middle" class="b">Kit circuit breaker</text>
+      <text x="116" y="226" text-anchor="middle" class="s">kit's 10 ga red feed to the block</text>
+      <text x="116" y="483" text-anchor="middle" class="b">Coil − terminal</text>
+
+      <text x="412" y="121" text-anchor="middle" class="b">Painless fuse block</text>
+      <text x="412" y="157" text-anchor="middle">Constant · 3 circuits</text>
+      <text x="360" y="221" text-anchor="middle" class="b">Relay</text>
+      <text x="412" y="285" text-anchor="middle">Ignition · 4 circuits</text>
+
+      <text x="354" y="377" text-anchor="middle" class="b">ACC source</text>
+      <text x="354" y="395" text-anchor="middle" class="s">pink wire · hot in ACC/RUN</text>
+      <text x="470" y="430" text-anchor="end" class="s">ground point (block, radio, tach)</text>
+
+      <text x="642" y="123" text-anchor="middle" class="b">Radio</text>
+      <text x="642" y="141" text-anchor="middle" class="s">memory + switched</text>
+      <text x="642" y="213" text-anchor="middle" class="b">Tachometer</text>
+      <text x="642" y="427" text-anchor="middle" class="b">Amplifier</text>
+      <text x="642" y="445" text-anchor="middle" class="s">in trunk</text>
+      <text x="536" y="372" class="s">12 ga · 15 A</text>
+      <text x="640" y="470" text-anchor="middle" class="s">tach signal, 18 ga</text>
+
+      <!-- legend -->
+      <g fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M16 530H56"/>
+        <path d="M232 530H272" stroke-dasharray="6 4"/>
+        <path d="M470 530H510" stroke-dasharray="1.5 4" stroke-linecap="round" stroke-width="2"/>
+      </g>
+      <text x="64" y="534" class="s">always hot (constant)</text>
+      <text x="280" y="534" class="s">hot with key on (switched)</text>
+      <text x="518" y="534" class="s">signal only</text>
+    </svg>

@@ -1,0 +1,684 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>302 Rear Main Seal Job</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@500;700&family=Saira+Condensed:wght@600;700;800&display=swap">
+<style>
+/* Layout: one shop-manual column; phases as numbered sections, each step tickable; specs table at the end. */
+:root {
+  --paper: #eef1f5;
+  --card: #ffffff;
+  --ink: #142032;
+  --muted: #586579;
+  --line: #c8d0dc;
+  --engine: #1f4f9e;      /* Ford engine blue: parts that come off */
+  --engine-soft: #d6e2f5;
+  --stay: #8a96a8;        /* parts that stay in */
+  --stay-soft: #e3e7ee;
+  --amber: #b25a00;       /* sealant, caution */
+  --amber-soft: #fbe7cf;
+  --stop: #b3261e;
+  --stop-soft: #f9dedb;
+  --display: "Saira Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #0e1520; --card: #151f2e; --ink: #e5ebf3; --muted: #95a3b6; --line: #2a374a;
+    --engine: #79a3ec; --engine-soft: #1d3157; --stay: #6f7d91; --stay-soft: #1f2a3a;
+    --amber: #f2a54e; --amber-soft: #3d2a12; --stop: #f37b70; --stop-soft: #3f1c1a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #0e1520; --card: #151f2e; --ink: #e5ebf3; --muted: #95a3b6; --line: #2a374a;
+  --engine: #79a3ec; --engine-soft: #1d3157; --stay: #6f7d91; --stay-soft: #1f2a3a;
+  --amber: #f2a54e; --amber-soft: #3d2a12; --stop: #f37b70; --stop-soft: #3f1c1a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--paper); color: var(--ink);
+  font: 17px/1.55 var(--body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 28px 64px;
+}
+.wrap { max-width: 760px; margin: 0 auto; display: grid; gap: 36px; }
+h1, h2, h3 { font-family: var(--display); line-height: 1.05; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2.4rem, 8vw, 3.6rem); font-weight: 800; letter-spacing: .005em; }
+h2 { font-size: 1.9rem; font-weight: 700; }
+h3 { font-size: 1.3rem; font-weight: 700; }
+p { margin: 0; }
+.eyebrow { font-family: var(--mono); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--engine); }
+.lede { color: var(--muted); font-size: 1.08rem; max-width: 62ch; }
+header { display: grid; gap: 12px; }
+section { display: grid; gap: 16px; min-width: 0; }
+.phase-head { display: grid; gap: 6px; border-top: 3px solid var(--ink); padding-top: 14px; }
+.phase-head .eyebrow { display: flex; justify-content: space-between; gap: 12px; }
+.count { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+nav.jump { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+nav.jump a {
+  flex: none; font-family: var(--mono); font-size: .8rem; color: var(--ink); text-decoration: none;
+  border: 1px solid var(--line); background: var(--card); border-radius: 999px; padding: 6px 12px;
+}
+nav.jump a:focus-visible, button:focus-visible, input:focus-visible + span { outline: 2px solid var(--engine); outline-offset: 2px; }
+
+.rules { background: var(--card); border: 1px solid var(--line); border-left: 6px solid var(--stop); padding: 18px 18px 18px 20px; display: grid; gap: 10px; }
+.rules ol { margin: 0; padding-left: 1.3em; display: grid; gap: 8px; }
+
+ol.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; counter-reset: step; }
+ol.steps > li { counter-increment: step; }
+ol.steps label {
+  display: grid; grid-template-columns: 28px 2.2em 1fr; gap: 0 10px; align-items: start;
+  padding: 12px 12px 12px 10px; background: var(--card); border: 1px solid var(--line); cursor: pointer;
+}
+ol.steps > li:first-child label { border-radius: 8px 8px 0 0; }
+ol.steps > li:last-child label { border-radius: 0 0 8px 8px; }
+ol.steps > li:only-child label { border-radius: 8px; }
+ol.steps label::before {
+  content: counter(step); grid-column: 2; grid-row: 1; font-family: var(--mono); font-weight: 700;
+  color: var(--engine); font-size: .95rem; padding-top: 2px; font-variant-numeric: tabular-nums;
+}
+ol.steps input { grid-column: 1; grid-row: 1; width: 22px; height: 22px; margin: 2px 0 0; accent-color: var(--engine); }
+ol.steps .txt { grid-column: 3; grid-row: 1; min-width: 0; display: grid; gap: 6px; }
+ol.steps input:checked ~ .txt { color: var(--muted); }
+ol.steps input:checked ~ .txt b { color: var(--muted); }
+.txt small { color: var(--muted); font-size: .9rem; }
+
+.callout { padding: 14px 16px; border-radius: 8px; display: grid; gap: 6px; }
+.callout .tag { font-family: var(--mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 700; }
+.callout.stop { background: var(--stop-soft); }
+.callout.stop .tag { color: var(--stop); }
+.callout.tip { background: var(--engine-soft); }
+.callout.tip .tag { color: var(--engine); }
+.callout.seal { background: var(--amber-soft); }
+.callout.seal .tag { color: var(--amber); }
+
+.spec { font-family: var(--mono); font-weight: 700; white-space: nowrap; font-size: .92em; }
+
+figure { margin: 0; background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 14px; display: grid; gap: 10px; min-width: 0; }
+figure .sv { overflow-x: auto; }
+figure svg { display: block; width: 100%; height: auto; min-width: 300px; }
+figcaption { font-size: .92rem; color: var(--muted); }
+figcaption b { color: var(--ink); }
+
+/* diagram tokens */
+svg text { font-family: var(--body); font-size: 13px; fill: var(--ink); }
+svg .lbl-muted { fill: var(--muted); }
+svg .on-fill { fill: var(--card); font-weight: 700; }
+svg .off { fill: var(--engine-soft); stroke: var(--engine); stroke-width: 2; }
+svg .off-solid { fill: var(--engine); stroke: var(--engine); }
+svg .stay { fill: var(--stay-soft); stroke: var(--stay); stroke-width: 2; }
+svg .ghost { fill: none; stroke: var(--stay); stroke-width: 2; stroke-dasharray: 5 4; }
+svg .lead { stroke: var(--muted); stroke-width: 1.2; fill: none; }
+svg .amber { fill: var(--amber); }
+svg .amber-zone { fill: var(--amber-soft); stroke: var(--amber); stroke-width: 2; }
+svg .seal-a { fill: none; stroke: var(--engine); stroke-width: 16; }
+svg .seal-b { fill: none; stroke: var(--stay); stroke-width: 16; }
+svg .bg { fill: var(--card); }
+svg .ink-stroke { stroke: var(--ink); fill: none; }
+
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 620px) { .two { grid-template-columns: 1fr; } }
+.stack { display: grid; gap: 12px; }
+ul.plain { margin: 0; padding-left: 1.2em; display: grid; gap: 4px; }
+.box { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 16px; display: grid; gap: 8px; min-width: 0; }
+
+.tablewrap { overflow-x: auto; background: var(--card); border: 1px solid var(--line); border-radius: 8px; }
+table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-family: var(--mono); font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+td.v { font-family: var(--mono); font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
+tr:last-child td { border-bottom: 0; }
+.foot { color: var(--muted); font-size: .9rem; display: grid; gap: 8px; }
+.foot a { color: var(--engine); }
+button.reset { justify-self: start; font: inherit; font-size: .9rem; background: var(--card); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 8px 14px; cursor: pointer; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+html { scroll-behavior: smooth; }
+</style>
+
+<div class="wrap">
+
+<header>
+  <span class="eyebrow">1968 Ford 302 · engine on a stand</span>
+  <h1>302 Rear Main Seal Job</h1>
+  <p class="lede">How to pull the crank, get the siliconed upper seal half out of the block, and put it all back without touching the heads, the pistons or the cam timing. Tick off steps as you go; your checks stay saved on this device.</p>
+</header>
+
+<nav class="jump" aria-label="Phases">
+  <a href="#overview">Overview</a>
+  <a href="#parts">Parts &amp; tools</a>
+  <a href="#p1">1 Mark</a>
+  <a href="#p2">2 Front</a>
+  <a href="#p3">3 Rods off</a>
+  <a href="#p4">4 Chain off</a>
+  <a href="#p5">5 Crank out</a>
+  <a href="#p6">6 Seal &amp; clean</a>
+  <a href="#p7">7 Crank in</a>
+  <a href="#p8">8 Chain on</a>
+  <a href="#p9">9 Rods on</a>
+  <a href="#p10">10 Close up</a>
+  <a href="#specs">Specs</a>
+</nav>
+
+<section id="overview">
+  <figure>
+    <div class="sv">
+    <svg viewBox="0 0 680 320" role="img" aria-label="Side view of the 302 upside down on the stand. The damper, front cover, timing set, main caps, rod caps, crankshaft and flywheel come off. The heads, pistons, rods and camshaft stay in.">
+      <!-- block -->
+      <rect class="stay" x="150" y="96" width="372" height="124" rx="4"/>
+      <!-- heads -->
+      <rect class="stay" x="166" y="220" width="340" height="38" rx="4"/>
+      <text x="336" y="244" text-anchor="middle" class="lbl-muted">Heads stay on</text>
+      <!-- cam -->
+      <line x1="150" y1="134" x2="522" y2="134" stroke="var(--stay)" stroke-width="7" stroke-linecap="round"/>
+      <!-- pistons -->
+      <rect class="stay" x="180" y="170" width="56" height="30" rx="3"/>
+      <rect class="stay" x="265" y="170" width="56" height="30" rx="3"/>
+      <rect class="stay" x="350" y="170" width="56" height="30" rx="3"/>
+      <rect class="stay" x="435" y="170" width="56" height="30" rx="3"/>
+      <!-- rods -->
+      <line x1="208" y1="170" x2="208" y2="88" stroke="var(--stay)" stroke-width="7"/>
+      <line x1="293" y1="170" x2="293" y2="88" stroke="var(--stay)" stroke-width="7"/>
+      <line x1="378" y1="170" x2="378" y2="88" stroke="var(--stay)" stroke-width="7"/>
+      <line x1="463" y1="170" x2="463" y2="88" stroke="var(--stay)" stroke-width="7"/>
+      <!-- crank -->
+      <rect class="off" x="112" y="74" width="420" height="16" rx="3"/>
+      <!-- rod caps -->
+      <rect class="off-solid" x="198" y="62" width="20" height="10" rx="2"/>
+      <rect class="off-solid" x="283" y="62" width="20" height="10" rx="2"/>
+      <rect class="off-solid" x="368" y="62" width="20" height="10" rx="2"/>
+      <rect class="off-solid" x="453" y="62" width="20" height="10" rx="2"/>
+      <!-- main caps -->
+      <rect class="off" x="160" y="56" width="26" height="16" rx="2"/>
+      <rect class="off" x="245" y="56" width="26" height="16" rx="2"/>
+      <rect class="off" x="330" y="56" width="26" height="16" rx="2"/>
+      <rect class="off" x="415" y="56" width="26" height="16" rx="2"/>
+      <rect class="off" x="500" y="56" width="26" height="16" rx="2"/>
+      <!-- timing set -->
+      <circle class="off" cx="126" cy="134" r="20"/>
+      <circle class="off" cx="126" cy="82" r="11"/>
+      <line x1="106" y1="134" x2="115" y2="82" stroke="var(--engine)" stroke-width="2"/>
+      <line x1="146" y1="134" x2="137" y2="82" stroke="var(--engine)" stroke-width="2"/>
+      <!-- front cover -->
+      <rect x="92" y="50" width="10" height="122" rx="2" fill="none" stroke="var(--engine)" stroke-width="2" stroke-dasharray="5 4"/>
+      <!-- damper -->
+      <rect class="off" x="60" y="62" width="24" height="40" rx="3"/>
+      <!-- flywheel -->
+      <rect class="off" x="536" y="26" width="12" height="114" rx="2"/>
+
+      <!-- labels -->
+      <text x="72" y="40" text-anchor="middle">Damper</text>
+      <line class="lead" x1="72" y1="45" x2="72" y2="62"/>
+      <text x="62" y="196" text-anchor="middle">Cover &amp;</text>
+      <text x="62" y="212" text-anchor="middle">timing set</text>
+      <line class="lead" x1="80" y1="184" x2="112" y2="150"/>
+      <text x="258" y="30" text-anchor="middle">Main caps ×5</text>
+      <line class="lead" x1="258" y1="36" x2="258" y2="56"/>
+      <text x="420" y="30" text-anchor="middle">Crankshaft</text>
+      <line class="lead" x1="420" y1="36" x2="486" y2="74"/>
+      <text x="610" y="40" text-anchor="middle">Flywheel</text>
+      <line class="lead" x1="580" y1="44" x2="548" y2="58"/>
+      <text x="610" y="128" text-anchor="middle">Cam stays</text>
+      <line class="lead" x1="574" y1="132" x2="524" y2="134"/>
+      <text x="610" y="182" text-anchor="middle">Rods &amp; pistons</text>
+      <text x="610" y="198" text-anchor="middle">stay in bores</text>
+      <line class="lead" x1="556" y1="190" x2="491" y2="186"/>
+      <text x="610" y="78" text-anchor="middle">Rod caps</text>
+      <line class="lead" x1="580" y1="82" x2="473" y2="67"/>
+
+      <!-- legend -->
+      <rect class="off" x="166" y="284" width="16" height="16" rx="2"/>
+      <text x="190" y="297">Comes off</text>
+      <rect class="stay" x="290" y="284" width="16" height="16" rx="2"/>
+      <text x="314" y="297">Stays in the engine</text>
+    </svg>
+    </div>
+    <figcaption><b>What comes off and what stays.</b> Shown upside down, the way it sits on the stand, front to the left. The heads, pistons, rods and cam never leave the block. The crank comes out once the rod caps, main caps, timing set and flywheel are off.</figcaption>
+  </figure>
+
+  <div class="rules">
+    <h3>Four rules that protect the cam timing and the valves</h3>
+    <ol>
+      <li><b>The crank and cam only turn together.</b> Any time the chain is off, don't turn either one more than a few degrees. With the cam stopped, a piston coming up can meet a valve that is held open.</li>
+      <li><b>Turn the engine clockwise, as seen from the front.</b> That's the way it runs. It keeps the chain slack on the same side so the timing dots read true, and it tightens the bolt you're turning with instead of unscrewing it. A little backward by accident won't hurt anything. If you overshoot a mark, back up well past it and come forward again.</li>
+      <li><b>Everything goes back where it came from, facing the same way:</b> rod caps, main caps, bearing shells, bolts, the slinger and the fuel pump eccentric.</li>
+      <li><b>Assembly lube on bearing faces only.</b> The backs of the shells, the saddles and the caps' bores stay clean and dry.</li>
+    </ol>
+  </div>
+
+  <div class="callout tip">
+    <span class="tag">Why the cam timing comes back exactly</span>
+    <p>Cam timing is set by the sprocket keyways and the timing dots, not by where the cam happens to sit. If the chain goes back on with the dots lined up the way you photograph them in Phase 2, the timing is the same as before. You only need to re-degree if you change the cam, the sprockets or an adjustable setting.</p>
+  </div>
+</section>
+
+<section id="parts">
+  <div class="phase-head"><span class="eyebrow">Before you start</span><h2>Parts and tools</h2></div>
+  <div class="two">
+    <div class="box">
+      <h3>Parts</h3>
+      <ul class="plain">
+        <li>Two-piece rubber rear main seal for a 289/302</li>
+        <li>Front cover gasket set with a new front crank seal</li>
+        <li>Oil pan gasket set</li>
+        <li>Oil pump and pickup gaskets</li>
+        <li>Water pump and fuel pump gaskets</li>
+        <li>Engine assembly lube</li>
+        <li>Oil-resistant RTV and anaerobic gasket maker</li>
+        <li>Brake cleaner or other solvent</li>
+        <li>Oil and filter</li>
+        <li>Main and rod bearings, only if inspection says so</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Tools</h3>
+      <ul class="plain">
+        <li>Torque wrench that reads 10–90 ft-lb</li>
+        <li>Feeler gauge set, or a dial indicator with magnetic base</li>
+        <li>Damper puller (bolts into the hub) and damper installer</li>
+        <li>Plastigage, green (0.001–0.003 in.)</li>
+        <li>2–3 in. outside micrometer reading to 0.0001 in. (optional, for checking journal taper and out-of-round)</li>
+        <li>Eight pairs of 5/16 in. hose pieces, about 3 in. long</li>
+        <li>Paint pen and number punches</li>
+        <li>Plastic scraper, brass pick, brass punch</li>
+        <li>Soft-face mallet, pry bars</li>
+        <li>Flywheel lock or a stout bar for the ring gear</li>
+        <li>Oil pump priming tool (optional)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="p1">
+  <div class="phase-head"><span class="eyebrow"><span>Phase 1</span><span class="count" data-count="p1"></span></span><h2>Set up and mark</h2></div>
+  <ol class="steps" data-phase="p1">
+    <li><label><input type="checkbox" id="p1-1"><span class="txt"><span>Roll the engine upside down on the stand. The pan is already off.</span></span></label></li>
+    <li><label><input type="checkbox" id="p1-2"><span class="txt"><span>Remove the oil pump and pickup. Keep the intermediate shaft with the pump and note which end goes up.</span></span></label></li>
+    <li><label><input type="checkbox" id="p1-3"><span class="txt"><span>If the flywheel or flexplate is still on, paint a mark across it and the crank flange. Lock the ring gear, then break loose the flywheel bolts and the damper bolt. Remove the flywheel.</span><small>The ring gear lock is the only easy way to hold the crank for these bolts, so do them now.</small></span></label></li>
+    <li><label><input type="checkbox" id="p1-4"><span class="txt"><span>Measure crank endplay. Set a dial indicator on the rear flange, pry the crank all the way back, zero it, then pry it forward. Write the number down. No indicator? Use feeler gauges as described in Phase 7, step 10.</span><small>Normal is <span class="spec">0.004–0.008 in.</span> Over <span class="spec">0.012 in.</span> means the thrust bearing or the crank's thrust face is worn. Better to know now than after it's together.</small></span></label></li>
+    <li><label><input type="checkbox" id="p1-5"><span class="txt"><span>Check the main caps for cast numbers and arrows. If any are missing, punch or paint them: 1 at the front to 5 at the rear, arrow toward the front.</span></span></label></li>
+    <li><label><input type="checkbox" id="p1-6"><span class="txt"><span>Check each rod and cap for a cylinder number. If there isn't one, mark both pieces on the same side with the cylinder number. Use the diagram below.</span></span></label></li>
+  </ol>
+
+  <figure>
+    <div class="sv">
+    <svg viewBox="0 0 640 280" role="img" aria-label="Top view of the 302 upright with the front to the left. The right bank, cylinders 1 to 4, sits slightly forward of the left bank, cylinders 5 to 8. Main caps are numbered 1 to 5 from front to rear; number 3 is the thrust bearing and number 5 holds the rear main seal.">
+      <text x="300" y="20" text-anchor="middle" class="lbl-muted">Right bank (passenger side)</text>
+      <circle class="stay" cx="150" cy="64" r="32"/><text x="150" y="69" text-anchor="middle">1</text>
+      <circle class="stay" cx="240" cy="64" r="32"/><text x="240" y="69" text-anchor="middle">2</text>
+      <circle class="stay" cx="330" cy="64" r="32"/><text x="330" y="69" text-anchor="middle">3</text>
+      <circle class="stay" cx="420" cy="64" r="32"/><text x="420" y="69" text-anchor="middle">4</text>
+
+      <line x1="80" y1="140" x2="540" y2="140" stroke="var(--stay)" stroke-width="2" stroke-dasharray="6 5"/>
+      <rect class="off" x="104" y="126" width="22" height="28" rx="3"/><text x="115" y="145" text-anchor="middle" font-size="12">1</text>
+      <rect class="off" x="194" y="126" width="22" height="28" rx="3"/><text x="205" y="145" text-anchor="middle" font-size="12">2</text>
+      <rect class="off-solid" x="284" y="126" width="22" height="28" rx="3"/><text x="295" y="145" text-anchor="middle" font-size="12" class="on-fill">3</text>
+      <rect class="off" x="374" y="126" width="22" height="28" rx="3"/><text x="385" y="145" text-anchor="middle" font-size="12">4</text>
+      <rect class="off-solid" x="464" y="126" width="22" height="28" rx="3"/><text x="475" y="145" text-anchor="middle" font-size="12" class="on-fill">5</text>
+      <text x="295" y="114" text-anchor="middle" font-size="12">thrust</text>
+      <text x="475" y="114" text-anchor="middle" font-size="12">rear seal</text>
+
+      <circle class="stay" cx="172" cy="216" r="32"/><text x="172" y="221" text-anchor="middle">5</text>
+      <circle class="stay" cx="262" cy="216" r="32"/><text x="262" y="221" text-anchor="middle">6</text>
+      <circle class="stay" cx="352" cy="216" r="32"/><text x="352" y="221" text-anchor="middle">7</text>
+      <circle class="stay" cx="442" cy="216" r="32"/><text x="442" y="221" text-anchor="middle">8</text>
+      <text x="320" y="272" text-anchor="middle" class="lbl-muted">Left bank (driver side)</text>
+
+      <polygon points="18,140 34,130 34,150" fill="var(--ink)"/>
+      <line x1="30" y1="140" x2="62" y2="140" stroke="var(--ink)" stroke-width="3"/>
+      <text x="44" y="122" text-anchor="middle" font-weight="700">FRONT</text>
+      <text x="586" y="145" text-anchor="middle" class="lbl-muted">rear</text>
+      <text x="586" y="161" text-anchor="middle" class="lbl-muted">(flywheel)</text>
+    </svg>
+    </div>
+    <figcaption><b>Cylinder and main cap numbers,</b> drawn with the engine upright and the front to the left. The right bank is set slightly forward of the left bank. Upside down on the stand the banks trade sides, so go by that forward offset: the forward bank is cylinders 1–4.</figcaption>
+  </figure>
+</section>
+
+<section id="p2">
+  <div class="phase-head"><span class="eyebrow"><span>Phase 2</span><span class="count" data-count="p2"></span></span><h2>Front of the engine</h2></div>
+  <ol class="steps" data-phase="p2">
+    <li><label><input type="checkbox" id="p2-1"><span class="txt"><span>Remove the pulley and the damper bolt. Pull the damper with a puller bolted into the threaded holes in the hub.</span><small>If the flywheel was already off and the damper bolt is still tight, thread two flywheel bolts into the crank's rear flange and wedge a pry bar between them to hold the crank. Never pull the damper by its outer ring. It's bonded to the hub with rubber and can slip or separate.</small></span></label></li>
+    <li><label><input type="checkbox" id="p2-2"><span class="txt"><span>Remove the fuel pump so its arm clears the eccentric behind the cover.</span></span></label></li>
+    <li><label><input type="checkbox" id="p2-3"><span class="txt"><span>Remove every bolt that threads into the block, including the long water pump bolts that pass through the cover. The cover can come off with the water pump still attached. Tap it off its dowels with a soft mallet.</span></span></label></li>
+    <li><label><input type="checkbox" id="p2-4"><span class="txt"><span>Slide the oil slinger off the snout. Photograph which way it faces first.</span></span></label></li>
+    <li><label><input type="checkbox" id="p2-5"><span class="txt"><span>Thread the damper bolt back into the snout over a stack of thick washers or a short spacer, so you have a handle to turn the crank.</span></span></label></li>
+    <li><label><input type="checkbox" id="p2-6"><span class="txt"><span>Turn the crank clockwise until the crank sprocket dot and the cam sprocket dot face each other on a straight line through both centers. Photograph it, including where the crank keyway points.</span><small>If your sprockets have more than one keyway or several marks, write down which keyway the crank sprocket is on and which marks line up.</small></span></label></li>
+  </ol>
+
+  <figure>
+    <div class="sv">
+    <svg viewBox="0 0 520 400" role="img" aria-label="The cam sprocket above and the crank sprocket below, joined by the chain. Each sprocket has a timing dot. The two dots face each other on the straight line through both sprocket centers.">
+      <line x1="180" y1="18" x2="180" y2="384" stroke="var(--stay)" stroke-width="1.5" stroke-dasharray="6 5"/>
+      <!-- chain -->
+      <line x1="95.9" y1="137.9" x2="135" y2="321.6" stroke="var(--stay)" stroke-width="5" stroke-dasharray="9 3"/>
+      <line x1="264.1" y1="137.9" x2="225" y2="321.6" stroke="var(--stay)" stroke-width="5" stroke-dasharray="9 3"/>
+      <!-- cam sprocket -->
+      <circle cx="180" cy="120" r="84" fill="none" stroke="var(--engine)" stroke-width="7" stroke-dasharray="5 4"/>
+      <circle class="off" cx="180" cy="120" r="78"/>
+      <circle class="bg" cx="180" cy="120" r="20" stroke="var(--engine)" stroke-width="2"/>
+      <circle class="bg" cx="180" cy="84" r="6" stroke="var(--engine)" stroke-width="2"/>
+      <circle class="amber" cx="180" cy="184" r="7"/>
+      <!-- crank sprocket -->
+      <circle cx="180" cy="312" r="44" fill="none" stroke="var(--engine)" stroke-width="7" stroke-dasharray="5 4"/>
+      <circle class="off" cx="180" cy="312" r="39"/>
+      <circle class="bg" cx="180" cy="312" r="16" stroke="var(--engine)" stroke-width="2"/>
+      <circle class="amber" cx="180" cy="282" r="7"/>
+
+      <text x="300" y="64">Cam sprocket</text>
+      <line class="lead" x1="296" y1="62" x2="254" y2="86"/>
+      <text x="300" y="98" class="lbl-muted" font-size="12">dowel hole locates it on the cam</text>
+      <line class="lead" x1="296" y1="94" x2="188" y2="85"/>
+      <text x="300" y="228" font-weight="700">Dots face each other</text>
+      <line class="lead" x1="296" y1="224" x2="190" y2="188"/>
+      <line class="lead" x1="296" y1="232" x2="190" y2="279"/>
+      <text x="190" y="382" class="lbl-muted" font-size="12">line through both centers</text>
+      <text x="300" y="350">Crank sprocket</text>
+      <line class="lead" x1="296" y1="346" x2="222" y2="328"/>
+    </svg>
+    </div>
+    <figcaption><b>Timing dots, dot to dot.</b> The dots line up once every two turns of the crank, so if they're on opposite sides, keep turning. The picture is the same whether the engine is upright or upside down.</figcaption>
+  </figure>
+</section>
+
+<section id="p3">
+  <div class="phase-head"><span class="eyebrow"><span>Phase 3</span><span class="count" data-count="p3"></span></span><h2>Disconnect the rods, chain still on</h2></div>
+  <div class="callout tip">
+    <span class="tag">Why the rods come off first</span>
+    <p>You have to turn the crank to reach every rod nut. With the chain still on, the cam turns with it, so the valves and pistons stay in step and can't meet.</p>
+  </div>
+  <ol class="steps" data-phase="p3">
+    <li><label><input type="checkbox" id="p3-1"><span class="txt"><span>Turn the crank clockwise until a rod's nuts are easy to reach. Remove the nuts and tap the cap loose with light side-to-side taps of a soft mallet. Leave the bearing shell in the cap.</span></span></label></li>
+    <li><label><input type="checkbox" id="p3-2"><span class="txt"><span>Slip a piece of hose over each of that rod's bolts.</span></span></label></li>
+    <li><label><input type="checkbox" id="p3-3"><span class="txt"><span>Leave the rod where it is. Nothing needs pushing. On the stand, the rod's half of the big end sits under the journal, on the side toward the heads, so the crank will lift straight up out of it later.</span></span></label></li>
+    <li><label><input type="checkbox" id="p3-4"><span class="txt"><span>Lay the cap out in cylinder order. Turn the crank slowly by hand to bring the next journal up, and repeat for all eight rods.</span><small>As the crank turns, a loose rod either gets pushed along by its journal or left behind. It swings on its wrist pin, so guide its big end with your hand to keep it off the counterweights, and check that the hoses stay on. If the crank stiffens, stop and look. Never force it.</small></span></label></li>
+    <li><label><input type="checkbox" id="p3-5"><span class="txt"><span>Keep turning clockwise, guiding the loose rods the same way, until the timing dots line up again, matching your photo.</span></span></label></li>
+  </ol>
+
+  <figure>
+    <div class="sv">
+    <svg viewBox="0 0 560 300" role="img" aria-label="End view of one rod journal with the engine upside down. The rod cap is removed and hose covers both rod bolts. The rod's half of the big end sits under the journal, toward the heads, so the crank lifts straight up and away from it.">
+      <!-- ghost cap -->
+      <path class="ghost" d="M202,100 A58,58 0 0 1 318,100"/>
+      <!-- journal -->
+      <circle class="off" cx="260" cy="90" r="44"/>
+      <text x="260" y="94" text-anchor="middle" font-size="12">journal</text>
+      <!-- lift arrow -->
+      <line x1="260" y1="40" x2="260" y2="14" stroke="var(--engine)" stroke-width="3"/>
+      <polygon points="260,4 252,18 268,18" fill="var(--engine)"/>
+      <text x="276" y="20">Crank lifts straight out</text>
+      <!-- rod big end, shifted down -->
+      <path class="stay" d="M202,110 A58,58 0 0 0 318,110 L308,110 A48,48 0 0 1 212,110 Z"/>
+      <rect class="stay" x="248" y="164" width="24" height="64"/>
+      <rect class="stay" x="206" y="228" width="108" height="42" rx="4"/>
+      <text x="260" y="254" text-anchor="middle" font-size="12">piston</text>
+      <!-- bolts -->
+      <line x1="207" y1="110" x2="207" y2="56" stroke="var(--stay)" stroke-width="6"/>
+      <line x1="313" y1="110" x2="313" y2="56" stroke="var(--stay)" stroke-width="6"/>
+      <!-- hoses -->
+      <rect class="amber-zone" x="199" y="50" width="16" height="58" rx="5"/>
+      <rect class="amber-zone" x="305" y="50" width="16" height="58" rx="5"/>
+
+      <text x="150" y="44" text-anchor="end" class="lbl-muted">Cap removed</text>
+      <line class="lead" x1="152" y1="48" x2="206" y2="78"/>
+      <text x="352" y="72">Hose over each bolt</text>
+      <text x="352" y="88" class="lbl-muted" font-size="12">keeps threads off the journal</text>
+      <line class="lead" x1="348" y1="74" x2="322" y2="74"/>
+      <text x="352" y="146">Rod stays put</text>
+      <text x="352" y="162" class="lbl-muted" font-size="12">crank lifts out of it</text>
+      <line class="lead" x1="348" y1="148" x2="300" y2="152"/>
+      <text x="352" y="250" class="lbl-muted">Heads are this way ↓</text>
+    </svg>
+    </div>
+    <figcaption><b>One rod, ready for the crank to come out.</b> On the stand, the rods hang below the crank. Once the caps are off, the crank lifts straight up out of the rods, so the pistons don't need to move.</figcaption>
+  </figure>
+</section>
+
+<section id="p4">
+  <div class="phase-head"><span class="eyebrow"><span>Phase 4</span><span class="count" data-count="p4"></span></span><h2>Timing set off</h2></div>
+  <ol class="steps" data-phase="p4">
+    <li><label><input type="checkbox" id="p4-1"><span class="txt"><span>Confirm the dots are still lined up. Paint a mark across the cam sprocket and the block.</span></span></label></li>
+    <li><label><input type="checkbox" id="p4-2"><span class="txt"><span>Hold the crank with a breaker bar on the snout bolt, pushing clockwise, and loosen the cam bolt. Remove the bolt, washer and fuel pump eccentric. Note which way the eccentric faces.</span></span></label></li>
+    <li><label><input type="checkbox" id="p4-3"><span class="txt"><span>Remove the snout bolt. Work both sprockets forward together with the chain, a little at a time on each. Pry gently behind the crank sprocket if it's snug.</span></span></label></li>
+    <li><label><input type="checkbox" id="p4-4"><span class="txt"><span>Mark the cam's dowel position on the block with paint. Tape a "do not turn" note to the front of the engine.</span><small>The cam may creep a few degrees as valve spring pressure settles it. That's fine. You'll turn it back to your mark when the sprocket goes on.</small></span></label></li>
+  </ol>
+  <div class="callout tip">
+    <span class="tag">While it's off</span>
+    <p>Check the chain. If it's visibly sloppy or the cam sprocket teeth are worn into hooks, a new set installed dot to dot is reasonable. A worn chain was retarding the cam slightly, so a new one restores the timing the engine was built with.</p>
+  </div>
+</section>
+
+<section id="p5">
+  <div class="phase-head"><span class="eyebrow"><span>Phase 5</span><span class="count" data-count="p5"></span></span><h2>Crank out</h2></div>
+  <div class="callout stop">
+    <span class="tag">From here until Phase 8</span>
+    <p>Don't turn the cam, and don't turn the crank more than a few degrees.</p>
+  </div>
+  <ol class="steps" data-phase="p5">
+    <li><label><input type="checkbox" id="p5-1"><span class="txt"><span>Loosen all ten main cap bolts a little at a time, working evenly.</span></span></label></li>
+    <li><label><input type="checkbox" id="p5-2"><span class="txt"><span>Remove the caps. Thread the bolts back in partway, use them as handles, and rock the cap side to side while tapping with a soft mallet. The rear cap is usually the tightest.</span><small>Don't pry between the cap and the block. A nicked parting face is a new leak.</small></span></label></li>
+    <li><label><input type="checkbox" id="p5-3"><span class="txt"><span>Lay the caps out in order with their bolts and lower shells.</span></span></label></li>
+    <li><label><input type="checkbox" id="p5-4"><span class="txt"><span>With a helper, lift the crank straight out, keeping it level. Watch that no rod's big end hooks a counterweight on the way up. The crank is heavy and the thrust faces are easy to nick.</span></span></label></li>
+    <li><label><input type="checkbox" id="p5-5"><span class="txt"><span>Set it on clean wood or cardboard, never bare concrete. Cover it.</span></span></label></li>
+    <li><label><input type="checkbox" id="p5-6"><span class="txt"><span>Leave the upper bearing shells in the block unless you're replacing them. If one falls out, note its position. The upper shells have oil holes; the lower ones don't.</span></span></label></li>
+  </ol>
+</section>
+
+<section id="p6">
+  <div class="phase-head"><span class="eyebrow"><span>Phase 6</span><span class="count" data-count="p6"></span></span><h2>Old seal out, clean and inspect</h2></div>
+  <ol class="steps" data-phase="p6">
+    <li><label><input type="checkbox" id="p6-1"><span class="txt"><span>Pick the stuck upper seal half out of the block groove.</span></span></label></li>
+    <li><label><input type="checkbox" id="p6-2"><span class="txt"><span>Remove every trace of silicone from the groove. Start with a plastic scraper, finish with a brass pick and solvent. The groove must be clean, dry metal.</span><small>Any silicone left under the new seal is a leak path. Don't gouge the groove edges or the parting faces.</small></span></label></li>
+    <li><label><input type="checkbox" id="p6-3"><span class="txt"><span>Clean the cap's groove the same way. If there's a small pin sticking up in the cap's groove, drive it out. It's left over from the original rope seal and keeps a rubber seal from seating.</span></span></label></li>
+    <li><label><input type="checkbox" id="p6-4"><span class="txt"><span>Clean all old sealant off the rear cap's mating faces and the matching faces on the block.</span></span></label></li>
+    <li><label><input type="checkbox" id="p6-5"><span class="txt"><span>Inspect where the seal rides on the crank. Light marks can be polished with 400-grit cloth. A groove that catches your fingernail will leak and needs a crank shop's opinion.</span></span></label></li>
+    <li><label><input type="checkbox" id="p6-6"><span class="txt"><span>Look over the bearings. An even dull gray is normal. Copper showing through, deep scratches or embedded grit means replacing that set. Check both sides of the #3 thrust bearing too.</span></span></label></li>
+    <li><label><input type="checkbox" id="p6-7"><span class="txt"><span>Blow out the crank's oil holes and wipe every journal clean.</span></span></label></li>
+  </ol>
+</section>
+
+<section id="p7">
+  <div class="phase-head"><span class="eyebrow"><span>Phase 7</span><span class="count" data-count="p7"></span></span><h2>New seal, crank back in</h2></div>
+
+  <div class="stack">
+    <figure>
+      <div class="sv">
+      <svg viewBox="0 0 600 300" role="img" aria-label="Rear view of the rear main bore with the engine upright. The upper seal half in the block runs three eighths of an inch past the parting line on one side and stops three eighths of an inch short on the other. The lower half in the cap fills the gap so the joints sit off the parting line.">
+        <rect class="stay" x="110" y="40" width="280" height="120"/>
+        <rect class="stay" x="140" y="160" width="220" height="110"/>
+        <circle class="bg" cx="250" cy="160" r="94"/>
+        <line x1="104" y1="160" x2="404" y2="160" stroke="var(--ink)" stroke-width="1.5" stroke-dasharray="6 5"/>
+        <path class="seal-a" d="M167.9,182 A85,85 0 0 1 332.1,138"/>
+        <path class="seal-b" d="M332.1,138 A85,85 0 0 1 167.9,182"/>
+        <circle class="off" cx="250" cy="160" r="70"/>
+        <text x="250" y="165" text-anchor="middle">crank</text>
+        <circle class="amber" cx="167.9" cy="182" r="6"/>
+        <circle class="amber" cx="332.1" cy="138" r="6"/>
+        <text x="96" y="152" text-anchor="end" class="lbl-muted" font-size="12">parting</text>
+        <text x="96" y="167" text-anchor="end" class="lbl-muted" font-size="12">line</text>
+        <text x="20" y="214">Joint ⅜ in.</text>
+        <text x="20" y="230">below the line</text>
+        <line class="lead" x1="100" y1="206" x2="160" y2="186"/>
+        <text x="412" y="116">Joint ⅜ in.</text>
+        <text x="412" y="132">above the line</text>
+        <line class="lead" x1="410" y1="128" x2="340" y2="137"/>
+        <text x="412" y="56" font-weight="700">Upper half</text>
+        <text x="412" y="72" class="lbl-muted" font-size="12">in the block</text>
+        <line class="lead" x1="410" y1="60" x2="300" y2="86"/>
+        <text x="412" y="240" font-weight="700">Lower half</text>
+        <text x="412" y="256" class="lbl-muted" font-size="12">in the rear cap</text>
+        <line class="lead" x1="410" y1="244" x2="300" y2="232"/>
+      </svg>
+      </div>
+      <figcaption><b>Offset the joints about ⅜ in.</b> so the seal's seams don't sit on the cap's seam. Amber dots mark the tiny RTV dabs. Drawn upright, looking at the back of the engine.</figcaption>
+    </figure>
+
+    <figure>
+      <div class="sv">
+      <svg viewBox="0 0 520 210" role="img" aria-label="Cross-section of the seal in its groove. The sealing lip angles toward the front of the engine, the oil side.">
+        <text x="40" y="22" font-weight="700">← FRONT (oil side)</text>
+        <text x="480" y="22" text-anchor="end" class="lbl-muted">REAR (flywheel) →</text>
+        <rect class="stay" x="40" y="36" width="440" height="62"/>
+        <rect class="bg" x="214" y="76" width="92" height="24"/>
+        <rect x="220" y="80" width="80" height="26" rx="3" fill="var(--engine)"/>
+        <polygon points="222,102 188,136 204,140 240,104" fill="var(--engine)"/>
+        <rect class="off" x="40" y="140" width="440" height="44"/>
+        <text x="260" y="167" text-anchor="middle">crankshaft seal surface</text>
+        <text x="40" y="126">Lip points forward</text>
+        <line class="lead" x1="160" y1="124" x2="204" y2="128"/>
+        <text x="330" y="126" class="lbl-muted" font-size="12">oil on the lip only</text>
+      </svg>
+      </div>
+      <figcaption><b>Lip toward the front of the engine.</b> Some seals are marked "air side" on the face that goes toward the flywheel.</figcaption>
+    </figure>
+  </div>
+
+  <ol class="steps" data-phase="p7">
+    <li><label><input type="checkbox" id="p7-1"><span class="txt"><span>Wipe the saddles and the backs of the upper shells clean and dry. Seat the upper shells with their tangs in the notches and oil holes lined up with the block's holes. Coat the shell faces with assembly lube.</span></span></label></li>
+    <li><label><input type="checkbox" id="p7-2"><span class="txt"><span>Press the upper seal half into the block groove, lip toward the front. Set it so one end sticks out ⅜ in. past the parting line and the other end sits ⅜ in. below it. Put a light film of oil on the lip only.</span></span></label></li>
+    <li><label><input type="checkbox" id="p7-3"><span class="txt"><span>Check that no rod's big end sits up where the crank will land. With the crank out you can reach the rods, so push any that are in the way toward the head with a hammer handle. Then lower the crank in level, keyway pointing where it was in your photo. Watch that the seal's protruding end doesn't fold.</span></span></label></li>
+    <li><label><input type="checkbox" id="p7-4"><span class="txt"><span>Optional: check main clearance with Plastigage. Lay a strip across a dry journal, torque that cap to spec, remove it without turning the crank, and read the strip. Clean it off.</span><small>About <span class="spec">0.001–0.002 in.</span> is healthy for a used engine. Over <span class="spec">0.0025 in.</span> means new bearings.</small></span></label></li>
+    <li><label><input type="checkbox" id="p7-5"><span class="txt"><span>Set the lower shells in the caps and lube their faces. Press the lower seal half into the rear cap so its ends meet the upper half's ends. Oil its lip.</span></span></label></li>
+    <li><label><input type="checkbox" id="p7-6"><span class="txt"><span>Put a dab of RTV no bigger than ⅛ in. on each end of the lower seal, where the halves meet. Keep it off the lip.</span></span></label></li>
+    <li><label><input type="checkbox" id="p7-7"><span class="txt"><span>Coat the rear cap's mating faces with a thin film of sealant, only on the area behind the seal groove (diagram below).</span></span></label></li>
+    <li><label><input type="checkbox" id="p7-8"><span class="txt"><span>Install caps 1, 2, 4 and 5 in their numbered spots, arrows forward, with oiled bolts. Torque in three passes: <span class="spec">30</span>, <span class="spec">50</span>, then <span class="spec">60–70 ft-lb</span>. Rock the crank a few degrees after each cap to make sure nothing binds.</span></span></label></li>
+    <li><label><input type="checkbox" id="p7-9"><span class="txt"><span>Align the #3 thrust bearing. Snug the cap bolts by hand. Pry the crank forward and hold it, tap the #3 cap rearward with a soft mallet, then torque it to <span class="spec">60–70 ft-lb</span> while still holding the crank forward.</span><small>This lines up the thrust faces of the upper and lower halves so both take the load.</small></span></label></li>
+    <li><label><input type="checkbox" id="p7-10"><span class="txt"><span>Measure endplay again. It should be <span class="spec">0.004–0.008 in.</span> and close to your Phase 1 number.</span><small>No indicator? Pry the crank all the way one direction, then slide feeler gauges into the gap that opens between the crank and the side of the #3 thrust bearing. The thickest blade that slides in with light drag is your endplay.</small></span></label></li>
+    <li><label><input type="checkbox" id="p7-11"><span class="txt"><span>Bolt the flywheel or flexplate back on with the paint marks lined up. Torque to <span class="spec">75–85 ft-lb</span> in a crisscross pattern. You'll lock its ring gear to hold the crank from here on.</span><small>If the stand gets in the way of the flywheel, leave it off and hold the crank with two bolts in the flange and a pry bar between them instead.</small></span></label></li>
+  </ol>
+
+  <figure>
+    <div class="sv">
+    <svg viewBox="0 0 640 300" role="img" aria-label="The rear main cap's mating face seen from above, front at the top. Sealant goes only on the strips of the two mating pads behind the seal groove. Everything forward of the groove stays dry. A small RTV dab sits at each seal joint.">
+      <text x="240" y="22" text-anchor="middle" font-weight="700">↑ FRONT</text>
+      <rect class="stay" x="40" y="36" width="130" height="226"/>
+      <rect class="stay" x="310" y="36" width="130" height="226"/>
+      <rect class="bg" x="170" y="36" width="140" height="226" stroke="var(--stay)" stroke-width="2"/>
+      <rect class="stay" x="180" y="36" width="120" height="160"/>
+      <text x="240" y="120" text-anchor="middle" font-size="12">bearing shell</text>
+      <rect x="170" y="210" width="140" height="22" fill="var(--engine)"/>
+      <text x="240" y="225" text-anchor="middle" font-size="12" class="on-fill">seal groove</text>
+      <rect class="amber-zone" x="40" y="236" width="130" height="26"/>
+      <rect class="amber-zone" x="310" y="236" width="130" height="26"/>
+      <circle class="amber" cx="172" cy="221" r="6"/>
+      <circle class="amber" cx="308" cy="221" r="6"/>
+      <text x="105" y="120" text-anchor="middle" class="lbl-muted" font-size="12">no sealer</text>
+      <text x="375" y="120" text-anchor="middle" class="lbl-muted" font-size="12">no sealer</text>
+      <text x="458" y="246" font-weight="700">Thin sealant here</text>
+      <text x="458" y="262" class="lbl-muted" font-size="12">behind the groove only</text>
+      <line class="lead" x1="454" y1="250" x2="440" y2="250"/>
+      <text x="458" y="196">RTV dab at each</text>
+      <text x="458" y="212">seal joint</text>
+      <line class="lead" x1="454" y1="204" x2="316" y2="219"/>
+      <text x="240" y="290" text-anchor="middle" class="lbl-muted">REAR ↓</text>
+    </svg>
+    </div>
+    <figcaption><b>Where sealant goes on the rear cap.</b> Ford's procedure puts sealer only on the rear part of the cap's mating faces. Anything forward of the seal groove can squeeze into the bearing. Use anaerobic gasket maker or a thin film of oil-resistant RTV.</figcaption>
+  </figure>
+</section>
+
+<section id="p8">
+  <div class="phase-head"><span class="eyebrow"><span>Phase 8</span><span class="count" data-count="p8"></span></span><h2>Timing set back on</h2></div>
+  <ol class="steps" data-phase="p8">
+    <li><label><input type="checkbox" id="p8-1"><span class="txt"><span>Check the crank keyway is where your photo shows it. If the cam crept, turn it gently with a bolt in its snout until the dowel is back at your paint mark.</span></span></label></li>
+    <li><label><input type="checkbox" id="p8-2"><span class="txt"><span>Wrap the chain around both sprockets with the dots facing each other. Slide both on together, onto the crank key and the cam dowel. If you noted a keyway in Phase 2, use the same one.</span></span></label></li>
+    <li><label><input type="checkbox" id="p8-3"><span class="txt"><span>Hold a straightedge through both centers and confirm the dots sit on it. If they're a tooth off, pull the cam sprocket and move the chain one tooth.</span></span></label></li>
+    <li><label><input type="checkbox" id="p8-4"><span class="txt"><span>Install the fuel pump eccentric facing the way it came off, then the washer and cam bolt. Lock the ring gear and torque to <span class="spec">40–45 ft-lb</span>.</span></span></label></li>
+  </ol>
+  <div class="callout tip">
+    <span class="tag">The crank can turn again</span>
+    <p>With the chain on, the crank and cam are back in step.</p>
+  </div>
+</section>
+
+<section id="p9">
+  <div class="phase-head"><span class="eyebrow"><span>Phase 9</span><span class="count" data-count="p9"></span></span><h2>Rods back on</h2></div>
+  <ol class="steps" data-phase="p9">
+    <li><label><input type="checkbox" id="p9-1"><span class="txt"><span>Turn the crank clockwise until a rod journal is easy to reach. Pull that rod up onto the journal and take the hoses off its bolts.</span></span></label></li>
+    <li><label><input type="checkbox" id="p9-2"><span class="txt"><span>Lube the rod shell and the cap shell. Fit the matching cap with the marks on the same side.</span></span></label></li>
+    <li><label><input type="checkbox" id="p9-3"><span class="txt"><span>Oil the threads and run the nuts down. Torque in two passes to <span class="spec">19–24 ft-lb</span>, aiming for 22–24.</span></span></label></li>
+    <li><label><input type="checkbox" id="p9-4"><span class="txt"><span>Repeat for all eight rods. After each one, the crank should still turn with a steady, light drag.</span><small>Optional: check rod side clearance with a feeler gauge between each pair of rods: <span class="spec">0.010–0.020 in.</span></small></span></label></li>
+    <li><label><input type="checkbox" id="p9-5"><span class="txt"><span>Turn the crank two full turns. It should be smooth with no tight spots or clunks, and the timing dots should line up again.</span></span></label></li>
+  </ol>
+</section>
+
+<section id="p10">
+  <div class="phase-head"><span class="eyebrow"><span>Phase 10</span><span class="count" data-count="p10"></span></span><h2>Close it up</h2></div>
+  <ol class="steps" data-phase="p10">
+    <li><label><input type="checkbox" id="p10-1"><span class="txt"><span>Slide the oil slinger on facing the way it did in your photo.</span></span></label></li>
+    <li><label><input type="checkbox" id="p10-2"><span class="txt"><span>Press a new seal into the front cover. Fit a new gasket and set the cover on its dowels. Slide the damper partway onto the snout to center the seal before tightening. Torque the cover and water pump bolts to <span class="spec">12–15 ft-lb</span>.</span></span></label></li>
+    <li><label><input type="checkbox" id="p10-3"><span class="txt"><span>Oil the damper's seal surface. Press the damper on with an installer threaded into the snout. Never hammer it on. Lock the ring gear and torque the bolt to <span class="spec">70–90 ft-lb</span>. Install the pulley.</span></span></label></li>
+    <li><label><input type="checkbox" id="p10-4"><span class="txt"><span>Install the fuel pump with a new gasket, its arm riding on the eccentric.</span></span></label></li>
+    <li><label><input type="checkbox" id="p10-5"><span class="txt"><span>Fill the oil pump with oil, fit a new gasket, and install it with the intermediate shaft the same way up as before. Torque to <span class="spec">23–28 ft-lb</span>. Install the pickup with a new gasket.</span></span></label></li>
+    <li><label><input type="checkbox" id="p10-6"><span class="txt"><span>Install the oil pan with a new gasket set, with a dab of RTV where the end seals meet the side gaskets. Torque ¼ in. bolts to <span class="spec">7–9 ft-lb</span> and 5/16 in. bolts to <span class="spec">9–11 ft-lb</span>.</span></span></label></li>
+    <li><label><input type="checkbox" id="p10-7"><span class="txt"><span>Fill with oil and install a new filter.</span></span></label></li>
+    <li><label><input type="checkbox" id="p10-8"><span class="txt"><span>Prime the oil system before the first start. The best way is to mark the distributor rotor and housing, pull the distributor, and spin the pump with a priming tool and drill until oil reaches the rockers. Then reinstall the distributor to your marks.</span><small>After the engine is running, check ignition timing with a timing light.</small></span></label></li>
+  </ol>
+  <button class="reset" type="button" id="reset">Clear all checkmarks</button>
+</section>
+
+<section id="specs">
+  <div class="phase-head"><span class="eyebrow">Reference</span><h2>Specs for this job</h2></div>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Fastener or check</th><th>Spec</th></tr></thead>
+      <tbody>
+        <tr><td>Main cap bolts</td><td class="v">60–70 ft-lb</td></tr>
+        <tr><td>Rod nuts (5/16 in. stock bolts)</td><td class="v">19–24 ft-lb</td></tr>
+        <tr><td>Cam sprocket bolt</td><td class="v">40–45 ft-lb</td></tr>
+        <tr><td>Damper bolt</td><td class="v">70–90 ft-lb</td></tr>
+        <tr><td>Flywheel or flexplate bolts</td><td class="v">75–85 ft-lb</td></tr>
+        <tr><td>Front cover and water pump bolts</td><td class="v">12–15 ft-lb</td></tr>
+        <tr><td>Oil pump to block</td><td class="v">23–28 ft-lb</td></tr>
+        <tr><td>Oil pan bolts, ¼ in. / 5/16 in.</td><td class="v">7–9 / 9–11 ft-lb</td></tr>
+        <tr><td>Crank endplay</td><td class="v">0.004–0.008 in.<br>max 0.012</td></tr>
+        <tr><td>Main and rod oil clearance (used engine)</td><td class="v">0.001–0.002 in.<br>replace over 0.0025</td></tr>
+        <tr><td>Rod side clearance</td><td class="v">0.010–0.020 in.</td></tr>
+        <tr><td>Rear seal joint offset</td><td class="v">⅜ in.</td></tr>
+        <tr><td>RTV dab at seal joints</td><td class="v">⅛ in. max</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="foot">
+    <p>Torques are for stock fasteners with clean, oiled threads. Aftermarket bolts such as ARP use their maker's spec. Published figures for the stock rod nuts vary between 19–24 and 22–25 ft-lb, which is why the steps aim for 22–24. The bearing clearance figures are a rule of thumb for a used stock engine. When a factory shop manual for your car is at hand, its numbers win.</p>
+    <p>Sources: <a href="https://www.felpro.com/technical/tecblogs/how-to-install-rear-main-seal.html" target="_blank" rel="noopener">Fel-Pro, How to Install a Rear Main Seal</a> · <a href="https://help.summitracing.com/knowledgebase/article/HE-04923/en-us" target="_blank" rel="noopener">Summit Racing, Ford small block torque specs</a> · <a href="https://stangnet.com/mustang-forums/threads/main-caps-tq-specs-engine-builders-come-in-here.764153/" target="_blank" rel="noopener">Ford shop manual thrust bearing procedure (StangNet excerpt)</a> · <a href="https://itstillruns.fordification.com/forum/viewtopic.php?p=401044" target="_blank" rel="noopener">Ford truck manual note on the rope seal pin</a></p>
+  </div>
+</section>
+
+</div>
+
+<script>
+(function () {
+  var KEY = "rms302-checks";
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { saved = {}; }
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('ol.steps input[type="checkbox"]'));
+  function counts() {
+    document.querySelectorAll("ol.steps").forEach(function (ol) {
+      var all = ol.querySelectorAll("input"), done = ol.querySelectorAll("input:checked");
+      var el = document.querySelector('[data-count="' + ol.dataset.phase + '"]');
+      if (el) el.textContent = done.length + " / " + all.length + " done";
+    });
+  }
+  function save() {
+    var s = {};
+    boxes.forEach(function (b) { if (b.checked) s[b.id] = 1; });
+    try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {}
+  }
+  boxes.forEach(function (b) {
+    if (saved[b.id]) b.checked = true;
+    b.addEventListener("change", function () { save(); counts(); });
+  });
+  document.getElementById("reset").addEventListener("click", function () {
+    boxes.forEach(function (b) { b.checked = false; });
+    save(); counts();
+  });
+  counts();
+})();
+</script>
+
+</body></html>

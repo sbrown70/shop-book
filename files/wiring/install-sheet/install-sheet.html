@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mustang Wiring Install Sheet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Black-and-white shop sheet: ink on paper, one rule weight for structure, grey only for secondary text. */
+  --ink: #111111;
+  --paper: #ffffff;
+  --muted: #4a4a4a;
+  --faint: #bdbdbd;
+  --desk: #e6e6e6;
+  --display: "Barlow Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Sans 3", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { background: var(--desk); }
+body {
+  margin: 0;
+  background: var(--desk);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.45;
+}
+.sheet {
+  max-width: 8.5in;
+  margin: 24px auto;
+  padding: 0.55in 0.6in 0.6in;
+  background: var(--paper);
+  box-shadow: 0 1px 4px rgba(0,0,0,.18);
+}
+header.top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 24px;
+  align-items: end;
+  border-bottom: 3px solid var(--ink);
+  padding-bottom: 10px;
+}
+.kicker {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 2px;
+}
+h1 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+.sub { margin: 6px 0 0; color: var(--muted); }
+.fields {
+  font-family: var(--mono);
+  font-size: 12px;
+  display: grid;
+  gap: 8px;
+  min-width: 2.4in;
+}
+.fields div { display: flex; gap: 8px; align-items: end; }
+.fields span.line { flex: 1; border-bottom: 1px solid var(--ink); height: 14px; }
+
+section { margin-top: 26px; }
+h2 {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  margin: 0 0 8px;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  border-top: 1.5px solid var(--ink);
+  padding-top: 8px;
+  text-wrap: balance;
+}
+h2 .n {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  border: 1.5px solid var(--ink);
+  padding: 1px 6px;
+  transform: translateY(-3px);
+}
+h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 19px;
+  margin: 18px 0 4px;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+}
+p { margin: 6px 0; max-width: 68ch; }
+.lede { font-size: 16px; }
+.note {
+  border-left: 3px solid var(--ink);
+  padding: 4px 0 4px 12px;
+  margin: 10px 0;
+  max-width: 68ch;
+}
+.note strong { font-family: var(--display); text-transform: uppercase; letter-spacing: .03em; font-size: 16px; }
+
+figure { margin: 14px 0 6px; }
+figure .dia { width: 100%; overflow-x: auto; }
+figure svg { display: block; width: 100%; height: auto; min-width: 520px; color: var(--ink); }
+figure svg text { font-family: var(--body); fill: currentColor; }
+figure svg .b { font-weight: 700; }
+figure svg .s { font-size: 11.5px; fill: var(--muted); }
+figure svg .z { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; fill: var(--muted); }
+figcaption {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 6px;
+  max-width: 72ch;
+}
+figcaption b { color: var(--ink); }
+
+.callouts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 4px 20px;
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+  font-size: 14px;
+  counter-reset: c;
+}
+.callouts li { counter-increment: c; display: flex; gap: 8px; align-items: baseline; }
+.callouts li::before {
+  content: counter(c);
+  font-family: var(--mono);
+  font-size: 11px;
+  flex: none;
+  width: 18px; height: 18px;
+  border: 1.5px solid var(--ink);
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  transform: translateY(3px);
+}
+
+.table-wrap { overflow-x: auto; margin-top: 8px; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  min-width: 620px;
+}
+th, td {
+  border: 1px solid var(--ink);
+  padding: 5px 7px;
+  text-align: left;
+  vertical-align: top;
+}
+th {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+  background: var(--paper);
+  border-bottom-width: 2px;
+}
+td.box { width: 26px; }
+td.box::before {
+  content: "";
+  display: block;
+  width: 13px; height: 13px;
+  border: 1.5px solid var(--ink);
+}
+td.fill { width: 64px; }
+td.mono, .mono { font-family: var(--mono); font-size: 12px; font-variant-numeric: tabular-nums; }
+tr.group td {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  border-left: none; border-right: none;
+  padding-top: 9px;
+  color: var(--muted);
+}
+
+.step {
+  border: 1.5px solid var(--ink);
+  margin-top: 12px;
+  padding: 10px 14px 12px;
+}
+.step-head {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.step-head .num {
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  width: 36px; height: 36px;
+  display: grid; place-items: center;
+  background: var(--ink); color: var(--paper);
+  flex: none;
+}
+.step-head h3 { margin: 0; }
+.step-head .when { font-family: var(--mono); font-size: 11px; color: var(--muted); margin-left: auto; text-align: right; }
+
+ul.check { list-style: none; padding: 0; margin: 6px 0 0; display: grid; gap: 5px; }
+ul.check li { position: relative; padding-left: 26px; max-width: 74ch; }
+ul.check li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 4px;
+  width: 13px; height: 13px;
+  border: 1.5px solid var(--ink);
+}
+ul.plain { margin: 6px 0 0; padding-left: 20px; display: grid; gap: 3px; max-width: 72ch; }
+.blank { display: inline-block; min-width: 72px; border-bottom: 1px solid var(--ink); height: 1em; vertical-align: baseline; }
+.warn::before { content: "Don't: "; font-weight: 700; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+.grid-2 > * { min-width: 0; }
+.grid-2 figure svg { min-width: 0; }
+.notes .line { border-bottom: 1px solid var(--faint); height: 30px; }
+footer { margin-top: 24px; font-size: 12px; color: var(--muted); border-top: 1px solid var(--ink); padding-top: 6px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 640px) {
+  .sheet { margin: 0; padding: 20px 16px 28px; box-shadow: none; }
+  header.top { grid-template-columns: 1fr; }
+  h1 { font-size: 32px; }
+  .grid-2 { grid-template-columns: 1fr; }
+}
+@media print {
+  @page { size: letter; margin: 0.5in; }
+  html, body { background: var(--paper); }
+  body { font-size: 10pt; }
+  .sheet { margin: 0; padding: 0; max-width: none; box-shadow: none; }
+  section { margin-top: 18px; }
+  .step { margin-top: 8px; padding: 8px 12px 10px; }
+  figure, .step, tr, .note { break-inside: avoid; }
+  h2, h3, .step-head { break-after: avoid; }
+  section.pb { break-before: page; margin-top: 0; }
+  section.pb > h2 { border-top: 3px solid var(--ink); }
+  .overview figure svg { max-height: 5.8in; width: auto; max-width: 100%; margin: 0 auto; }
+  body { font-size: 9.5pt; line-height: 1.35; }
+  .step { margin-top: 6px; padding: 6px 10px 8px; }
+  .step-head .num { width: 28px; height: 28px; font-size: 22px; }
+  .step-head h3 { font-size: 15px; }
+  ul.check { gap: 2px; margin-top: 4px; }
+  table { font-size: 9pt; }
+  th, td { padding: 3px 6px; }
+  th { font-size: 12px; }
+  tr.group td { padding-top: 5px; }
+  .overview figure.route svg { max-height: 1.8in; }
+  figcaption { font-size: 8.5pt; margin-top: 3px; }
+  .callouts { font-size: 9pt; }
+  figure.crimp svg { max-height: 2.3in; width: auto; max-width: 100%; margin: 0 auto; }
+  figure.coil svg { max-height: 2.4in; width: auto; max-width: 100%; }
+  footer { display: none; }
+  .step figure { margin: 6px 0 0; }
+  h2 { font-size: 21px; }
+  p { margin: 4px 0; }
+  .overview figure { margin: 8px 0 4px; }
+  .overview .lede { font-size: 10.5pt; }
+  footer { break-inside: avoid; }
+  figure svg { min-width: 0; }
+  table { min-width: 0; }
+}
+</style>
+</head>
+<body>
+<main class="sheet">
+
+<header class="top">
+  <div>
+    <p class="kicker">1966 Ford Mustang · Install sheet</p>
+    <h1>Radio, amp &amp; tach wiring</h1>
+    <p class="sub">The garage copy of the rewiring guide: diagrams, the circuit plan, connection methods, install steps and tests. Written for the Painless CirKit Boss 70107 fuse block kit.</p>
+  </div>
+  <div class="fields" aria-label="Fill-in fields">
+    <div>Started <span class="line"></span></div>
+    <div>Finished <span class="line"></span></div>
+  </div>
+</header>
+
+<section class="overview">
+  <h2><span class="n">01</span>System at a glance</h2>
+  <p class="lede">One fused feed runs from the battery side through the firewall to the fuse block under the dash. The key only clicks the block's relay, and every accessory has its own fuse in the block.</p>
+  <figure>
+    <div class="dia">
+    <svg viewBox="0 0 760 548" role="img" aria-label="Wiring overview: battery feeds the kit circuit breaker, which feeds the Painless fuse block under the dash; the key's ACC circuit triggers the block's relay; the radio, tach and amp take fused circuits from the block; the tach signal comes from the coil negative terminal.">
+      <defs>
+        <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker>
+      </defs>
+      <text x="16" y="48" class="z">ENGINE BAY</text>
+      <text x="256" y="48" class="z">UNDER DASH</text>
+      <text x="556" y="48" class="z">ACCESSORIES</text>
+
+      <g fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="236" y1="64" x2="236" y2="510" stroke-dasharray="2 4" stroke-width="2"/>
+        <!-- battery to breaker, breaker to block -->
+        <path d="M116 128V158" marker-end="url(#ar)"/>
+        <path d="M216 182H272V152H314" marker-end="url(#ar)"/>
+        <!-- inside block -->
+        <path d="M360 172V194" marker-end="url(#ar)"/>
+        <path d="M360 236V258" stroke-dasharray="6 4" marker-end="url(#ar)"/>
+        <!-- trigger -->
+        <path d="M290 356V216H314" stroke-dasharray="6 4" marker-end="url(#ar)"/>
+        <!-- block ground -->
+        <path d="M480 320V392"/>
+        <path d="M462 392H498M468 399H492M474 406H486"/>
+        <!-- radio memory (constant) -->
+        <path d="M508 146H536V118H554" marker-end="url(#ar)"/>
+        <!-- switched to radio and tach -->
+        <path d="M508 280H544V138H554" stroke-dasharray="6 4" marker-end="url(#ar)"/>
+        <path d="M544 208H554" stroke-dasharray="6 4" marker-end="url(#ar)"/>
+        <!-- amp feed (constant), hops over switched line -->
+        <path d="M508 162H528V274a6 6 0 0 1 0 12V430H554" marker-end="url(#ar)"/>
+        <!-- tach signal -->
+        <path d="M216 478H744V208H730" stroke-dasharray="1.5 4" stroke-linecap="round" stroke-width="2" marker-end="url(#ar)"/>
+      </g>
+      <circle cx="544" cy="208" r="3" fill="currentColor"/>
+
+      <g fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="16" y="76" width="200" height="52" rx="4"/>
+        <rect x="16" y="160" width="200" height="44" rx="4"/>
+        <rect x="16" y="456" width="200" height="44" rx="4"/>
+        <rect x="300" y="96" width="224" height="224" rx="6" stroke-width="2.5"/>
+        <rect x="316" y="132" width="192" height="40" rx="3"/>
+        <rect x="316" y="196" width="88" height="40" rx="3"/>
+        <rect x="316" y="260" width="192" height="40" rx="3"/>
+        <rect x="256" y="356" width="196" height="48" rx="4" fill="#ffffff"/>
+        <rect x="556" y="100" width="172" height="52" rx="4"/>
+        <rect x="556" y="186" width="172" height="44" rx="4"/>
+        <rect x="556" y="404" width="172" height="52" rx="4"/>
+      </g>
+      <!-- firewall grommets -->
+      <g fill="#ffffff" stroke="currentColor" stroke-width="1.5">
+        <circle cx="236" cy="182" r="5"/>
+        <circle cx="236" cy="478" r="5"/>
+      </g>
+      <text transform="translate(228 300) rotate(-90)" text-anchor="middle" class="z">FIREWALL</text>
+
+      <text x="116" y="99" text-anchor="middle" class="b">Battery +</text>
+      <text x="116" y="117" text-anchor="middle" class="s">or starter relay battery stud</text>
+      <text x="116" y="187" text-anchor="middle" class="b">Kit circuit breaker</text>
+      <text x="116" y="226" text-anchor="middle" class="s">kit's 10 ga red feed to the block</text>
+      <text x="116" y="483" text-anchor="middle" class="b">Coil − terminal</text>
+
+      <text x="412" y="121" text-anchor="middle" class="b">Painless fuse block</text>
+      <text x="412" y="157" text-anchor="middle">Constant · 3 circuits</text>
+      <text x="360" y="221" text-anchor="middle" class="b">Relay</text>
+      <text x="412" y="285" text-anchor="middle">Ignition · 4 circuits</text>
+
+      <text x="354" y="377" text-anchor="middle" class="b">ACC source</text>
+      <text x="354" y="395" text-anchor="middle" class="s">pink wire · hot in ACC/RUN</text>
+      <text x="470" y="430" text-anchor="end" class="s">ground point (block, radio, tach)</text>
+
+      <text x="642" y="123" text-anchor="middle" class="b">Radio</text>
+      <text x="642" y="141" text-anchor="middle" class="s">memory + switched</text>
+      <text x="642" y="213" text-anchor="middle" class="b">Tachometer</text>
+      <text x="642" y="427" text-anchor="middle" class="b">Amplifier</text>
+      <text x="642" y="445" text-anchor="middle" class="s">in trunk</text>
+      <text x="536" y="372" class="s">12 ga · 15 A</text>
+      <text x="640" y="470" text-anchor="middle" class="s">tach signal, 18 ga</text>
+
+      <!-- legend -->
+      <g fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M16 530H56"/>
+        <path d="M232 530H272" stroke-dasharray="6 4"/>
+        <path d="M470 530H510" stroke-dasharray="1.5 4" stroke-linecap="round" stroke-width="2"/>
+      </g>
+      <text x="64" y="534" class="s">always hot (constant)</text>
+      <text x="280" y="534" class="s">hot with key on (switched)</text>
+      <text x="518" y="534" class="s">signal only</text>
+    </svg>
+    </div>
+    <figcaption><b>The key never carries accessory current.</b> The pink trigger wire only energizes the relay. The radio memory and the amp sit on constant circuits; the radio's switched lead and the tach sit on ignition circuits. Circles on the firewall are rubber grommets.</figcaption>
+  </figure>
+
+
+</section>
+
+<section class="pb">
+  <h2><span class="n">02</span>Where the wires run</h2>
+  <figure class="route">
+    <div class="dia">
+    <svg viewBox="0 0 760 320" role="img" aria-label="Top view of the car showing wire routes: feed from the battery on the passenger side through the firewall to the fuse block, amp power down the passenger side, RCA and turn-on down the center tunnel, tach signal from the coil through the firewall to the tach.">
+      <defs>
+        <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker>
+      </defs>
+      <text x="24" y="26" class="z">FRONT</text>
+      <text x="736" y="26" text-anchor="end" class="z">REAR</text>
+      <text x="400" y="26" text-anchor="middle" class="z">PASSENGER SIDE</text>
+      <text x="400" y="306" text-anchor="middle" class="z">DRIVER SIDE</text>
+
+      <g fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="24" y="40" width="712" height="240" rx="70" stroke-width="2.5"/>
+        <line x1="250" y1="44" x2="250" y2="276" stroke-dasharray="2 4" stroke-width="2"/>
+        <line x1="560" y1="44" x2="560" y2="276" stroke-dasharray="2 6"/>
+        <rect x="70" y="104" width="150" height="112" rx="6"/>
+        <rect x="168" y="116" width="44" height="24" rx="3"/>
+        <rect x="44" y="52" width="104" height="30" rx="3"/>
+        <rect x="160" y="52" width="70" height="30" rx="3"/>
+        <rect x="270" y="52" width="92" height="30" rx="3" stroke-width="2.5"/>
+        <rect x="280" y="145" width="70" height="30" rx="3"/>
+        <rect x="270" y="226" width="80" height="30" rx="3"/>
+        <rect x="600" y="135" width="100" height="50" rx="3"/>
+        <!-- runs -->
+        <path d="M148 67H158" marker-end="url(#ar2)"/>
+        <path d="M230 67H268" marker-end="url(#ar2)"/>
+        <path d="M362 67H650V133" marker-end="url(#ar2)"/>
+        <path d="M350 160H598" stroke-dasharray="6 4" marker-end="url(#ar2)"/>
+        <path d="M212 128H236V241H268" stroke-dasharray="1.5 4" stroke-linecap="round" stroke-width="2" marker-end="url(#ar2)"/>
+      </g>
+      <g fill="#ffffff" stroke="currentColor" stroke-width="1.5">
+        <circle cx="250" cy="67" r="5"/>
+        <circle cx="250" cy="241" r="5"/>
+      </g>
+      <text x="96" y="72" text-anchor="middle">Battery</text>
+      <text x="195" y="72" text-anchor="middle" class="s">Breaker</text>
+      <text x="190" y="132" text-anchor="middle" class="s">Coil</text>
+      <text x="125" y="172" text-anchor="middle" class="s">Engine</text>
+      <text x="316" y="72" text-anchor="middle" class="b">Fuse block</text>
+      <text x="315" y="165" text-anchor="middle">Radio</text>
+      <text x="310" y="246" text-anchor="middle">Tach</text>
+      <text x="650" y="165" text-anchor="middle" class="b">Amplifier</text>
+      <text x="484" y="60" text-anchor="middle" class="s">amp power, 12 ga, under the sill plates</text>
+      <text x="470" y="152" text-anchor="middle" class="s">RCA + turn-on, center tunnel</text>
+      <text x="150" y="234" text-anchor="middle" class="s">tach signal</text>
+      <text x="256" y="208" class="s">firewall</text>
+      <text x="566" y="270" class="s">trunk</text>
+    </svg>
+    </div>
+    <figcaption><b>Keep power and signal apart.</b> The amp's power wire runs down one side under the sill plates; the RCA cables and turn-on wire take the center tunnel or the other side. If they have to cross, cross them at a right angle. Exact component positions on your car may differ; the routes are what matter.</figcaption>
+  </figure>
+
+  <h3>Tach signal at the coil</h3>
+  <figure class="coil">
+  <div class="dia">
+  <svg viewBox="0 0 760 170" role="img" aria-label="Ignition coil: the positive terminal carries the reduced-voltage ignition feed and must not be used; the negative terminal goes to the distributor and is where the tach signal wire connects.">
+    <g fill="none" stroke="currentColor" stroke-width="1.5">
+      <rect x="300" y="64" width="160" height="80" rx="14" stroke-width="2"/>
+      <rect x="334" y="40" width="14" height="24" rx="2"/>
+      <rect x="412" y="40" width="14" height="24" rx="2"/>
+      <path d="M426 50C520 60 600 104 716 104" stroke-dasharray="1.5 4" stroke-linecap="round" stroke-width="2"/>
+      <path d="M334 48H286"/>
+    </g>
+    <text x="380" y="110" text-anchor="middle" class="b">Coil</text>
+    <text x="341" y="32" text-anchor="middle" class="b">+</text>
+    <text x="419" y="32" text-anchor="middle" class="b">−</text>
+    <text x="278" y="44" text-anchor="end">+ : ignition feed (resistor wire)</text>
+    <text x="278" y="60" text-anchor="end" class="s">don't power the tach from here</text>
+    <text x="470" y="30">− : wire to the distributor / Ignitor</text>
+    <text x="716" y="126" text-anchor="end" class="s">tach signal, through a firewall grommet</text>
+  </svg>
+  </div>
+  <figcaption><b>Use the − terminal.</b> With an electronic conversion like a Pertronix Ignitor, coil − is the right signal point for most tachs. If the needle is erratic, check the tach's and the ignition maker's notes.</figcaption>
+    </figure>
+</section>
+
+<section class="pb">
+  <h2><span class="n">03</span>Circuit plan</h2>
+  <p>Fill in the fuse slot as you assign each circuit, and tick the box when it's connected and labeled at both ends. Use black for every ground; for everything else the labels matter more than the colors, since the kit's circuit wires come in Painless's own colors.</p>
+  <div class="table-wrap">
+  <table>
+    <thead>
+      <tr><th aria-label="Done"></th><th>Circuit</th><th>From</th><th>Fuse</th><th>Wire</th><th>To</th><th>Slot</th></tr>
+    </thead>
+    <tbody>
+      <tr class="group"><td colspan="7">Power distribution</td></tr>
+      <tr><td class="box"></td><td>Main feed</td><td>Battery + or starter relay battery stud</td><td>Kit breaker near battery</td><td>Kit 10 ga red</td><td>Fuse block feed</td><td class="fill">—</td></tr>
+      <tr><td class="box"></td><td>Relay trigger</td><td>ACC source (hot in ACC and RUN only)</td><td>Existing factory fuse</td><td>Kit pink 18 ga</td><td>Fuse block trigger</td><td class="fill">—</td></tr>
+      <tr><td class="box"></td><td>Block ground</td><td>Fuse block</td><td>None</td><td>Kit ground wire</td><td>Under-dash ground point</td><td class="fill">—</td></tr>
+      <tr class="group"><td colspan="7">Radio</td></tr>
+      <tr><td class="box"></td><td>Memory (yellow)</td><td>Constant circuit</td><td class="mono">per manual, often 10–15 A</td><td>Kit circuit wire</td><td>Radio yellow</td><td class="fill"></td></tr>
+      <tr><td class="box"></td><td>Switched (red)</td><td>Ignition circuit</td><td class="mono">5 A</td><td>Kit circuit wire</td><td>Radio red</td><td class="fill"></td></tr>
+      <tr><td class="box"></td><td>Ground (black)</td><td>Radio</td><td>None</td><td>12 ga black</td><td>Under-dash ground point</td><td class="fill">—</td></tr>
+      <tr><td class="box"></td><td>Illumination (orange, if present)</td><td>Dash light circuit</td><td>Existing factory fuse</td><td>18 ga</td><td>Radio orange</td><td class="fill">—</td></tr>
+      <tr class="group"><td colspan="7">Tachometer</td></tr>
+      <tr><td class="box"></td><td>Power</td><td>Ignition circuit</td><td class="mono">3 A or per tach manual</td><td>Kit circuit wire</td><td>Tach 12 V lead</td><td class="fill"></td></tr>
+      <tr><td class="box"></td><td>Ground</td><td>Tach</td><td>None</td><td>18 ga black</td><td>Under-dash ground point</td><td class="fill">—</td></tr>
+      <tr><td class="box"></td><td>Signal</td><td>Coil − terminal</td><td>None</td><td>18 ga</td><td>Tach signal lead</td><td class="fill">—</td></tr>
+      <tr><td class="box"></td><td>Light</td><td>Dash light circuit</td><td>Existing factory fuse</td><td>18 ga</td><td>Tach light lead</td><td class="fill">—</td></tr>
+      <tr class="group"><td colspan="7">Amplifier</td></tr>
+      <tr><td class="box"></td><td>Power</td><td>Constant circuit</td><td class="mono">15 A</td><td>Kit circuit wire, spliced to 12 ga red</td><td>Amp +12 V</td><td class="fill"></td></tr>
+      <tr><td class="box"></td><td>Ground</td><td>Amp</td><td>None</td><td>12 ga black, under 3 ft</td><td>Bare body metal next to the amp</td><td class="fill">—</td></tr>
+      <tr><td class="box"></td><td>Turn-on</td><td>Radio blue/white remote lead</td><td>Radio's own</td><td>18 ga</td><td>Amp REM</td><td class="fill">—</td></tr>
+      <tr><td class="box"></td><td>Audio</td><td>Radio RCA outputs</td><td>None</td><td>RCA cables</td><td>Amp inputs</td><td class="fill">—</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="note"><strong>Spare circuits.</strong> That plan uses 2 of the 3 constant circuits and 2 of the 4 ignition circuits. Leave the spares fused out and their wires coiled, taped and labeled "spare".</p>
+  <p class="mono">Sizing rule for anything added later: 18 ga to 5 A · 16 ga to 10 A · 14 ga to 15 A · 12 ga to 20 A · 10 ga to 30 A.</p>
+</section>
+
+<section class="pb">
+  <h2><span class="n">04</span>Making connections</h2>
+  <p>Every connection is a crimp with a ratcheting crimper, sealed with adhesive heat-shrink, and every one must pass a hard tug test. Terminal color matches wire size: <b>red</b> 22–18 ga, <b>blue</b> 16–14 ga, <b>yellow</b> 12–10 ga.</p>
+
+  <figure class="crimp">
+    <div class="dia">
+    <svg viewBox="0 0 760 200" role="img" aria-label="Cross-section of a crimped heat-shrink ring terminal: insulation stops at the barrel, about a quarter inch of bare wire fills the barrel, the crimp is on the barrel, and the heat-shrink sleeve seals both ends.">
+      <g fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="262" y="72" width="140" height="60" rx="12" stroke-dasharray="5 3"/>
+        <rect x="40" y="88" width="250" height="28" rx="4" fill="#ffffff"/>
+        <path d="M290 93H372M290 98H372M290 102H372M290 106H372M290 111H372" stroke-width="1"/>
+        <rect x="286" y="84" width="96" height="36" rx="3" stroke-width="2.5"/>
+        <rect x="382" y="90" width="60" height="24" rx="2"/>
+        <circle cx="480" cy="102" r="36"/>
+        <circle cx="480" cy="102" r="13"/>
+        <!-- strip dimension -->
+        <path d="M290 50V62M372 50V62M290 56H372"/>
+        <!-- crimp arrows -->
+        <path d="M326 150L334 132L342 150Z" fill="currentColor"/>
+      </g>
+      <text x="331" y="44" text-anchor="middle" class="s">strip ¼–5/16 in</text>
+      <g font-family="IBM Plex Mono, monospace" font-size="11">
+        <circle cx="165" cy="66" r="10" fill="#ffffff" stroke="currentColor" stroke-width="1.5"/><text x="165" y="70" text-anchor="middle">1</text>
+        <circle cx="402" cy="44" r="10" fill="#ffffff" stroke="currentColor" stroke-width="1.5"/><text x="402" y="48" text-anchor="middle">2</text>
+        <circle cx="334" cy="170" r="10" fill="#ffffff" stroke="currentColor" stroke-width="1.5"/><text x="334" y="174" text-anchor="middle">3</text>
+        <circle cx="240" cy="150" r="10" fill="#ffffff" stroke="currentColor" stroke-width="1.5"/><text x="240" y="154" text-anchor="middle">4</text>
+        <circle cx="540" cy="58" r="10" fill="#ffffff" stroke="currentColor" stroke-width="1.5"/><text x="540" y="62" text-anchor="middle">5</text>
+      </g>
+      <g fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M250 142L266 128"/>
+        <path d="M532 64L510 80"/>
+      </g>
+    </svg>
+    </div>
+    <ol class="callouts">
+      <li>Insulation stops at the barrel; none goes inside it.</li>
+      <li>Strip ¼ to 5/16 in, just enough to fill the barrel. No bare copper shows past it.</li>
+      <li>Crimp on the barrel in the matching color die, until the ratchet releases.</li>
+      <li>Heat from the middle out until clear adhesive squeezes out of both ends.</li>
+      <li>Match the ring to the stud. A loose ring on a big stud makes poor contact.</li>
+    </ol>
+  </figure>
+
+  <div class="grid-2">
+    <figure>
+      <div class="dia">
+      <svg viewBox="0 0 380 170" role="img" aria-label="Splicing the trigger into the ACC wire: one cut end and the new pink wire share one side of a butt connector, the other cut end goes in the other side.">
+        <g fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 84H150"/>
+          <path d="M20 128C90 128 120 98 150 96" stroke-dasharray="6 4"/>
+          <path d="M230 90H360"/>
+          <rect x="150" y="74" width="80" height="32" rx="7" stroke-width="2.5" fill="#ffffff"/>
+          <line x1="190" y1="74" x2="190" y2="106" stroke-width="1"/>
+        </g>
+        <text x="20" y="72" class="s">cut ACC wire, one end</text>
+        <text x="20" y="150" class="s">kit's pink trigger wire</text>
+        <text x="360" y="78" text-anchor="end" class="s">other cut end</text>
+        <text x="190" y="130" text-anchor="middle" class="s">butt connector sized</text>
+        <text x="190" y="145" text-anchor="middle" class="s">for the pair</text>
+      </svg>
+      </div>
+      <figcaption><b>Splicing the trigger.</b> Twist the pink wire with one cut end, crimp the pair into one side, the other cut end into the other.</figcaption>
+    </figure>
+    <figure>
+      <div class="dia">
+      <svg viewBox="0 0 380 170" role="img" aria-label="Exploded ground connection: bolt, ring terminal, star washer, body metal sanded bare, nut.">
+        <g fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="40" y1="80" x2="300" y2="80" stroke-dasharray="3 3" stroke-width="1"/>
+          <rect x="20" y="56" width="16" height="48" rx="2" stroke-width="2"/>
+          <rect x="36" y="74" width="40" height="12" fill="#ffffff"/>
+          <rect x="96" y="52" width="8" height="56" rx="2" stroke-width="2"/>
+          <path d="M100 108V140"/>
+          <path d="M150 54L158 61L150 68L158 75L150 82L158 89L150 96L158 103L150 110"/>
+          <rect x="206" y="30" width="14" height="100" fill="#ffffff" stroke-width="2"/>
+          <path d="M206 40L220 30M206 54L220 44M206 68L220 58M206 96L220 86M206 110L220 100M206 124L220 114" stroke-width="1"/>
+          <rect x="262" y="62" width="22" height="36" rx="2" stroke-width="2"/>
+        </g>
+        <text x="28" y="124" text-anchor="middle" class="s">bolt</text>
+        <text x="100" y="158" text-anchor="middle" class="s">ring</text>
+        <text x="154" y="128" text-anchor="middle" class="s">star</text>
+        <text x="154" y="142" text-anchor="middle" class="s">washer</text>
+        <text x="213" y="150" text-anchor="middle" class="s">bare metal</text>
+        <text x="273" y="118" text-anchor="middle" class="s">nut</text>
+      </svg>
+      </div>
+      <figcaption><b>Grounds.</b> Sand a quarter-sized spot to bare, shiny metal. Star washer between ring and body; paint or grease over the finished joint. Never use a seat-belt anchor bolt.</figcaption>
+    </figure>
+  </div>
+
+  <h3>Never</h3>
+  <ul class="plain">
+    <li class="warn">use snap-on "vampire" taps (Scotchlok, T-taps), twist-and-tape splices or wire nuts.</li>
+    <li class="warn">pass a wire through a metal hole without a grommet.</li>
+    <li class="warn">leave a power wire unfused, or put the fuse at the wrong end of the wire.</li>
+    <li class="warn">sandwich ring terminals under a battery clamp bolt.</li>
+  </ul>
+</section>
+
+<section class="pb">
+  <h2><span class="n">05</span>Install steps</h2>
+  <p>Work in order. Where the Painless instruction sheet in the box differs from this one, follow Painless.</p>
+
+  <div class="step">
+    <div class="step-head"><span class="num">1</span><h3>Find the ACC source</h3><span class="when">battery<br>connected</span></div>
+    <ul class="check">
+      <li>Meter on DC volts, black probe on bare metal. Find a wire under the dash that reads battery voltage in ACC and RUN and 0 V in OFF. The original radio feed is usually it.</li>
+      <li>Check it at every key position, then mark it with tape. It's normal for it to drop out while cranking. Don't trust 60-year-old wire colors.</li>
+      <li>Not the coil feed: in RUN it runs through a resistor wire at reduced voltage.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">2</span><h3>Disconnect and repair</h3></div>
+    <ul class="check">
+      <li>Disconnect the battery negative cable and tuck it away from the post.</li>
+      <li>Inspect every factory wire you tapped into in high school. Cut out nicked, burnt or brittle sections and butt-splice in new wire of the same gauge.</li>
+      <li>Remove leftover connectors, tape and orphaned wire.</li>
+      <li>Plug unused holes from the old firewall runs with rubber grommet plugs.</li>
+      <li>Clean and tighten the battery-to-engine and engine-to-body grounds. Add an engine-to-firewall strap if there isn't one.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">3</span><h3>Mount the fuse block</h3></div>
+    <ul class="check">
+      <li>Pick a spot under the dash where you can reach the fuses, clear of the column, pedals, heater box and any coolant drip. Near the passenger kick panel usually works.</li>
+      <li>Mount it with the kit's long screws and spacers, to the dash support or a small plate, never to anything that moves.</li>
+      <li>Sand a bare-metal ground point nearby and connect the kit's ground wire to it. The radio and tach will ground here too.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">4</span><h3>Run the main feed</h3></div>
+    <ul class="check">
+      <li>Choose the firewall pass-through: an unused factory grommet, or a new hole in a flat spot after checking both sides for brake lines, the heater box and the factory harness. Deburr it and fit a grommet.</li>
+      <li>Route the kit's 10 ga red wire from the block through the grommet toward the battery.</li>
+      <li>Mount the kit's circuit breaker close to the battery, on the inner fender or firewall. Cut the red wire to length and connect it to the breaker.</li>
+      <li>Run the leftover red from the breaker's other terminal to the starter relay battery stud (or a battery terminal with auxiliary studs). Crimp the ring, but <b>leave it unbolted until testing</b>.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">5</span><h3>Connect the trigger</h3></div>
+    <ul class="check">
+      <li>Route the kit's pink 18 ga wire to the ACC wire you marked in step 1.</li>
+      <li>Splice it in as shown in section 04. Painless's sheet also describes clipping a fuse tap onto the hot side of a fuse that's live only with the key on. That works too if your fuse panel has such a fuse and the tap fits it.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">6</span><h3>Assign and label circuits</h3></div>
+    <ul class="check">
+      <li>Pick which pre-attached circuit wire feeds each accessory and write the slot numbers in the circuit plan.</li>
+      <li>Label both ends of every wire now, before anything is buried behind the dash.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">7</span><h3>Radio</h3></div>
+    <ul class="check">
+      <li>Connect to the radio's own harness with butt connectors, never to the radio itself.</li>
+      <li>Yellow to its constant circuit, red to the 5 A ignition circuit, black to the ground point.</li>
+      <li>Orange (if present) to the dash light circuit, the instrument-light feed that changes with the headlight-switch dimmer.</li>
+      <li>Leave blue/white long enough to reach the amp turn-on run (step 9). Check the radio's manual for its exact colors and fuse values.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">8</span><h3>Tachometer</h3></div>
+    <ul class="check">
+      <li>Power lead to the 3 A ignition circuit, ground to the ground point, light lead to the dash light circuit.</li>
+      <li>Run the signal wire through a firewall grommet to the coil − terminal, ring terminal stacked under the existing nut.</li>
+      <li>Keep it away from the spark plug wires, which make the needle jumpy. Set the tach's cylinder selector to 8.</li>
+      <li>Coil terminals are shown in section 02.</li>
+    </ul>
+
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">9</span><h3>Amplifier</h3></div>
+    <ul class="check">
+      <li>Splice the 15 A constant circuit's wire to the 12 ga red. If the gauges differ, use a butt connector sized for the bigger wire and fold the smaller wire's strands double so it fills the barrel.</li>
+      <li>Run the red down one side under the door sill plates and carpet to the trunk. It stays inside the car, so no extra firewall hole.</li>
+      <li>Run the RCA cables and the turn-on wire down the center tunnel or the other side.</li>
+      <li>Mount the amp on a board or bracket where it gets air, not loose on the trunk floor or under carpet.</li>
+      <li>Ground it with under 3 ft of 12 ga black to sanded bare metal on the trunk floor or a body brace. Seal any hole you drill.</li>
+      <li>Yellow ring or fork terminals on power and ground, red on the turn-on wire, into the amp's screw strip. Turn-on goes to the radio's blue/white lead.</li>
+      <li>Leave the amp's own fuse in. The block fuse protects the wire; the amp's fuse protects the amp.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">10</span><h3>Route and secure</h3></div>
+    <ul class="check">
+      <li>Sleeve every engine-bay run and keep it several inches from the exhaust manifolds, and clear of the fan, belts, throttle linkage and steering shaft.</li>
+      <li>Under the dash, bundle wires and keep them clear of the pedals, steering column and parking brake.</li>
+      <li>Tie or clamp every 12–18 in, with a little slack at each end.</li>
+      <li>Add a small drip loop just before each firewall grommet.</li>
+      <li>Fold this sheet with the filled-in circuit plan into the glovebox.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="pb">
+  <h2><span class="n">06</span>Testing</h2>
+  <p>Power up in stages so a mistake blows a fuse instead of melting a wire.</p>
+
+  <div class="step">
+    <div class="step-head"><span class="num">A</span><h3>Before the battery</h3></div>
+    <ul class="check">
+      <li>Pull every fuse from the block. The breaker's battery-side ring is still unbolted.</li>
+      <li>Meter on resistance: breaker's block-side terminal to bare metal. Reads open (OL)? <span class="blank"></span> &nbsp;A reading near 0 Ω is a short; find it before going on.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">B</span><h3>First power-up</h3></div>
+    <ul class="check">
+      <li>Bolt the breaker's ring to its stud and reconnect the battery negative. Block fuses still out.</li>
+      <li>Constant circuits at the fuse slots, key off (expect about 12.6 V): <span class="blank"></span> V</li>
+      <li>Ignition circuits at the fuse slots: OFF <span class="blank"></span> V &nbsp; ACC <span class="blank"></span> V &nbsp; RUN <span class="blank"></span> V, with a relay click</li>
+      <li>Radio fuses in: radio turns on with the key and keeps a preset after key off and back on.</li>
+      <li>Tach fuse in: lights with the dash lights and reads a sensible idle. Idle reading: <span class="blank"></span> rpm</li>
+      <li>Amp's 15 A fuse in: amp turns on with the radio and off with the key.</li>
+      <li>Set the amp gain per its manual with the radio at about three-quarters volume.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">C</span><h3>Voltage drop</h3><span class="when">engine running,<br>amp playing loud</span></div>
+    <ul class="check">
+      <li>Battery + to amp +12 V: <span class="blank"></span> V &nbsp; (under about 0.75 V; this path runs through the fuse block, so a little more drop is normal)</li>
+      <li>Amp ground to battery −: <span class="blank"></span> V &nbsp; (under about 0.5 V)</li>
+    </ul>
+    <p>More than that points to a bad crimp, a loose connection or a poor ground.</p>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">D</span><h3>Key-off drain</h3></div>
+    <ul class="check">
+      <li>Everything off and the doors shut so no courtesy lights are on. Meter in series with the battery negative cable, starting on the 10 A range: <span class="blank"></span> mA</li>
+      <li>An original electric dash clock, if you have one, rewinds every few minutes and briefly spikes the reading. That's normal.</li>
+      <li>Radio memory adds a few mA up to about 30 mA. Above about 50 mA, pull fuses one at a time until the reading drops.</li>
+      <li>Don't crank the engine or switch on the headlights with the meter in line.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <div class="step-head"><span class="num">E</span><h3>After a week of driving</h3></div>
+    <ul class="check">
+      <li>Recheck every nut and ground bolt.</li>
+      <li>After a long drive, feel each connection. One that's noticeably warm has high resistance; redo it.</li>
+    </ul>
+  </div>
+
+  <h3>Notes</h3>
+  <div class="notes" aria-label="Lines for notes">
+    <div class="line"></div><div class="line"></div>
+  </div>
+</section>
+
+<footer>
+  <span>1966 Mustang · radio, amp &amp; tach wiring</span>
+  <span>Companion to the rewiring guide; shopping and parts lists live there.</span>
+</footer>
+
+</main>
+</body>
+</html>

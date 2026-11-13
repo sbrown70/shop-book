@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" style="color:#111;background:#fff" viewBox="0 0 380 170" role="img" aria-label="Splicing the trigger into the ACC wire: one cut end and the new pink wire share one side of a butt connector, the other cut end goes in the other side."><style>text{font-family:"Source Sans 3","Segoe UI",Arial,sans-serif;font-size:13px;fill:#111}.b{font-weight:700}.s{font-size:11.5px;fill:#4a4a4a}.z{font-family:"IBM Plex Mono",Consolas,monospace;font-size:11px;letter-spacing:.08em;fill:#4a4a4a}</style><rect width="380" height="170" fill="#fff"/>
+        <g fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M20 84H150"/>
+          <path d="M20 128C90 128 120 98 150 96" stroke-dasharray="6 4"/>
+          <path d="M230 90H360"/>
+          <rect x="150" y="74" width="80" height="32" rx="7" stroke-width="2.5" fill="#ffffff"/>
+          <line x1="190" y1="74" x2="190" y2="106" stroke-width="1"/>
+        </g>
+        <text x="20" y="72" class="s">cut ACC wire, one end</text>
+        <text x="20" y="150" class="s">kit's pink trigger wire</text>
+        <text x="360" y="78" text-anchor="end" class="s">other cut end</text>
+        <text x="190" y="130" text-anchor="middle" class="s">butt connector sized</text>
+        <text x="190" y="145" text-anchor="middle" class="s">for the pair</text>
+      </svg>

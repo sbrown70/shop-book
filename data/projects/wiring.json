@@ -1,0 +1,1084 @@
+{
+  "id": "wiring",
+  "title": "Update the Mustang wiring",
+  "area": "electrical",
+  "status": "active",
+  "goal": "Remove the accessory wiring added in high school, fix the factory faults found along the way, and install a fused, relay-switched fuse block so the radio, amp and tach each get their own fused circuit.",
+  "summary": "The old add-on wiring has been removed and diagnosis of the factory circuits is underway, with the engine out of the car and the ignition switch and headlight switch out of the dash for testing. Found so far: a short to ground on circuit 11 (passenger front parking light), a turn-signal fault in the switch or its blue-pin connector, a heater fan switch that never grounds, and a loose unidentified solid-red wire at the starter relay. The install sheet is the current set of install steps and supersedes the guide's step-by-step section (which still describes a generic separate relay and a 30 A fuse); the guide's circuit plan, connection methods, parts and shopping list are current.",
+  "next_step": "Run the switch-only continuity test on the turn-signal switch (both plugs unplugged, battery off).",
+  "started": "2026-10-26",
+  "updated": "2026-11-13",
+  "links": [
+    {
+      "label": "Guide (Claude)",
+      "url": "https://claude.ai/artifact/Xb6Gn1Fgbfo69XGqHgkeTW"
+    },
+    {
+      "label": "Install sheet (Claude)",
+      "url": "https://claude.ai/artifact/UvedaNSQ2rfuJpMNKs9d5u"
+    }
+  ],
+  "files": [
+    {
+      "path": "files/wiring/install-sheet/install-sheet.html",
+      "title": "Wiring install sheet (v2)",
+      "kind": "sheet",
+      "primary": true,
+      "caption": "Current install steps, written for the Painless CirKit Boss kit. Prints to 7 pages."
+    },
+    {
+      "path": "files/wiring/install-sheet/Mustang-Wiring-Install-Sheet-v2.pdf",
+      "title": "Wiring install sheet (v2), printable PDF",
+      "kind": "pdf",
+      "primary": false,
+      "caption": "7-page black-and-white garage sheet; same content as the web page."
+    },
+    {
+      "path": "files/wiring/guide/1966-Mustang-Accessory-Rewiring-Guide.md",
+      "title": "Accessory rewiring guide",
+      "kind": "guide",
+      "primary": false,
+      "caption": "Plan, circuit plan, parts, connection methods, testing. Its step-by-step section is superseded by the install sheet."
+    },
+    {
+      "path": "files/wiring/diagrams/system-overview.svg",
+      "title": "System overview",
+      "kind": "diagram",
+      "primary": false,
+      "caption": "Battery, breaker, fuse block, radio, tach and amp."
+    },
+    {
+      "path": "files/wiring/diagrams/wiring-overview-doc.png",
+      "title": "Wiring overview (guide figure)",
+      "kind": "diagram",
+      "primary": false,
+      "caption": "The guide's overview diagram."
+    },
+    {
+      "path": "files/wiring/diagrams/wire-routes-top-view.svg",
+      "title": "Wire routes, top view",
+      "kind": "diagram",
+      "primary": false,
+      "caption": "Where each run goes in the car."
+    },
+    {
+      "path": "files/wiring/diagrams/coil-terminals.svg",
+      "title": "Coil terminals",
+      "kind": "diagram",
+      "primary": false,
+      "caption": "Which coil terminal is which."
+    },
+    {
+      "path": "files/wiring/diagrams/crimp-anatomy.svg",
+      "title": "Crimp anatomy",
+      "kind": "diagram",
+      "primary": false,
+      "caption": "What a good crimp looks like."
+    },
+    {
+      "path": "files/wiring/diagrams/trigger-splice.svg",
+      "title": "Trigger splice",
+      "kind": "diagram",
+      "primary": false,
+      "caption": "Splicing the relay trigger into an accessory wire."
+    },
+    {
+      "path": "files/wiring/diagrams/ground-connection.svg",
+      "title": "Ground connection",
+      "kind": "diagram",
+      "primary": false,
+      "caption": "Ground bolt, ring terminal and star washer stack."
+    },
+    {
+      "path": "files/wiring/photos/amp-phase-linear-upa224.jpg",
+      "title": "Phase Linear UPA224 amplifier",
+      "kind": "photo",
+      "primary": false,
+      "caption": "2-channel, 120 W peak; onboard blade fuse appears red/10 A (verify)."
+    },
+    {
+      "path": "files/wiring/photos/headlight-switch-continuity-map.jpg",
+      "title": "Headlight switch continuity map",
+      "kind": "photo",
+      "primary": false,
+      "caption": "Owner's terminal-by-position chart."
+    },
+    {
+      "path": "files/wiring/photos/haynes-diagram-1965-exterior-lighting-front.jpg",
+      "title": "Haynes diagram: 1965 exterior lighting, front",
+      "kind": "photo",
+      "primary": false,
+      "caption": "Printed diagram labeled 1965; verify against 1966."
+    },
+    {
+      "path": "files/wiring/photos/haynes-diagram-1965-exterior-lighting-full-spread.jpg",
+      "title": "Haynes diagram: 1965 exterior lighting, full spread",
+      "kind": "photo",
+      "primary": false,
+      "caption": "Printed diagram labeled 1965; verify against 1966."
+    },
+    {
+      "path": "files/wiring/photos/haynes-diagram-turn-signals-rear-lighting.jpg",
+      "title": "Haynes diagram: turn signals and rear lighting",
+      "kind": "photo",
+      "primary": false,
+      "caption": "Turn-signal switch, flasher and rear lights."
+    },
+    {
+      "path": "files/wiring/reference/diagnostic-log.md",
+      "title": "Diagnostic log",
+      "kind": "reference",
+      "primary": false,
+      "caption": "Everything learned while troubleshooting, Nov 11-12, 2026."
+    },
+    {
+      "path": "files/wiring/reference/factory-wiring-reference.md",
+      "title": "Factory wiring reference",
+      "kind": "reference",
+      "primary": false,
+      "caption": "Color code, circuit functions, relay and ignition facts."
+    },
+    {
+      "path": "files/wiring/reference/shopping-list.csv",
+      "title": "Shopping list",
+      "kind": "list",
+      "primary": false,
+      "caption": "Parts and tools with links and prices (checked Oct 29, 2026)."
+    }
+  ],
+  "subprojects": [
+    {
+      "id": "turn-signals",
+      "title": "Finish diagnosing the turn signals",
+      "status": "in_progress",
+      "goal": "Find the turn-signal fault (switch or the blue pin's connector contact) and fix it.",
+      "summary": "Flasher, its feed, the blue (44) wire to the four-wire connector, and the rear wiring/bulbs all test good. Fault is in the turn-signal switch or the blue pin contact in the four-wire connector.",
+      "blocked_by": "",
+      "files": [
+        "files/wiring/photos/haynes-diagram-turn-signals-rear-lighting.jpg",
+        "files/wiring/reference/diagnostic-log.md",
+        "files/wiring/reference/factory-wiring-reference.md"
+      ],
+      "notes": [
+        "Circuit path per the Haynes diagram: ignition switch eyelet (297) → 8 orange-yellow → flasher → 44 blue → turn-signal switch four-wire connector (44 blue, 10 green-red brake, 2 white-blue front, 3 green-white front). Rear lights get 5 orange-blue and 9 green-orange through a separate two-pin plug.",
+        "Open: both flasher terminals read 12 V with the key OFF, though the diagram says it is fed from accessory circuit 297."
+      ],
+      "tasks": [
+        {
+          "id": "switch-side-continuity-test-both-switch",
+          "text": "Switch-side continuity test: both switch plugs unplugged, battery off; blue to each front/rear pin with lever left, right, neutral",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "astroai-digital-multimeter"
+          ],
+          "confirm": false
+        },
+        {
+          "id": "if-the-switch-passes-inspect-clean",
+          "text": "If the switch passes: inspect, clean and re-seat the blue (44) pin in both halves of the four-wire connector",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "if-the-switch-fails-replace-the",
+          "text": "If the switch fails: replace the turn-signal switch (steering wheel removal required)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 180,
+          "est_guess": true,
+          "needs_parts": [
+            "turn-signal-switch-1966"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "explain-why-the-flasher-has-12",
+          "text": "Explain why the flasher has 12 V with the key OFF (should be fed from accessory circuit 297)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 60,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "reconnect-both-front-parking-turn-connectors",
+          "text": "Reconnect both front parking/turn connectors and test all four corners plus the dash indicator",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        }
+      ]
+    },
+    {
+      "id": "passenger-front-parking-wiring",
+      "title": "Repair or replace the passenger front parking/turn wiring",
+      "status": "in_progress",
+      "goal": "Parking lights work with no crackle and no breaker cycling.",
+      "summary": "Short to ground on circuit 11 (front parking lights) isolated to the passenger-side wiring past the wheel-well connector. It caused the headlight-switch crackle and breaker cycling.",
+      "blocked_by": "",
+      "files": [
+        "files/wiring/photos/headlight-switch-continuity-map.jpg",
+        "files/wiring/photos/haynes-diagram-1965-exterior-lighting-front.jpg",
+        "files/wiring/reference/diagnostic-log.md"
+      ],
+      "notes": [
+        "Unplugging the passenger-side wheel-well connector stopped the crackling; unplugging the driver side did not. A crackle at the starter relay was arcing at the relay-bolt ground connection, not the relay switching."
+      ],
+      "tasks": [
+        {
+          "id": "battery-off-bulb-out-ohms-from",
+          "text": "Battery off, bulb out: ohms from wire 11 (light side of the wheel-well connector) to ground; find the exact spot",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "astroai-digital-multimeter"
+          ],
+          "confirm": false
+        },
+        {
+          "id": "inspect-socket-melted-corroded-crushed-contact",
+          "text": "Inspect socket (melted/corroded/crushed contact) and where the pigtail passes through sheet metal",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "repair-with-splice-heat-shrink-grommet",
+          "text": "Repair with splice + heat-shrink + grommet/loom, or replace the socket/pigtail",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 90,
+          "est_guess": true,
+          "needs_parts": [
+            "front-parking-turn-light-socket"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "check-the-turn-signal-wire-in",
+          "text": "Check the turn-signal wire in the same socket/pigtail",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "reconnect-both-front-lights-confirm-park",
+          "text": "Reconnect both front lights; confirm park position lights the fronts with no crackle",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "clean-and-tighten-the-starter-relay",
+          "text": "Clean and tighten the starter-relay mounting bolt ground (it was arcing)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "inspect-headlight-switch-terminals-for-heat",
+          "text": "Inspect headlight switch terminals for heat damage; replace the switch if it ever crackles again",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        }
+      ]
+    },
+    {
+      "id": "heater-fan-switch",
+      "title": "Replace the heater fan switch",
+      "status": "todo",
+      "goal": "Heater fan runs on all speeds.",
+      "summary": "Blower motor and resistor work; the factory switch never grounds any output. Fan is ground-side switched on the '66.",
+      "blocked_by": "",
+      "files": [
+        "files/wiring/reference/diagnostic-log.md"
+      ],
+      "notes": [
+        "Don't run low or medium for long with the resistor outside the heater box; it relies on the blower's airflow for cooling."
+      ],
+      "tasks": [
+        {
+          "id": "buy-a-replacement-1966-mustang-heater",
+          "text": "Buy a replacement 1966 Mustang heater fan switch",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [
+            "replacement-1966-heater-fan-switch"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "wire-per-factory-motor-control-wire",
+          "text": "Wire per factory: motor control wire and high-speed wire on the resistor's full-speed terminal, lower speeds on the other taps, switch common to ground",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 60,
+          "est_guess": true,
+          "needs_parts": [
+            "replacement-1966-heater-fan-switch"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "make-sure-the-switch-s-ground",
+          "text": "Make sure the switch's ground (housing or ground lead) is on clean bare metal",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "test-all-speeds-keep-resistor-tests",
+          "text": "Test all speeds; keep resistor tests short if it is outside the heater box",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        }
+      ]
+    },
+    {
+      "id": "accessory-fuse-block",
+      "title": "Wire in the fuse block and relay for the accessories",
+      "status": "todo",
+      "goal": "Radio, amp and tach each on their own fused, relay-switched circuit.",
+      "summary": "Painless CirKit Boss 70107 under the dash, fed through its breaker from the starter-relay battery stud, triggered from the accessory circuit; radio, amp and tach each on their own fuse.",
+      "blocked_by": "",
+      "files": [
+        "files/wiring/install-sheet/install-sheet.html",
+        "files/wiring/install-sheet/Mustang-Wiring-Install-Sheet-v2.pdf",
+        "files/wiring/guide/1966-Mustang-Accessory-Rewiring-Guide.md",
+        "files/wiring/diagrams/system-overview.svg",
+        "files/wiring/diagrams/wire-routes-top-view.svg",
+        "files/wiring/diagrams/trigger-splice.svg",
+        "files/wiring/diagrams/crimp-anatomy.svg",
+        "files/wiring/diagrams/ground-connection.svg",
+        "files/wiring/photos/amp-phase-linear-upa224.jpg",
+        "files/wiring/reference/shopping-list.csv"
+      ],
+      "notes": [
+        "Follow the install sheet; the guide's step-by-step section (generic relay, 30 A fuse) is superseded. Never take the trigger from the pink coil feed."
+      ],
+      "tasks": [
+        {
+          "id": "buy-parts-see-shopping-list-csv",
+          "text": "Buy parts (see shopping-list.csv) and RCA cables",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [
+            "painless-cirkit-boss-70107-fuse",
+            "12-gauge-pure-copper-wire",
+            "ticonn-120-piece-heat-shrink",
+            "18-gauge-gxl-wire-black",
+            "150-piece-atc-blade-fuse",
+            "200-piece-rubber-grommet-kit",
+            "rca-cables-head-unit-to"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "mount-the-fuse-block-and-ground",
+          "text": "Mount the fuse block and ground it",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 90,
+          "est_guess": true,
+          "needs_parts": [
+            "painless-cirkit-boss-70107-fuse"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "run-the-10-ga-feed-through",
+          "text": "Run the 10 ga feed through a firewall grommet to the kit breaker near the battery",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 120,
+          "est_guess": true,
+          "needs_parts": [
+            "painless-cirkit-boss-70107-fuse",
+            "200-piece-rubber-grommet-kit"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "connect-the-pink-trigger-to-an",
+          "text": "Connect the pink trigger to an ACC+ON circuit (accessory 297) - never the pink coil feed",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [
+            "painless-cirkit-boss-70107-fuse",
+            "ticonn-120-piece-heat-shrink"
+          ],
+          "needs_tools": [
+            "icrimp-ratcheting-crimper-22-10",
+            "klein-11061-self-adjusting-wire"
+          ],
+          "confirm": false
+        },
+        {
+          "id": "wire-radio-memory-on-constant-switched",
+          "text": "Wire radio (memory on constant, switched 5 A, illumination to the spare dash-light branch)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 90,
+          "est_guess": true,
+          "needs_parts": [
+            "150-piece-atc-blade-fuse",
+            "18-gauge-gxl-wire-black"
+          ],
+          "needs_tools": [
+            "icrimp-ratcheting-crimper-22-10",
+            "klein-11061-self-adjusting-wire"
+          ],
+          "confirm": false
+        },
+        {
+          "id": "wire-tach-3-a-ignition-circuit",
+          "text": "Wire tach (3 A ignition circuit, signal to coil -, light to dash-light branch, set to 8 cylinders)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 90,
+          "est_guess": true,
+          "needs_parts": [
+            "150-piece-atc-blade-fuse",
+            "18-gauge-gxl-wire-black"
+          ],
+          "needs_tools": [
+            "icrimp-ratcheting-crimper-22-10",
+            "klein-11061-self-adjusting-wire"
+          ],
+          "confirm": false
+        },
+        {
+          "id": "wire-amp-12-ga-from-a",
+          "text": "Wire amp (12 ga from a 15 A constant circuit, 12 ga ground under 3 ft, turn-on from radio blue/white)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 90,
+          "est_guess": true,
+          "needs_parts": [
+            "12-gauge-pure-copper-wire",
+            "150-piece-atc-blade-fuse",
+            "rca-cables-head-unit-to"
+          ],
+          "needs_tools": [
+            "icrimp-ratcheting-crimper-22-10",
+            "klein-11061-self-adjusting-wire",
+            "seekone-heat-gun"
+          ],
+          "confirm": false
+        },
+        {
+          "id": "run-the-test-sequence-on-the",
+          "text": "Run the test sequence on the install sheet",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 60,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "optional-update-the-guide-doc-s",
+          "text": "Optional: update the guide doc's install steps to match the Painless kit (the install sheet already does)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        }
+      ]
+    },
+    {
+      "id": "loose-red-wire",
+      "title": "Identify the loose solid-red wire at the starter relay",
+      "status": "todo",
+      "goal": "Know what the loose red wire is and where it goes.",
+      "summary": "Comes from the firewall main disconnect with the S, I and battery-stud wires; reads 0 V in every key position; relay end loose.",
+      "blocked_by": "",
+      "files": [
+        "files/wiring/reference/diagnostic-log.md",
+        "files/wiring/reference/factory-wiring-reference.md"
+      ],
+      "notes": [
+        "Don't connect it until identified. The owner believes it used to connect somewhere on the starter relay."
+      ],
+      "tasks": [
+        {
+          "id": "find-its-pin-and-the-matching",
+          "text": "Find its pin and the matching wire color on the cabin side of the main disconnect",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "continuity-trace-it-battery-off-to",
+          "text": "Continuity-trace it (battery off) to the ignition switch, fuse panel, headlight switch, flashers, gauges and shifter",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 120,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "astroai-digital-multimeter"
+          ],
+          "confirm": false
+        },
+        {
+          "id": "check-whether-anything-in-the-car",
+          "text": "Check whether anything in the car is unpowered that should work",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "do-not-connect-it-until-identified",
+          "text": "Do not connect it until identified",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        }
+      ]
+    },
+    {
+      "id": "engine-reinstall-electrical",
+      "title": "Engine-out test setup and reinstall electrical checklist",
+      "status": "todo",
+      "goal": "Everything restored correctly when the engine goes back in.",
+      "summary": "Temporary setup used for testing with the engine out, and what must be restored when it goes back in.",
+      "blocked_by": "",
+      "files": [
+        "files/wiring/diagrams/coil-terminals.svg",
+        "files/wiring/reference/diagnostic-log.md"
+      ],
+      "notes": [
+        "Coordinate with the engine-302 project: the engine is out and being rebuilt."
+      ],
+      "tasks": [
+        {
+          "id": "keep-the-starter-cable-off-the",
+          "text": "Keep the starter cable off the relay (or insulated) while the engine is out; verify its current state",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "reconnect-the-ground-cable-at-the",
+          "text": "Reconnect the ground cable at the relay mounting bolt to the engine (clean metal both ends)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "restore-battery-negative-to-the-engine",
+          "text": "Restore battery negative to the engine; remove or keep the temporary body ground jumper as an extra ground",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "brown-back-on-relay-i-terminal",
+          "text": "Brown back on relay I terminal; main disconnect fully plugged in",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "coil-pink-resistance-wire-and-brown",
+          "text": "Coil +: pink resistance wire and brown/I circuit; check the electronic ignition's voltage requirement first",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "coil-distributor-ignition-module-wire-plus",
+          "text": "Coil -: distributor/ignition module wire plus the new tach signal wire",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "alternator-output-wire-back-on-the",
+          "text": "Alternator output wire back on the relay battery stud (if removed); regulator plug connected",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "reconnect-starter-cable-last-confirm-the",
+          "text": "Reconnect starter cable last; confirm the relay clicks only in START",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "add-an-engine-to-firewall-ground",
+          "text": "Add an engine-to-firewall ground strap if there isn't one",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        }
+      ],
+      "depends_on": [
+        "engine-302/reassembly"
+      ]
+    },
+    {
+      "id": "dash-reassembly",
+      "title": "Dash reassembly",
+      "status": "todo",
+      "goal": "Dash back together with clean, secured wiring.",
+      "summary": "Ignition switch, key cylinder and headlight switch are out of the dash for testing.",
+      "blocked_by": "",
+      "files": [
+        "files/wiring/photos/headlight-switch-continuity-map.jpg"
+      ],
+      "notes": [],
+      "tasks": [
+        {
+          "id": "reinstall-ignition-switch-and-key-cylinder",
+          "text": "Reinstall ignition switch and key cylinder",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "reinstall-and-plug-in-the-headlight",
+          "text": "Reinstall and plug in the headlight switch (after the parking-light short is fixed)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "plug-the-old-firewall-holes-from",
+          "text": "Plug the old firewall holes from the high-school wiring",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "bundle-and-secure-under-dash-wiring",
+          "text": "Bundle and secure under-dash wiring away from pedals, column and parking brake",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 60,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        }
+      ],
+      "depends_on": [
+        "turn-signals",
+        "passenger-front-parking-wiring"
+      ]
+    },
+    {
+      "id": "documentation",
+      "title": "Documentation",
+      "status": "todo",
+      "goal": "A 1966-specific diagram and a written record of the fixes.",
+      "summary": "Keep the reference material accurate.",
+      "blocked_by": "",
+      "files": [
+        "files/wiring/photos/haynes-diagram-1965-exterior-lighting-full-spread.jpg",
+        "files/wiring/reference/factory-wiring-reference.md"
+      ],
+      "notes": [],
+      "tasks": [
+        {
+          "id": "get-a-1966-specific-mustang-wiring",
+          "text": "Get a 1966-specific Mustang wiring diagram (current printed set is labeled 1965)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "record-the-loose-red-wire-s",
+          "text": "Record the loose red wire's identity and the turn-signal fix once known",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        }
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "painless-cirkit-boss-70107-fuse",
+      "name": "Painless CirKit Boss 70107 fuse block kit",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "Amazon",
+      "part_number": "",
+      "price": 89.99,
+      "url": "https://www.amazon.com/dp/B000A8OG2A",
+      "notes": "Fuse block, relay, breaker, feed and trigger wires, pre-attached circuit wires. Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+    },
+    {
+      "id": "12-gauge-pure-copper-wire",
+      "name": "12 gauge pure copper wire, red and black pair, 25 ft",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "Amazon",
+      "part_number": "",
+      "price": 27.99,
+      "url": "https://www.amazon.com/dp/B0DGL723WB",
+      "notes": "Amp power (red); amp and radio grounds (black). Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+    },
+    {
+      "id": "ticonn-120-piece-heat-shrink",
+      "name": "TICONN 120-piece heat shrink terminal kit",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "Amazon",
+      "part_number": "",
+      "price": 9.99,
+      "url": "https://www.amazon.com/dp/B086Z2Y1D6",
+      "notes": "Rings, forks, spades, disconnects, butt connectors 22-10 ga. Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+    },
+    {
+      "id": "18-gauge-gxl-wire-black",
+      "name": "18 gauge GXL wire, black and red, 25 ft each",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "Amazon",
+      "part_number": "",
+      "price": 26.38,
+      "url": "https://www.amazon.com/dp/B094H8SKTC",
+      "notes": "Tach signal and ground, dash light feeds, amp turn-on. Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+    },
+    {
+      "id": "150-piece-atc-blade-fuse",
+      "name": "150-piece ATC blade fuse assortment",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "Amazon",
+      "part_number": "",
+      "price": 8.99,
+      "url": "https://www.amazon.com/dp/B07VWRK2VD",
+      "notes": "Tach, radio and 15 A amp fuses. Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+    },
+    {
+      "id": "200-piece-rubber-grommet-kit",
+      "name": "200-piece rubber grommet kit",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "Amazon",
+      "part_number": "",
+      "price": 8.99,
+      "url": "https://www.amazon.com/dp/B0F8N9PLXT",
+      "notes": "Firewall pass-throughs, plugging old holes. Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+    },
+    {
+      "id": "boao-braided-split-sleeve-1",
+      "name": "Boao braided split sleeve, 1/4, 1/2, 3/4 in, 10 ft each",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "Amazon",
+      "part_number": "",
+      "price": 21.99,
+      "url": "https://www.amazon.com/dp/B08JPV4NRJ",
+      "notes": "Engine-bay runs (rated 257 F). Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+    },
+    {
+      "id": "tesa-51036-cloth-harness-tape",
+      "name": "tesa 51036 cloth harness tape",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "Amazon",
+      "part_number": "",
+      "price": 7.49,
+      "url": "https://www.amazon.com/dp/B016ZMXLEI",
+      "notes": "Under-dash bundles. Optional: yes. Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+    },
+    {
+      "id": "rca-cables-head-unit-to",
+      "name": "RCA cables (head unit to amp)",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "Any audio store",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Not on Amazon list; buy where the amp came from. Purchase status unknown; set when confirmed."
+    },
+    {
+      "id": "replacement-1966-heater-fan-switch",
+      "name": "Replacement 1966 heater fan switch",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "TBD",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Heater fan sub-project."
+    },
+    {
+      "id": "front-parking-turn-light-socket",
+      "name": "Front parking/turn light socket + pigtail (passenger)",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "TBD",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Only if the socket or pigtail is the fault. Optional: maybe."
+    },
+    {
+      "id": "turn-signal-switch-1966",
+      "name": "Turn-signal switch (1966)",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "TBD",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Only if the switch-side continuity test fails. Optional: maybe."
+    }
+  ],
+  "tools": [
+    {
+      "id": "icrimp-ratcheting-crimper-22-10",
+      "name": "iCrimp ratcheting crimper, 22-10 ga",
+      "status": "needed",
+      "notes": "Heat-shrink terminals. Optional: if not owned. Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+    },
+    {
+      "id": "seekone-heat-gun",
+      "name": "SEEKONE heat gun",
+      "status": "needed",
+      "notes": "Heat-shrink. Optional: if not owned. Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+    },
+    {
+      "id": "astroai-digital-multimeter",
+      "name": "AstroAI digital multimeter",
+      "status": "needed",
+      "notes": "Testing. Optional: if not owned. Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+    },
+    {
+      "id": "klein-11061-self-adjusting-wire",
+      "name": "Klein 11061 self-adjusting wire stripper",
+      "status": "needed",
+      "notes": "Stripping. Optional: yes. Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+    }
+  ],
+  "specs": [],
+  "decisions": [
+    {
+      "date": "2026-11-12",
+      "text": "Replace the heater fan switch: the factory switch, with its housing grounded, never grounds any output in any position. (Date approximate.)",
+      "date_approx": true
+    },
+    {
+      "date": "2026-10-26",
+      "text": "Use a fused, relay-switched fuse block (Painless CirKit Boss 70107) triggered from accessory circuit 297, instead of splicing into factory circuits or the starter relay. The install sheet supersedes the guide's generic relay and 30 A fuse steps."
+    },
+    {
+      "date": "2026-10-26",
+      "text": "Dropped the 12 V cigarette-lighter socket from the plan."
+    }
+  ],
+  "open_questions": [
+    {
+      "text": "Why do both flasher terminals read 12 V with the key OFF? Per the diagram the flasher is fed from accessory circuit 297.",
+      "resolved": false,
+      "answer": ""
+    },
+    {
+      "text": "What is the loose solid-red wire at the starter relay, and where does it go?",
+      "resolved": false,
+      "answer": ""
+    },
+    {
+      "text": "Is the turn-signal fault the switch or the blue (44) pin contact in the four-wire connector?",
+      "resolved": false,
+      "answer": ""
+    },
+    {
+      "text": "What voltage does the electronic ignition module need on coil +? Check before wiring the coil feed.",
+      "resolved": false,
+      "answer": ""
+    },
+    {
+      "text": "Is the amp's onboard blade fuse really red / 10 A?",
+      "resolved": false,
+      "answer": ""
+    }
+  ],
+  "sources": []
+}

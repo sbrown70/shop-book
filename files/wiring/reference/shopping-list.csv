@@ -1,0 +1,17 @@
+category,item,store,url,price_usd,purpose,optional,purchased
+part,Painless CirKit Boss 70107 fuse block kit,Amazon,https://www.amazon.com/dp/B000A8OG2A,89.99,"Fuse block, relay, breaker, feed and trigger wires, pre-attached circuit wires",no,unknown
+part,"12 gauge pure copper wire, red and black pair, 25 ft",Amazon,https://www.amazon.com/dp/B0DGL723WB,27.99,Amp power (red); amp and radio grounds (black),no,unknown
+part,TICONN 120-piece heat shrink terminal kit,Amazon,https://www.amazon.com/dp/B086Z2Y1D6,9.99,"Rings, forks, spades, disconnects, butt connectors 22-10 ga",no,unknown
+part,"18 gauge GXL wire, black and red, 25 ft each",Amazon,https://www.amazon.com/dp/B094H8SKTC,26.38,"Tach signal and ground, dash light feeds, amp turn-on",no,unknown
+part,150-piece ATC blade fuse assortment,Amazon,https://www.amazon.com/dp/B07VWRK2VD,8.99,"Tach, radio and 15 A amp fuses",no,unknown
+part,200-piece rubber grommet kit,Amazon,https://www.amazon.com/dp/B0F8N9PLXT,8.99,"Firewall pass-throughs, plugging old holes",no,unknown
+part,"Boao braided split sleeve, 1/4, 1/2, 3/4 in, 10 ft each",Amazon,https://www.amazon.com/dp/B08JPV4NRJ,21.99,Engine-bay runs (rated 257 F),no,unknown
+part,tesa 51036 cloth harness tape,Amazon,https://www.amazon.com/dp/B016ZMXLEI,7.49,Under-dash bundles,yes,unknown
+part,RCA cables (head unit to amp),Any audio store,,,Not on Amazon list; buy where the amp came from,no,unknown
+tool,"iCrimp ratcheting crimper, 22-10 ga",Amazon,https://www.amazon.com/dp/B07Q4MG4BW,18.59,Heat-shrink terminals,if not owned,unknown
+tool,SEEKONE heat gun,Amazon,https://www.amazon.com/dp/B086WH19WH,18.99,Heat-shrink,if not owned,unknown
+tool,AstroAI digital multimeter,Amazon,https://www.amazon.com/dp/B01ISAMUA6,14.99,Testing,if not owned,unknown
+tool,Klein 11061 self-adjusting wire stripper,Amazon,https://www.amazon.com/dp/B00CXKOEQ6,22.96,Stripping,yes,unknown
+part,Replacement 1966 heater fan switch,TBD,,,Heater fan sub-project,no,no
+part,Front parking/turn light socket + pigtail (passenger),TBD,,,Only if the socket or pigtail is the fault,maybe,no
+part,Turn-signal switch (1966),TBD,,,Only if the switch-side continuity test fails,maybe,no

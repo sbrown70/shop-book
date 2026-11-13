@@ -1,0 +1,1834 @@
+{
+  "id": "engine-302",
+  "title": "Engine: rear main seal & bottom-end refresh",
+  "area": "engine",
+  "status": "active",
+  "goal": "Replace the leaking rear main seal and refresh the bottom end (new main and rod bearings, water pump, timing cover) without a full rebuild, then put the engine back in the car.",
+  "summary": "The 1968 302 (from a Fairlane) leaked at the rear main. A previous owner had siliconed the upper seal half into the block, so the crank has to come out. A chip also broke off the rear of the block while the old seal was being punched out. The engine is already out of the car (the C4 stays in) and torn down on a stand, waiting on parts. Heads, pistons, rods and cam stay in; cam timing returns exactly by going back together dot to dot. Since the crank is out anyway, the job grew to include new bearings, a water pump and a timing cover. On Oct 30 the crank was turned a couple of times with the chain off; a compression or leak-down test after reassembly will confirm no valves were bent. Merged from two chats: an earlier one (engine pull, chipped block) and a later one (bottom end).",
+  "next_step": "Micrometer arrives → measure the crank journals → order bearings, water pump and timing cover.",
+  "started": "2026-10-20",
+  "updated": "2026-11-13",
+  "links": [
+    {
+      "label": "Live guide (Claude)",
+      "url": "https://claude.ai/artifact/Yc4hb45YsMSn3Bm3kPnyeW"
+    }
+  ],
+  "files": [
+    {
+      "path": "files/engine-302/guide/302-rear-main-seal-guide.html",
+      "title": "Rear main seal and bottom-end guide (10 phases)",
+      "kind": "guide",
+      "primary": true,
+      "caption": "Step-by-step guide with tickable checkboxes, 7 diagrams, specs and sources."
+    },
+    {
+      "path": "files/engine-302/diagrams/01-what-comes-off-and-what-stays.png",
+      "title": "What comes off and what stays",
+      "kind": "diagram",
+      "primary": false,
+      "caption": "Parts that come off vs stay in the block, upside down on the stand"
+    },
+    {
+      "path": "files/engine-302/diagrams/02-cylinder-and-main-cap-numbers.png",
+      "title": "Cylinder and main cap numbers",
+      "kind": "diagram",
+      "primary": false,
+      "caption": "Cylinder 1-8 and main cap 1-5 numbering; #3 thrust, #5 rear seal"
+    },
+    {
+      "path": "files/engine-302/diagrams/03-timing-dots-dot-to-dot.png",
+      "title": "Timing dots, dot to dot",
+      "kind": "diagram",
+      "primary": false,
+      "caption": "Crank and cam sprocket dots lined up"
+    },
+    {
+      "path": "files/engine-302/diagrams/04-rod-cap-off-crank-lifts-out.png",
+      "title": "Rod cap off, crank lifts out",
+      "kind": "diagram",
+      "primary": false,
+      "caption": "Rod with cap off and hose on bolts; crank lifts straight out"
+    },
+    {
+      "path": "files/engine-302/diagrams/05-rear-seal-joint-offset.png",
+      "title": "Rear seal joint offset",
+      "kind": "diagram",
+      "primary": false,
+      "caption": "Seal joints offset 3/8 in. from the cap seam; RTV dab spots"
+    },
+    {
+      "path": "files/engine-302/diagrams/06-seal-lip-direction.png",
+      "title": "Seal lip direction",
+      "kind": "diagram",
+      "primary": false,
+      "caption": "Seal lip faces the front of the engine"
+    },
+    {
+      "path": "files/engine-302/diagrams/07-rear-cap-sealant-zones.png",
+      "title": "Rear cap sealant zones",
+      "kind": "diagram",
+      "primary": false,
+      "caption": "Sealant only behind the seal groove on the rear cap"
+    },
+    {
+      "path": "files/engine-302/diagrams/rear-main-seal.svg",
+      "title": "Two-piece rear main seal layout and chip location",
+      "kind": "diagram",
+      "primary": false,
+      "caption": "Rear face of the engine, looking forward; seal splits at the crank centerline. Chip location marked (older chat)."
+    },
+    {
+      "path": "files/engine-302/reference/specs.csv",
+      "title": "Torque specs, clearances and measurements",
+      "kind": "reference",
+      "primary": false,
+      "caption": "All specs in one table."
+    },
+    {
+      "path": "files/engine-302/procedures/engine-pull.md",
+      "title": "Engine pull procedure (C4 stays in the car)",
+      "kind": "guide",
+      "primary": false,
+      "caption": "From the earlier chat. The pull is done; still useful for the converter and reinstall notes."
+    },
+    {
+      "path": "files/engine-302/reference/rear-main-seal.md",
+      "title": "Rear main seal reference notes (earlier chat)",
+      "kind": "reference",
+      "primary": false,
+      "caption": "Seal design, the RTV problem, the chipped block."
+    },
+    {
+      "path": "files/engine-302/reference/tools-and-equipment.md",
+      "title": "Tools and equipment notes (earlier chat)",
+      "kind": "reference",
+      "primary": false,
+      "caption": "Hoist decision, transmission support, converter strap."
+    },
+    {
+      "path": "files/engine-302/reference/car-specs.md",
+      "title": "Quick reference (earlier chat, assumed a 289)",
+      "kind": "reference",
+      "primary": false,
+      "caption": "Written for a 289; engine is a 302. Reinstall torque values are unverified."
+    }
+  ],
+  "subprojects": [
+    {
+      "id": "pull-engine",
+      "title": "Pull the engine (C4 stays in the car)",
+      "status": "done",
+      "goal": "Engine out of the car and on the stand, with the transmission left in the car.",
+      "summary": "Engine separated at the bellhousing and lifted out the top. The C4 automatic and its torque converter stay in the car, with the transmission supported by a jack or stand and the converter strapped so it can't slide off the front pump.",
+      "blocked_by": "",
+      "files": [
+        "files/engine-302/procedures/engine-pull.md",
+        "files/engine-302/reference/tools-and-equipment.md"
+      ],
+      "notes": [
+        "The pull itself is done (engine is on the stand). One safety check is left open on purpose: confirm the converter is strapped and the transmission is supported.",
+        "On reinstall, verify the converter is fully seated on the pump (it drops over it with 2-3 distinct engagements) before mating the engine, and don't draw it forward with the converter bolts. The converter-to-flexplate fastener count is typically 4 on a C4; verify on the car."
+      ],
+      "tasks": [
+        {
+          "id": "gather-tools",
+          "text": "Gather tools and supplies for the pull",
+          "detail": "",
+          "done": true,
+          "done_date": null,
+          "est_min": null,
+          "est_guess": false,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "decide-hoist",
+          "text": "Decide on an engine hoist",
+          "detail": "Options considered: Harbor Freight 2-ton foldable (~$270) or an AutoZone Loan-A-Tool loaner. See decisions.",
+          "done": true,
+          "done_date": null,
+          "est_min": null,
+          "est_guess": false,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "pull-engine",
+          "text": "Pull the engine and set it on the engine stand",
+          "detail": "Followed the engine-pull procedure: separate at the bellhousing, lift out the top.",
+          "done": true,
+          "done_date": null,
+          "est_min": null,
+          "est_guess": false,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "verify-converter-strapped",
+          "text": "Verify the torque converter is strapped and the trans is supported",
+          "detail": "Lingering safety check. The older chat's plan: jack or stand with a 2x4 under the C4 pan so the front doesn't drop and strain the rear mount and tailshaft; strap or bracket the converter so it can't slide forward off the pump. Also cover the open bellhousing to keep dirt out. Not recorded whether this was done.",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "trans-support",
+            "converter-strap"
+          ],
+          "confirm": true
+        }
+      ]
+    },
+    {
+      "id": "teardown",
+      "title": "Teardown and crank removal",
+      "status": "in_progress",
+      "goal": "Crank out with rods, main caps and shells laid out in order; heads, pistons, rods and cam stay in.",
+      "summary": "Engine on the stand upside down; front of the engine and timing set off; crank coming out with heads, pistons, rods and cam left in place.",
+      "blocked_by": "",
+      "files": [
+        "files/engine-302/diagrams/01-what-comes-off-and-what-stays.png",
+        "files/engine-302/diagrams/02-cylinder-and-main-cap-numbers.png",
+        "files/engine-302/diagrams/04-rod-cap-off-crank-lifts-out.png"
+      ],
+      "notes": [
+        "2026-10-30 INCIDENT: the crank was turned a couple of times after the chain was off. It turned smoothly with no hard stop, so valve contact is very unlikely. A compression or leak-down test after reassembly will confirm it (see Startup and verification). Don't turn the crank again until it's out. When it goes back in, set the keyway to match the dot-to-dot photo before the chain goes on.",
+        "The guide measures crank endplay before teardown. If that wasn't done, measure it after reassembly only.",
+        "Safest order is rods off with the chain still on, then the timing set. With the chain off, don't turn the crank or cam more than a few degrees.",
+        "Upside down on the stand, the crank lifts straight up out of the uncapped rods; rods don't need pushing (guide corrected Oct 30)."
+      ],
+      "tasks": [
+        {
+          "id": "engine-on-stand",
+          "text": "Engine on the stand, oil pan off",
+          "detail": "",
+          "done": true,
+          "done_date": null,
+          "est_min": null,
+          "est_guess": false,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "front-parts-off",
+          "text": "Damper, timing cover and fuel pump off",
+          "detail": "",
+          "done": true,
+          "done_date": null,
+          "est_min": null,
+          "est_guess": false,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "chain-and-cam-sprocket-off",
+          "text": "Timing chain and cam sprocket off",
+          "detail": "Confirmed in the chat on Oct 30.",
+          "done": true,
+          "done_date": null,
+          "est_min": null,
+          "est_guess": false,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "rod-caps-off",
+          "text": "Rod caps off",
+          "detail": "In progress as of Oct 30; current state not confirmed.",
+          "done": false,
+          "done_date": null,
+          "est_min": 60,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": true
+        },
+        {
+          "id": "main-caps-crank-out",
+          "text": "Main caps off and crank out",
+          "detail": "The Nov 2 journal work suggests the crank is already out; not confirmed.",
+          "done": false,
+          "done_date": null,
+          "est_min": 90,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": true
+        },
+        {
+          "id": "label-caps-and-shells",
+          "text": "Rod caps, main caps and bearing shells laid out in order and marked",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "paint-pen-punches"
+          ],
+          "confirm": true
+        }
+      ]
+    },
+    {
+      "id": "chipped-block",
+      "title": "Assess the chipped block",
+      "status": "todo",
+      "goal": "Know whether the chip at the rear of the block affects the seal groove, and fix it if it does.",
+      "summary": "While punching out the old seal, a chip broke off the very rear of the block (transmission side). Believed non-structural; it only matters if it breaks into the groove where the seal's outer diameter seats.",
+      "blocked_by": "",
+      "files": [
+        "files/engine-302/diagrams/rear-main-seal.svg",
+        "files/engine-302/reference/rear-main-seal.md"
+      ],
+      "notes": [
+        "From the earlier chat, which was written before the crank was out. With the crank out, the whole upper groove is now visible, so no mirror-and-feel guesswork is needed.",
+        "If it's the rear edge or chamfer only, it is not a sealing surface: proceed as normal. If part of the groove wall is gone: a dab of anaerobic sealant or RTV on the seal OD at that spot, or fill the void with epoxy (low-stress, non-bearing area).",
+        "Whether the chip has already been looked at is not recorded in the newer chat."
+      ],
+      "tasks": [
+        {
+          "id": "inspect-chip",
+          "text": "Clean and inspect the chip at the rear of the block under good light",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "scraper-pick-punch"
+          ],
+          "confirm": true
+        },
+        {
+          "id": "judge-chip",
+          "text": "Decide whether the chip breaks into the seal OD groove or only the rear edge/chamfer",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": true
+        },
+        {
+          "id": "repair-chip",
+          "text": "If the groove wall is damaged: seal the OD with anaerobic/RTV at that spot, or fill with epoxy",
+          "detail": "Only needed if the chip took out part of the groove wall. Rear edge only: skip this.",
+          "done": false,
+          "done_date": null,
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [
+            "chip-repair-epoxy"
+          ],
+          "needs_tools": [],
+          "confirm": true
+        }
+      ]
+    },
+    {
+      "id": "rear-main-seal",
+      "title": "Rear main seal",
+      "status": "todo",
+      "goal": "Old seal and all silicone out; new two-piece seal installed correctly and not leaking.",
+      "summary": "A previous owner siliconed the upper seal half into the block. The lower half came out of the cap; the upper half wouldn't move, which is why the crank comes out.",
+      "blocked_by": "",
+      "files": [
+        "files/engine-302/diagrams/05-rear-seal-joint-offset.png",
+        "files/engine-302/diagrams/06-seal-lip-direction.png",
+        "files/engine-302/diagrams/07-rear-cap-sealant-zones.png",
+        "files/engine-302/diagrams/rear-main-seal.svg",
+        "files/engine-302/reference/rear-main-seal.md"
+      ],
+      "notes": [
+        "Correct technique: sealant on the seal ends only, lube the lip, and offset the seal parting lines from the cap-to-block split. Leftover RTV in the bore is the number one cause of a repeat leak.",
+        "The seal is not in the Summit cart yet (as of Nov 2); see Parts and tools ordering."
+      ],
+      "tasks": [
+        {
+          "id": "pick-upper-seal-half",
+          "text": "Pick the stuck upper seal half out of the block groove",
+          "detail": "Not confirmed whether it's already out.",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "scraper-pick-punch"
+          ],
+          "confirm": true
+        },
+        {
+          "id": "clean-silicone",
+          "text": "Clean every trace of silicone out of the block groove and the cap groove",
+          "detail": "Plastic scraper first, then a brass pick and solvent.",
+          "done": false,
+          "done_date": null,
+          "est_min": 60,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "scraper-pick-punch"
+          ],
+          "confirm": false
+        },
+        {
+          "id": "remove-rope-pin",
+          "text": "Drive out the small pin in the cap's seal groove, if there is one",
+          "detail": "Left over from the rope seal; it stops a rubber seal from seating.",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "scraper-pick-punch"
+          ],
+          "confirm": false
+        },
+        {
+          "id": "clean-cap-faces",
+          "text": "Clean old sealant off the rear cap's mating faces and the matching block faces",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "check-seal-surface",
+          "text": "Check the crank's seal surface",
+          "detail": "Fingernail test: if a groove catches your nail, ask a crank shop. A grooved or scored journal where the lip rides makes the new seal leak too; if it's worn, plan a thin repair sleeve (e.g. Speedi-Sleeve) before reassembly rather than hoping a new seal fixes it. Condition is unknown until inspected.",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "install-seal",
+          "text": "Install the new seal: lip toward the front, joints offset 3/8 in. from the cap's seam, oil on the lip only",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [
+            "rear-main-seal"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "rtv-seal-joints",
+          "text": "RTV dab of no more than 1/8 in. at each seal joint",
+          "detail": "Keep it off the lip.",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [
+            "gasket-maker-rtv"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "sealant-cap-faces",
+          "text": "Thin sealant on the rear cap's mating faces, behind the seal groove only",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [
+            "gasket-maker-rtv"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        }
+      ],
+      "depends_on": [
+        "teardown"
+      ]
+    },
+    {
+      "id": "crank",
+      "title": "Crank inspection and journal cleanup",
+      "status": "in_progress",
+      "goal": "Journals cleaned and measured so the right bearing size can be chosen.",
+      "summary": "A couple of small nicks on the journals. Knock down burrs, clean, then measure with the micrometer to choose bearing size. Measuring waits on the micrometer.",
+      "blocked_by": "",
+      "files": [
+        "files/engine-302/diagrams/02-cylinder-and-main-cap-numbers.png"
+      ],
+      "notes": [
+        "Remove the raised burr, not the dent. Oiled 400/600 grit emery or wet/dry in a shoeshine motion, then crocus cloth. No Scotch-Brite. Stay off the fillets.",
+        "Mains about 2.249 in., rods about 2.123 in.; taper and out-of-round under about 0.0005 in. is healthy. Over that, show the crank to a machine shop.",
+        "The crank seal-surface check (and Speedi-Sleeve option) is under Rear main seal."
+      ],
+      "tasks": [
+        {
+          "id": "fingernail-test-nicks",
+          "text": "Fingernail test on each nick; if it catches, take the crank to a machine shop",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "knock-down-burrs",
+          "text": "Knock down raised burrs with oiled 400-600 grit, shoeshine style, then finish with crocus cloth",
+          "detail": "Rotate your grip around the journal. Stay off the fillets.",
+          "done": false,
+          "done_date": null,
+          "est_min": 60,
+          "est_guess": true,
+          "needs_parts": [
+            "sandpaper-crocus"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "clean-crank",
+          "text": "Clean the crank thoroughly, brush every oil hole, blow dry, oil the journals right away",
+          "detail": "Hot soapy water or solvent.",
+          "done": false,
+          "done_date": null,
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "measure-journals",
+          "text": "Zero the micrometer on the 2 in. standard; measure each journal at both ends (taper) and 90 degrees apart (out-of-round)",
+          "detail": "Waiting on the micrometer. Mains about 2.249 in., rods about 2.123 in. Log the readings in the work log.",
+          "done": false,
+          "done_date": null,
+          "est_min": 90,
+          "est_guess": true,
+          "needs_parts": [
+            "micrometer"
+          ],
+          "needs_tools": [
+            "micrometer-tool"
+          ],
+          "confirm": false
+        },
+        {
+          "id": "decide-bearing-size",
+          "text": "Decide: standard-size bearings, undersize bearings, or a machine shop",
+          "detail": "Waiting on the measurements.",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "check-bearing-shells",
+          "text": "Check the bearing shells that rode on the nicked journals for embedded debris or deep scoring",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        }
+      ],
+      "depends_on": [
+        "teardown"
+      ]
+    },
+    {
+      "id": "bearings",
+      "title": "Main and rod bearings",
+      "status": "blocked",
+      "blocked_by": "Crank journal measurements (micrometer not here yet).",
+      "goal": "New main and rod bearings installed with healthy oil clearance and endplay.",
+      "summary": "Replacing all main and rod bearings; size depends on the micrometer readings. #3 main is the thrust bearing.",
+      "files": [
+        "files/engine-302/diagrams/02-cylinder-and-main-cap-numbers.png"
+      ],
+      "notes": [],
+      "tasks": [
+        {
+          "id": "order-bearings",
+          "text": "Order main and rod bearings in the size the measurements call for",
+          "detail": "Waiting on the micrometer.",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [
+            "main-bearings",
+            "rod-bearings"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "prep-bearing-install",
+          "text": "Saddles and the backs of the shells clean and dry; assembly lube on the faces only",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [
+            "assembly-lube"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "plastigage-bearings",
+          "text": "Plastigage the mains and at least a couple of rods",
+          "detail": "0.001-0.002 in. is healthy for a stock engine; replace over 0.0025 in.",
+          "done": false,
+          "done_date": null,
+          "est_min": 90,
+          "est_guess": true,
+          "needs_parts": [
+            "plastigage"
+          ],
+          "needs_tools": [
+            "plastigage-tool",
+            "torque-wrench"
+          ],
+          "confirm": false
+        },
+        {
+          "id": "align-thrust-bearing",
+          "text": "Align the #3 thrust bearing (pry the crank forward, tap the cap rearward, torque)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "torque-wrench"
+          ],
+          "confirm": false
+        },
+        {
+          "id": "check-endplay",
+          "text": "Check crank endplay: 0.004-0.008 in. (0.012 max)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "feeler-gauges"
+          ],
+          "confirm": false
+        }
+      ]
+    },
+    {
+      "id": "front",
+      "title": "Timing cover, water pump and timing set",
+      "status": "blocked",
+      "blocked_by": "Order after the bearing order, which waits on the journal measurements.",
+      "goal": "New timing cover, correct water pump and front seal installed; chain checked.",
+      "summary": "New timing cover and cast-iron water pump, ordered after the bearings. New front seal. Check chain wear.",
+      "files": [
+        "files/engine-302/diagrams/03-timing-dots-dot-to-dot.png"
+      ],
+      "notes": [
+        "The Mustang is a 1966 with a 1968 302 from a Fairlane, so confirm the pump against the engine: inlet side, length and rotation."
+      ],
+      "tasks": [
+        {
+          "id": "order-timing-cover",
+          "text": "Order a new timing cover",
+          "detail": "After the bearing order.",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [
+            "timing-cover"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "order-water-pump",
+          "text": "Order a new cast-iron water pump that matches the vehicle",
+          "detail": "Check: inlet side (driver or passenger) matches the lower radiator hose; length from the cover mounting face to the pulley face matches the old pump so the belts line up; standard rotation for V-belts, not the reverse-rotation serpentine pump; heater and bypass fittings and the fan/pulley bolt pattern. Order by exact vehicle and year; pumps for 1965-69 and 1970-up are often different.",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [
+            "water-pump"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "compare-water-pumps",
+          "text": "Set the new pump beside the old one and compare before installing",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "front-crank-seal",
+          "text": "New front crank seal: lip toward the engine, flush with the bore, oil on the lip",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [
+            "front-crank-seal"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "inspect-timing-chain",
+          "text": "Look over the timing chain; replace the set if it's sloppy or the cam sprocket teeth are hooked (install dot to dot)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [
+            "timing-chain-set"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "thread-sealant-bolts",
+          "text": "Thread sealant on every cover and pump bolt that goes into a coolant passage",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [
+            "gasket-maker-rtv"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "move-pump-fittings",
+          "text": "Move any threaded fittings from the old pump to the new one",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        }
+      ]
+    },
+    {
+      "id": "while-in-there",
+      "title": "While you're in there: rear-of-block jobs",
+      "status": "todo",
+      "goal": "Replace the common rear-of-block leak sources while access is easy.",
+      "summary": "From the earlier chat: these are miserable with the engine in the car and easy with it out.",
+      "blocked_by": "",
+      "files": [
+        "files/engine-302/reference/rear-main-seal.md"
+      ],
+      "notes": [
+        "Flagged to confirm because the newer chat doesn't mention the cam plug or core plugs; whether any were done or planned is unclear. The oil pan gasket overlaps with the ordering list."
+      ],
+      "tasks": [
+        {
+          "id": "cam-welch-plug",
+          "text": "Replace the cam/welch plug behind the flexplate",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": true
+        },
+        {
+          "id": "rear-core-plugs",
+          "text": "Replace the rear core (freeze) plugs",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 60,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": true
+        },
+        {
+          "id": "oil-pan-gasket",
+          "text": "Oil pan gasket",
+          "detail": "Pan bolts 7-9 ft-lb (1/4 in.), 9-11 ft-lb (5/16 in.).",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [
+            "oil-pan-gasket-set"
+          ],
+          "needs_tools": [],
+          "confirm": true
+        }
+      ]
+    },
+    {
+      "id": "reassembly",
+      "title": "Reassembly",
+      "status": "todo",
+      "blocked_by": "",
+      "goal": "Engine back together, dot to dot, turning smoothly by hand.",
+      "summary": "Phases 7-10 of the guide.",
+      "files": [
+        "files/engine-302/diagrams/03-timing-dots-dot-to-dot.png",
+        "files/engine-302/diagrams/04-rod-cap-off-crank-lifts-out.png"
+      ],
+      "notes": [],
+      "tasks": [
+        {
+          "id": "crank-in",
+          "text": "Crank in, keyway matching the dot-to-dot photo; first push any rod whose big end sits where the crank will land toward the head",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 90,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "main-caps-torque",
+          "text": "Main caps in numbered order, arrows forward, torque in three passes (30, 50, 60-70 ft-lb)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 60,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "torque-wrench"
+          ],
+          "confirm": false
+        },
+        {
+          "id": "flexplate-on",
+          "text": "Flywheel or flexplate back on to its paint marks, 75-85 ft-lb",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "torque-wrench",
+            "flywheel-lock"
+          ],
+          "confirm": false
+        },
+        {
+          "id": "timing-set-dot-to-dot",
+          "text": "Timing set dot to dot, cam bolt 40-45 ft-lb; check the dots with a straightedge",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 60,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "torque-wrench"
+          ],
+          "confirm": false
+        },
+        {
+          "id": "reconnect-rods",
+          "text": "Rods reconnected with matching caps, 19-24 ft-lb (aim for 22-24)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 90,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "torque-wrench",
+            "hose-pieces"
+          ],
+          "confirm": false
+        },
+        {
+          "id": "turn-by-hand",
+          "text": "Turn two full turns by hand: smooth, and the dots line up again",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "slinger-cover-damper-pan",
+          "text": "Slinger, cover, damper (pressed on with an installer, never hammered, 70-90 ft-lb), fuel pump, oil pump, pan",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 240,
+          "est_guess": true,
+          "needs_parts": [
+            "timing-cover-gasket",
+            "fuel-pump-gasket",
+            "oil-pump-gasket",
+            "water-pump-gasket",
+            "oil-pan-gasket-set"
+          ],
+          "needs_tools": [
+            "damper-puller-installer",
+            "torque-wrench"
+          ],
+          "confirm": false
+        }
+      ],
+      "depends_on": [
+        "rear-main-seal",
+        "crank",
+        "bearings",
+        "front",
+        "chipped-block"
+      ]
+    },
+    {
+      "id": "startup",
+      "title": "Startup and verification",
+      "status": "todo",
+      "blocked_by": "",
+      "goal": "Prime, run, and confirm nothing was damaged.",
+      "summary": "Includes the compression or leak-down test that settles the Oct 30 crank-turning incident.",
+      "files": [],
+      "notes": [],
+      "tasks": [
+        {
+          "id": "prime-oil-system",
+          "text": "Prime the oil system with a priming tool before the first start (mark the distributor first)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "priming-tool"
+          ],
+          "confirm": false
+        },
+        {
+          "id": "zinc-oil",
+          "text": "Fill with high-zinc oil or add ZDDP (flat-tappet cam)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [
+            "zddp-additive",
+            "oil-filter-and-oil"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "compression-test",
+          "text": "Compression or leak-down test (confirms no valves were bent when the crank was turned with the chain off)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 60,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "set-ignition-timing",
+          "text": "Set the ignition timing with a timing light",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "leak-check",
+          "text": "Check for leaks at the rear main, timing cover, water pump and pan",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        }
+      ],
+      "depends_on": [
+        "reassembly"
+      ]
+    },
+    {
+      "id": "ordering",
+      "title": "Parts and tools ordering",
+      "status": "in_progress",
+      "blocked_by": "",
+      "goal": "Everything needed is ordered or on hand.",
+      "summary": "Summit order in the cart; bearings, pump and cover follow after measuring.",
+      "files": [],
+      "notes": [
+        "Neither the rear main seal nor the oil pan gasket was in the cart as of Nov 2."
+      ],
+      "tasks": [
+        {
+          "id": "place-summit-order",
+          "text": "Place the Summit order (micrometer, gaskets, assembly lube, ZDDP)",
+          "detail": "The micrometer is on its way, so an order was placed; whether it included the gaskets, lube and ZDDP isn't recorded.",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": true
+        },
+        {
+          "id": "add-seal-and-pan-gasket",
+          "text": "Add the rear main seal and oil pan gasket to the order",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [
+            "rear-main-seal",
+            "oil-pan-gasket-set"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "confirm-micrometer-set",
+          "text": "Confirm the micrometer set has a vernier scale (0.0001 in.) and a 2 in. standard",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [
+            "micrometer"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "order-after-measuring",
+          "text": "After measuring: order the bearings, water pump and timing cover",
+          "detail": "Same orders as in the bearings and front subprojects.",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [
+            "main-bearings",
+            "rod-bearings",
+            "water-pump",
+            "timing-cover"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "buy-sandpaper-crocus",
+          "text": "Pick up 400/600 grit wet/dry paper and crocus cloth (hardware store)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [
+            "sandpaper-crocus"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "arrange-damper-tool",
+          "text": "Arrange a damper puller and installer (parts-store loaner, or Powerbuilt 648637)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "damper-puller-installer"
+          ],
+          "confirm": false
+        }
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "micrometer",
+      "name": "Outside micrometer set, 0-3 in.",
+      "status": "ordered",
+      "qty": 1,
+      "vendor": "Summit Racing",
+      "part_number": "SUM-900014",
+      "price": 64.99,
+      "url": "https://www.summitracing.com/parts/sum-900014",
+      "notes": "Was in the Summit cart Nov 2; owner says it is on its way. Listing conflicts on 0.001 vs 0.0001 in. graduations; check for a vernier and a 2 in. standard."
+    },
+    {
+      "id": "assembly-lube",
+      "name": "Assembly lube",
+      "status": "in_cart",
+      "qty": 1,
+      "vendor": "Summit Racing",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "fuel-pump-gasket",
+      "name": "Fuel pump gasket",
+      "status": "in_cart",
+      "qty": 1,
+      "vendor": "Summit Racing",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "oil-pump-gasket",
+      "name": "Oil pump gasket",
+      "status": "in_cart",
+      "qty": 1,
+      "vendor": "Summit Racing",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "water-pump-gasket",
+      "name": "Water pump gasket",
+      "status": "in_cart",
+      "qty": 1,
+      "vendor": "Summit Racing",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "timing-cover-gasket",
+      "name": "Timing cover gasket",
+      "status": "in_cart",
+      "qty": 1,
+      "vendor": "Summit Racing",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "zddp-additive",
+      "name": "Lucas Engine Break-In Oil Additive (ZDDP), 16 oz",
+      "status": "in_cart",
+      "qty": 1,
+      "vendor": "Summit Racing",
+      "part_number": "LUC-10063-1",
+      "price": 15.99,
+      "url": "",
+      "notes": "Recommended to reach free shipping; confirm it was added."
+    },
+    {
+      "id": "rear-main-seal",
+      "name": "Two-piece rear main seal, 289/302",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "The reason for the job. Not in the cart as of Nov 2."
+    },
+    {
+      "id": "oil-pan-gasket-set",
+      "name": "Oil pan gasket set",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Not in the cart as of Nov 2."
+    },
+    {
+      "id": "front-crank-seal",
+      "name": "Front crank seal",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Unless included with the gasket set or the new cover."
+    },
+    {
+      "id": "oil-pump-pickup-gasket",
+      "name": "Oil pump pickup gasket",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Separate on some setups."
+    },
+    {
+      "id": "plastigage",
+      "name": "Plastigage, green (0.001-0.003 in.)",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "oil-filter-and-oil",
+      "name": "Oil filter and oil",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Use high-zinc oil or a ZDDP additive (flat-tappet cam)."
+    },
+    {
+      "id": "main-bearings",
+      "name": "Main bearings",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Order after measuring the crank; size per micrometer."
+    },
+    {
+      "id": "rod-bearings",
+      "name": "Rod bearings",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Order after measuring the crank; size per micrometer."
+    },
+    {
+      "id": "water-pump",
+      "name": "Cast-iron water pump (standard rotation)",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Order after measuring the crank. Match inlet side, length, standard rotation, fittings; 1965-69 and 1970-up pumps often differ."
+    },
+    {
+      "id": "timing-cover",
+      "name": "Timing cover",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Order after measuring the crank (after the bearing order)."
+    },
+    {
+      "id": "sandpaper-crocus",
+      "name": "400/600 grit wet/dry paper and crocus cloth",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "Hardware store",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Summit's emery is only 120/180 grit, too coarse. Alternative: Goodson UR-1-CROCUS. No Scotch-Brite."
+    },
+    {
+      "id": "hardened-oil-pump-shaft",
+      "name": "Hardened oil pump intermediate shaft",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Suggested, optional: cheap insurance against sudden loss of oil pressure."
+    },
+    {
+      "id": "thermostat-gasket",
+      "name": "Thermostat and housing gasket",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Suggested, optional."
+    },
+    {
+      "id": "valve-cover-gaskets",
+      "name": "Valve cover gaskets",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Suggested, optional."
+    },
+    {
+      "id": "timing-chain-set",
+      "name": "Timing chain set",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Suggested, optional: only if the old chain is worn."
+    },
+    {
+      "id": "damper-bolt-washer",
+      "name": "New damper bolt and washer",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Suggested, optional."
+    },
+    {
+      "id": "micrometer-standard",
+      "name": "2 in. micrometer standard",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Suggested, optional: only if the set doesn't include one."
+    },
+    {
+      "id": "high-zinc-oil",
+      "name": "High-zinc oil (e.g. Valvoline VR1)",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Suggested, optional: long-term alternative to adding ZDDP at every change."
+    },
+    {
+      "id": "gasket-maker-rtv",
+      "name": "Gasket maker, RTV, thread sealant",
+      "status": "on_hand",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": ""
+    },
+    {
+      "id": "chip-repair-epoxy",
+      "name": "Epoxy / JB Weld (chip repair)",
+      "status": "needed",
+      "qty": 1,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Only if the chip took out part of the seal groove wall (older chat)."
+    }
+  ],
+  "tools": [
+    {
+      "id": "torque-wrench",
+      "name": "Torque wrench 10-90 ft-lb",
+      "status": "needed",
+      "notes": ""
+    },
+    {
+      "id": "feeler-gauges",
+      "name": "Feeler gauge set",
+      "status": "needed",
+      "notes": "Chosen over a $50 digital dial indicator for crank endplay."
+    },
+    {
+      "id": "damper-puller-installer",
+      "name": "Damper puller and installer",
+      "status": "needed",
+      "notes": "Hub-bolt type only, never a jaw puller. Powerbuilt 648637 (Kit 12) does both and is often a parts-store loaner. OMT flange kit removes only. Fallback installer: grade 8 threaded rod, nut, hardened washers."
+    },
+    {
+      "id": "micrometer-tool",
+      "name": "2-3 in. outside micrometer",
+      "status": "needed",
+      "notes": "On order (see the micrometer part). Must read 0.0001 in.; calipers aren't accurate enough."
+    },
+    {
+      "id": "plastigage-tool",
+      "name": "Plastigage, green",
+      "status": "needed",
+      "notes": ""
+    },
+    {
+      "id": "flywheel-lock",
+      "name": "Flywheel lock (or two bolts in the crank flange and a pry bar)",
+      "status": "needed",
+      "notes": "For the damper, cam and flywheel bolts."
+    },
+    {
+      "id": "hose-pieces",
+      "name": "5/16 in. hose pieces, about 3 in. long",
+      "status": "needed",
+      "notes": "Over the rod bolts."
+    },
+    {
+      "id": "scraper-pick-punch",
+      "name": "Plastic scraper, brass pick, brass punch",
+      "status": "needed",
+      "notes": "For the seal groove and gaskets."
+    },
+    {
+      "id": "paint-pen-punches",
+      "name": "Paint pen, number punches",
+      "status": "needed",
+      "notes": "Marking caps, sprockets and the flywheel."
+    },
+    {
+      "id": "priming-tool",
+      "name": "Oil pump priming tool",
+      "status": "needed",
+      "notes": "Before the first start."
+    },
+    {
+      "id": "engine-stand",
+      "name": "Engine stand (750 lb min)",
+      "status": "have",
+      "notes": "Engine is on it now."
+    },
+    {
+      "id": "engine-hoist",
+      "name": "Engine hoist, 2 ton",
+      "status": "needed",
+      "notes": "Needed again at reinstall. The earlier chat planned a Harbor Freight foldable or an AutoZone Loan-A-Tool loaner; how the pull was done is not recorded."
+    },
+    {
+      "id": "trans-support",
+      "name": "Floor jack or jack stand with a 2x4 pad (transmission support)",
+      "status": "needed",
+      "notes": "Holds the C4 level while the engine is out. Don't press on the thin stamped pan directly."
+    },
+    {
+      "id": "converter-strap",
+      "name": "Torque converter retaining strap (or bracket and bolts)",
+      "status": "needed",
+      "notes": "Keeps the converter seated on the front pump."
+    }
+  ],
+  "specs": [
+    {
+      "item": "Main cap bolts",
+      "value": "60-70",
+      "unit": "ft-lb",
+      "min": 60,
+      "max": 70,
+      "notes": "Three passes: 30, 50, then final"
+    },
+    {
+      "item": "Rod nuts (stock 5/16 in.)",
+      "value": "19-24",
+      "unit": "ft-lb",
+      "min": 19,
+      "max": 24,
+      "notes": "Aim for 22-24; published figures vary (19-24 vs 22-25)"
+    },
+    {
+      "item": "Cam sprocket bolt",
+      "value": "40-45",
+      "unit": "ft-lb",
+      "min": 40,
+      "max": 45,
+      "notes": ""
+    },
+    {
+      "item": "Damper bolt",
+      "value": "70-90",
+      "unit": "ft-lb",
+      "min": 70,
+      "max": 90,
+      "notes": "Press the damper on with an installer; never hammer it"
+    },
+    {
+      "item": "Flywheel or flexplate bolts",
+      "value": "75-85",
+      "unit": "ft-lb",
+      "min": 75,
+      "max": 85,
+      "notes": "Crisscross pattern; line up paint marks"
+    },
+    {
+      "item": "Front cover and water pump bolts",
+      "value": "12-15",
+      "unit": "ft-lb",
+      "min": 12,
+      "max": 15,
+      "notes": "Thread sealant on bolts into coolant passages"
+    },
+    {
+      "item": "Oil pump to block",
+      "value": "23-28",
+      "unit": "ft-lb",
+      "min": 23,
+      "max": 28,
+      "notes": ""
+    },
+    {
+      "item": "Oil pan bolts 1/4 in.",
+      "value": "7-9",
+      "unit": "ft-lb",
+      "min": 7,
+      "max": 9,
+      "notes": ""
+    },
+    {
+      "item": "Oil pan bolts 5/16 in.",
+      "value": "9-11",
+      "unit": "ft-lb",
+      "min": 9,
+      "max": 11,
+      "notes": ""
+    },
+    {
+      "item": "Crank endplay",
+      "value": "0.004-0.008",
+      "unit": "in.",
+      "min": 0.004,
+      "max": 0.008,
+      "notes": "0.012 max"
+    },
+    {
+      "item": "Main and rod oil clearance (used engine)",
+      "value": "0.001-0.002",
+      "unit": "in.",
+      "min": 0.001,
+      "max": 0.002,
+      "notes": "Replace bearings over 0.0025; rule of thumb"
+    },
+    {
+      "item": "Rod side clearance",
+      "value": "0.010-0.020",
+      "unit": "in.",
+      "min": 0.01,
+      "max": 0.02,
+      "notes": "Feeler gauge between each pair of rods"
+    },
+    {
+      "item": "Main journal diameter",
+      "value": "about 2.249",
+      "unit": "in.",
+      "notes": "Approximate standard size"
+    },
+    {
+      "item": "Rod journal diameter",
+      "value": "about 2.123",
+      "unit": "in.",
+      "notes": "Approximate standard size"
+    },
+    {
+      "item": "Journal taper / out-of-round",
+      "value": "under about 0.0005",
+      "unit": "in.",
+      "max": 0.0005,
+      "notes": "Approximate limit. Over that, show the crank to a machine shop"
+    },
+    {
+      "item": "Rear seal joint offset from cap parting line",
+      "value": "3/8",
+      "unit": "in.",
+      "notes": "0.375 in."
+    },
+    {
+      "item": "RTV dab at rear seal joints",
+      "value": "1/8 max",
+      "unit": "in.",
+      "max": 0.125,
+      "notes": "Keep it off the lip"
+    },
+    {
+      "item": "Firing order",
+      "value": "1-5-4-2-6-3-7-8",
+      "unit": "",
+      "notes": "Standard 302"
+    },
+    {
+      "item": "Bellhousing-to-block bolts",
+      "value": "40-45",
+      "unit": "ft-lb",
+      "min": 40,
+      "max": 45,
+      "notes": "Reinstall reference from the earlier chat; unverified, check a shop manual"
+    },
+    {
+      "item": "Torque converter to flexplate",
+      "value": "20-25",
+      "unit": "ft-lb",
+      "min": 20,
+      "max": 25,
+      "notes": "Reinstall reference from the earlier chat; unverified, check a shop manual"
+    },
+    {
+      "item": "Motor mount through-bolts",
+      "value": "45-55",
+      "unit": "ft-lb",
+      "min": 45,
+      "max": 55,
+      "notes": "Reinstall reference from the earlier chat; unverified, check a shop manual"
+    }
+  ],
+  "decisions": [
+    {
+      "date": "2026-10-20",
+      "text": "Scope: the crank comes out; nothing else does. Heads, pistons, rods and cam stay in. The timing chain only has to come off the crank sprocket. (Date approximate: start of the chat.)",
+      "date_approx": true
+    },
+    {
+      "date": "2026-11-02",
+      "text": "No re-degreeing: cam timing is set by the sprocket keyways and dots, so going back dot to dot on the same keyway restores it exactly. Re-degree only if the cam, sprockets or an adjustable setting change. (Date approximate.)",
+      "date_approx": true
+    },
+    {
+      "date": "2026-10-30",
+      "text": "Order matters for the valves: rods off with the chain still on, then the timing set. With the chain off, don't turn the crank or cam more than a few degrees. (Date approximate.)",
+      "date_approx": true
+    },
+    {
+      "date": "2026-10-30",
+      "text": "Rods don't need pushing: upside down on the stand the crank lifts straight out of the uncapped rods. The guide step about pushing rods was wrong and was corrected."
+    },
+    {
+      "date": "2026-11-02",
+      "text": "Clockwise rotation (from the front) is the habit, not a hard rule: it keeps chain slack on the correct side so the dots read true. A little backward by accident does no harm. (Date approximate.)",
+      "date_approx": true
+    },
+    {
+      "date": "2026-11-02",
+      "text": "Turning the engine dry by hand on the stand is fine. Avoid spinning it fast or for many turns, keep grit off the bearings, oil bare journals and bores if it sits. (Date approximate.)",
+      "date_approx": true
+    },
+    {
+      "date": "2026-11-02",
+      "text": "Replace the water pump now; it must match inlet side, length, rotation and fittings. (Date approximate.)",
+      "date_approx": true
+    },
+    {
+      "date": "2026-11-02",
+      "text": "Timing cover: originally planned to reuse after inspecting for coolant-passage corrosion; now replacing. (Date approximate.)",
+      "date_approx": true
+    },
+    {
+      "date": "2026-11-02",
+      "text": "Journal nicks: remove the raised burr, not the dent. Oiled 400/600 grit then crocus; no Scotch-Brite. Summit's emery is only 120/180 grit; use Goodson UR-1-CROCUS or hardware-store sheets. (Date approximate.)",
+      "date_approx": true
+    },
+    {
+      "date": "2026-11-02",
+      "text": "Feeler gauges instead of a $50 dial indicator for crank endplay. (Date approximate.)",
+      "date_approx": true
+    },
+    {
+      "date": "2026-11-02",
+      "text": "Cam isn't new, so this isn't a new-cam break-in, but use high-zinc oil or a ZDDP additive for the flat-tappet cam on every oil change. (Date approximate.)",
+      "date_approx": true
+    },
+    {
+      "date": "2026-10-20",
+      "text": "Obsolete, kept for the record: engine hoist plan was to buy a Harbor Freight 2-ton foldable (~$270) or borrow an AutoZone Loan-A-Tool loaner, not a daily/weekly rental (the hoist sits idle through the long middle of the job). The engine is already out. Still needed again at reinstall. (Date approximate; earlier chat.)",
+      "date_approx": true
+    },
+    {
+      "date": "2026-10-20",
+      "text": "Obsolete, kept for the record: no transmission jack needed because the C4 stays in the car; a floor jack or stand with a 2x4 pad is enough. (Date approximate; earlier chat.)",
+      "date_approx": true
+    },
+    {
+      "date": "2026-10-20",
+      "text": "Obsolete, kept for the record: earlier chat judged the crank didn't need to come out for the seal job (mirror-and-feel on the upper bore). Superseded: the upper seal half is stuck, so the crank is out. (Date approximate; earlier chat.)",
+      "date_approx": true
+    }
+  ],
+  "open_questions": [
+    {
+      "text": "What year and model is the Mustang? Needed to order the right water pump and timing cover.",
+      "resolved": true,
+      "answer": "1966 Ford Mustang with a 1968 302 from a Fairlane (owner, Nov 13). Body style still unknown."
+    },
+    {
+      "text": "Is the crank out, and is the old upper seal half out of the groove?",
+      "resolved": false,
+      "answer": ""
+    },
+    {
+      "text": "Was crank endplay measured before teardown?",
+      "resolved": false,
+      "answer": ""
+    },
+    {
+      "text": "Does the micrometer set include a vernier scale and a 2 in. standard?",
+      "resolved": false,
+      "answer": ""
+    },
+    {
+      "text": "Does the old timing chain need replacing?",
+      "resolved": false,
+      "answer": ""
+    },
+    {
+      "text": "What is the condition of the crank's rear seal journal (grooved or scored from the old leak)?",
+      "resolved": false,
+      "answer": ""
+    },
+    {
+      "text": "Exact torque-converter fastener count (4 is typical for the C4); verify on the car before reinstall.",
+      "resolved": false,
+      "answer": ""
+    },
+    {
+      "text": "Has the chip at the rear of the block been inspected, and does it break into the seal groove?",
+      "resolved": false,
+      "answer": ""
+    }
+  ],
+  "sources": [
+    {
+      "title": "Fel-Pro: How to Install a Rear Main Seal",
+      "url": "https://www.felpro.com/technical/tecblogs/how-to-install-rear-main-seal.html"
+    },
+    {
+      "title": "Summit Racing: Ford small-block torque specs",
+      "url": "https://help.summitracing.com/knowledgebase/article/HE-04923/en-us"
+    },
+    {
+      "title": "Ford shop manual thrust bearing procedure (StangNet excerpt)",
+      "url": "https://stangnet.com/mustang-forums/threads/main-caps-tq-specs-engine-builders-come-in-here.764153/"
+    },
+    {
+      "title": "Ford truck manual note on the rope-seal pin",
+      "url": "https://itstillruns.fordification.com/forum/viewtopic.php?p=401044"
+    },
+    {
+      "title": "StangNet: water pump selection",
+      "url": "https://stangnet.com/mustang-forums/threads/water-pump-selection.554666/?amp=1"
+    },
+    {
+      "title": "GT40s.com: identifying a 302 water pump",
+      "url": "https://www.gt40s.com/threads/can-someone-identify-this-302-water-pump.14044"
+    },
+    {
+      "title": "7173mustangs.com: valve-to-piston contact in a 302",
+      "url": "https://7173mustangs.com/threads/new-pistons-and-rings-needed.30612/page-2"
+    },
+    {
+      "title": "Summit Racing SUM-900014 micrometer set",
+      "url": "https://www.summitracing.com/parts/sum-900014"
+    },
+    {
+      "title": "Summit Racing: Allstar Performance emery cloth",
+      "url": "https://www.summitracing.com/search/product-line/allstar-performance-emery-cloth"
+    },
+    {
+      "title": "Goodson: 1 in. x 50 yd. crocus cloth (UR-1-CROCUS)",
+      "url": "https://goodson.com/products/1-inch-crocus-cloth"
+    },
+    {
+      "title": "ThirdGen.org: crank polishing",
+      "url": "https://www.thirdgen.org/forums/tech-general-engine/164618-crank-polishing.html"
+    }
+  ]
+}

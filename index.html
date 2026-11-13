@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Shop Book</title>
+<meta name="description" content="Projects, work log and specs for a 1966 Mustang.">
+<meta name="theme-color" content="#1c4e9c">
+<meta name="robots" content="noindex">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="app/style.css">
+</head>
+<body>
+<a id="sync" href="#/settings" hidden></a>
+<main id="view"><div class="page"><p class="muted">Loading the shop book…</p></div></main>
+<button class="fab" id="fab" type="button" aria-label="Log something">＋ LOG</button>
+<nav id="tabs" aria-label="Main">
+  <a href="#/" data-tab="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-7 9 7v9h-6v-6H9v6H3z"/></svg>Home</a>
+  <a href="#/today" data-tab="today"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg>Today</a>
+  <a href="#/projects" data-tab="projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16M4 12h16M4 19h10"/></svg>Projects</a>
+  <a href="#/log" data-tab="log"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h11l3 3v15H5z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg>Log</a>
+  <a href="#/car" data-tab="car"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 15l2-6h14l2 6v4H3z"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg>Car</a>
+</nav>
+<dialog id="sheet"></dialog>
+<div id="toast" role="status" hidden></div>
+<datalist id="units"><option value="in"><option value="mm"><option value="V"><option value="ohm"><option value="A"><option value="ft-lb"><option value="in-lb"><option value="psi"><option value="°F"><option value="qt"><option value="mi"></datalist>
+<script type="module" src="app/main.js"></script>
+</body>
+</html>
