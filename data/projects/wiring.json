@@ -424,15 +424,16 @@
         "files/wiring/reference/shopping-list.csv"
       ],
       "notes": [
-        "Follow the install sheet; the guide's step-by-step section (generic relay, 30 A fuse) is superseded. Never take the trigger from the pink coil feed."
+        "Follow the install sheet; the guide's step-by-step section (generic relay, 30 A fuse) is superseded. Never take the trigger from the pink coil feed.",
+        "2026-11-13: an unused switched 12 V wire under the dash, probably the factory radio feed, plus a three-prong plug that seemed to be for illumination. Details not in the chat export yet."
       ],
       "tasks": [
         {
           "id": "buy-parts-see-shopping-list-csv",
           "text": "Buy parts (see shopping-list.csv) and RCA cables",
-          "detail": "",
-          "done": false,
-          "done_date": null,
+          "detail": "Bought the Painless kit, wire, connectors, tape and the rest of the list. RCA cables not confirmed.",
+          "done": true,
+          "done_date": "2026-11-13",
           "est_min": 15,
           "est_guess": true,
           "needs_parts": [
@@ -446,6 +447,18 @@
           ],
           "needs_tools": [],
           "confirm": false
+        },
+        {
+          "id": "identify-spare-switched-12v",
+          "text": "Identify the unused switched 12 V wire under the dash (probably the factory radio feed): color, which key positions are hot, and which fuse feeds it",
+          "detail": "Found during the wiring work. If it is the factory radio feed, it could serve the head unit's switched lead, but the plan runs the radio from the fuse block. Label it or tape it off either way.",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": true
         },
         {
           "id": "mount-the-fuse-block-and-ground",
@@ -881,90 +894,90 @@
     {
       "id": "painless-cirkit-boss-70107-fuse",
       "name": "Painless CirKit Boss 70107 fuse block kit",
-      "status": "needed",
+      "status": "on_hand",
       "qty": 1,
       "vendor": "Amazon",
       "part_number": "",
       "price": 89.99,
       "url": "https://www.amazon.com/dp/B000A8OG2A",
-      "notes": "Fuse block, relay, breaker, feed and trigger wires, pre-attached circuit wires. Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+      "notes": "Fuse block, relay, breaker, feed and trigger wires, pre-attached circuit wires. Price checked Oct 29, 2026."
     },
     {
       "id": "12-gauge-pure-copper-wire",
       "name": "12 gauge pure copper wire, red and black pair, 25 ft",
-      "status": "needed",
+      "status": "on_hand",
       "qty": 1,
       "vendor": "Amazon",
       "part_number": "",
       "price": 27.99,
       "url": "https://www.amazon.com/dp/B0DGL723WB",
-      "notes": "Amp power (red); amp and radio grounds (black). Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+      "notes": "Amp power (red); amp and radio grounds (black). Price checked Oct 29, 2026."
     },
     {
       "id": "ticonn-120-piece-heat-shrink",
       "name": "TICONN 120-piece heat shrink terminal kit",
-      "status": "needed",
+      "status": "on_hand",
       "qty": 1,
       "vendor": "Amazon",
       "part_number": "",
       "price": 9.99,
       "url": "https://www.amazon.com/dp/B086Z2Y1D6",
-      "notes": "Rings, forks, spades, disconnects, butt connectors 22-10 ga. Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+      "notes": "Rings, forks, spades, disconnects, butt connectors 22-10 ga. Price checked Oct 29, 2026."
     },
     {
       "id": "18-gauge-gxl-wire-black",
       "name": "18 gauge GXL wire, black and red, 25 ft each",
-      "status": "needed",
+      "status": "on_hand",
       "qty": 1,
       "vendor": "Amazon",
       "part_number": "",
       "price": 26.38,
       "url": "https://www.amazon.com/dp/B094H8SKTC",
-      "notes": "Tach signal and ground, dash light feeds, amp turn-on. Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+      "notes": "Tach signal and ground, dash light feeds, amp turn-on. Price checked Oct 29, 2026."
     },
     {
       "id": "150-piece-atc-blade-fuse",
       "name": "150-piece ATC blade fuse assortment",
-      "status": "needed",
+      "status": "on_hand",
       "qty": 1,
       "vendor": "Amazon",
       "part_number": "",
       "price": 8.99,
       "url": "https://www.amazon.com/dp/B07VWRK2VD",
-      "notes": "Tach, radio and 15 A amp fuses. Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+      "notes": "Tach, radio and 15 A amp fuses. Price checked Oct 29, 2026."
     },
     {
       "id": "200-piece-rubber-grommet-kit",
       "name": "200-piece rubber grommet kit",
-      "status": "needed",
+      "status": "on_hand",
       "qty": 1,
       "vendor": "Amazon",
       "part_number": "",
       "price": 8.99,
       "url": "https://www.amazon.com/dp/B0F8N9PLXT",
-      "notes": "Firewall pass-throughs, plugging old holes. Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+      "notes": "Firewall pass-throughs, plugging old holes. Price checked Oct 29, 2026."
     },
     {
       "id": "boao-braided-split-sleeve-1",
       "name": "Boao braided split sleeve, 1/4, 1/2, 3/4 in, 10 ft each",
-      "status": "needed",
+      "status": "on_hand",
       "qty": 1,
       "vendor": "Amazon",
       "part_number": "",
       "price": 21.99,
       "url": "https://www.amazon.com/dp/B08JPV4NRJ",
-      "notes": "Engine-bay runs (rated 257 F). Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+      "notes": "Engine-bay runs (rated 257 F). Price checked Oct 29, 2026."
     },
     {
       "id": "tesa-51036-cloth-harness-tape",
       "name": "tesa 51036 cloth harness tape",
-      "status": "needed",
+      "status": "on_hand",
       "qty": 1,
       "vendor": "Amazon",
       "part_number": "",
       "price": 7.49,
       "url": "https://www.amazon.com/dp/B016ZMXLEI",
-      "notes": "Under-dash bundles. Optional: yes. Purchase status unknown; set when confirmed. Price checked Oct 29, 2026."
+      "notes": "Under-dash bundles. Optional: yes. Price checked Oct 29, 2026."
     },
     {
       "id": "rca-cables-head-unit-to",
@@ -1076,6 +1089,11 @@
     },
     {
       "text": "Is the amp's onboard blade fuse really red / 10 A?",
+      "resolved": false,
+      "answer": ""
+    },
+    {
+      "text": "What is the unused switched 12 V wire under the dash (factory radio feed?), and is the three-prong illumination plug the blue dash-light splitter with the spare branch, or something else?",
       "resolved": false,
       "answer": ""
     }

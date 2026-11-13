@@ -165,9 +165,6 @@ export function todayView() {
   const score = x => x.total / budget + (x.s.status === 'in_progress' ? 1 : 0);
   plans.sort((a, b) => score(b) - score(a));
   const SHOW = 5;
-  const inPlans = new Set(plans.flatMap(x => x.tasks));
-  const quick = [];
-  for (const p of act) for (const x of doable(p)) if ((x.t.est_min || 30) <= 15 && !inPlans.has(x.t)) quick.push(x);
 
   const chips = BUDGETS.map(([m, l]) => `<button class="chip" data-act="set-budget" data-m="${m}" aria-pressed="${m === budget}">${l}</button>`).join('');
   const pchips = [`<button class="chip" data-act="set-today-proj" data-id="all" aria-pressed="${proj === 'all'}">All projects</button>`,
@@ -187,7 +184,6 @@ export function todayView() {
         <div class="tasks" style="border:0">${x.tasks.map(t => taskRow(x.p, x.s, t)).join('')}</div></div>${i === plans.length - 1 && plans.length > SHOW ? '</div></details>' : ''}`).join('') ||
         '<div class="empty">Nothing fits that window. Try a longer one, or check what\'s waiting on parts below.</div>'}
     </section>
-    ${quick.length ? `<section class="block">${sec('Quick hits · 15 min or less')}<div class="tasks">${quick.map(x => taskRow(x.p, x.s, x.t, { context: true })).join('')}</div></section>` : ''}
     ${tooBig.length ? `<section class="block">${sec('Needs a longer session')}<div class="tasks">${tooBig.map(x => taskRow(x.p, x.s, x.t, { context: true })).join('')}</div></section>` : ''}
     ${waiting.length || blockedSubs.length ? `<section class="block">${sec('Waiting on', '<a href="#/parts">Parts list</a>')}
       <div class="waiting-list">${blockedSubs.map(x => `<div><a href="#/p/${esc(x.p.id)}/${esc(x.s.id)}">${esc(x.s.title)}</a><span class="why">${esc(x.after ? `after ${x.after.join(', ')}` : x.s.blocked_by || 'blocked')}</span></div>`).join('')}

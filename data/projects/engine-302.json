@@ -5,7 +5,7 @@
   "status": "active",
   "goal": "Replace the leaking rear main seal and refresh the bottom end (new main and rod bearings, water pump, timing cover) without a full rebuild, then put the engine back in the car.",
   "summary": "The 1968 302 (from a Fairlane) leaked at the rear main. A previous owner had siliconed the upper seal half into the block, so the crank has to come out. A chip also broke off the rear of the block while the old seal was being punched out. The engine is already out of the car (the C4 stays in) and torn down on a stand, waiting on parts. Heads, pistons, rods and cam stay in; cam timing returns exactly by going back together dot to dot. Since the crank is out anyway, the job grew to include new bearings, a water pump and a timing cover. On Oct 30 the crank was turned a couple of times with the chain off; a compression or leak-down test after reassembly will confirm no valves were bent. Merged from two chats: an earlier one (engine pull, chipped block) and a later one (bottom end).",
-  "next_step": "Micrometer arrives → measure the crank journals → order bearings, water pump and timing cover.",
+  "next_step": "When the micrometer arrives, measure the journals, then order bearings, a water pump and a new timing cover (the old one is cracked). Meanwhile: sand the JB Weld repair and clean the old seal and silicone out of the grooves.",
   "started": "2026-10-20",
   "updated": "2026-11-13",
   "links": [
@@ -171,8 +171,8 @@
           "id": "verify-converter-strapped",
           "text": "Verify the torque converter is strapped and the trans is supported",
           "detail": "Lingering safety check. The older chat's plan: jack or stand with a 2x4 under the C4 pan so the front doesn't drop and strain the rear mount and tailshaft; strap or bracket the converter so it can't slide forward off the pump. Also cover the open bellhousing to keep dirt out. Not recorded whether this was done.",
-          "done": false,
-          "done_date": null,
+          "done": true,
+          "done_date": "2026-11-13",
           "est_min": 15,
           "est_guess": true,
           "needs_parts": [],
@@ -180,14 +180,14 @@
             "trans-support",
             "converter-strap"
           ],
-          "confirm": true
+          "confirm": false
         }
       ]
     },
     {
       "id": "teardown",
       "title": "Teardown and crank removal",
-      "status": "in_progress",
+      "status": "done",
       "goal": "Crank out with rods, main caps and shells laid out in order; heads, pistons, rods and cam stay in.",
       "summary": "Engine on the stand upside down; front of the engine and timing set off; crank coming out with heads, pistons, rods and cam left in place.",
       "blocked_by": "",
@@ -243,46 +243,32 @@
           "id": "rod-caps-off",
           "text": "Rod caps off",
           "detail": "In progress as of Oct 30; current state not confirmed.",
-          "done": false,
-          "done_date": null,
+          "done": true,
+          "done_date": "2026-11-13",
           "est_min": 60,
           "est_guess": true,
           "needs_parts": [],
           "needs_tools": [],
-          "confirm": true
+          "confirm": false
         },
         {
           "id": "main-caps-crank-out",
           "text": "Main caps off and crank out",
-          "detail": "The Nov 2 journal work suggests the crank is already out; not confirmed.",
-          "done": false,
-          "done_date": null,
+          "detail": "Rubber hose over the rod bolts, pistons pushed up out of the way, crank wiggled out.",
+          "done": true,
+          "done_date": "2026-11-13",
           "est_min": 90,
           "est_guess": true,
           "needs_parts": [],
           "needs_tools": [],
-          "confirm": true
-        },
-        {
-          "id": "label-caps-and-shells",
-          "text": "Rod caps, main caps and bearing shells laid out in order and marked",
-          "detail": "",
-          "done": false,
-          "done_date": null,
-          "est_min": 45,
-          "est_guess": true,
-          "needs_parts": [],
-          "needs_tools": [
-            "paint-pen-punches"
-          ],
-          "confirm": true
+          "confirm": false
         }
       ]
     },
     {
       "id": "chipped-block",
       "title": "Assess the chipped block",
-      "status": "todo",
+      "status": "in_progress",
       "goal": "Know whether the chip at the rear of the block affects the seal groove, and fix it if it does.",
       "summary": "While punching out the old seal, a chip broke off the very rear of the block (transmission side). Believed non-structural; it only matters if it breaks into the groove where the seal's outer diameter seats.",
       "blocked_by": "",
@@ -300,41 +286,55 @@
           "id": "inspect-chip",
           "text": "Clean and inspect the chip at the rear of the block under good light",
           "detail": "",
-          "done": false,
-          "done_date": null,
+          "done": true,
+          "done_date": "2026-11-13",
           "est_min": 30,
           "est_guess": true,
           "needs_parts": [],
           "needs_tools": [
             "scraper-pick-punch"
           ],
-          "confirm": true
+          "confirm": false
         },
         {
           "id": "judge-chip",
           "text": "Decide whether the chip breaks into the seal OD groove or only the rear edge/chamfer",
           "detail": "",
-          "done": false,
-          "done_date": null,
+          "done": true,
+          "done_date": "2026-11-13",
           "est_min": 15,
           "est_guess": true,
           "needs_parts": [],
           "needs_tools": [],
-          "confirm": true
+          "confirm": false
         },
         {
           "id": "repair-chip",
           "text": "If the groove wall is damaged: seal the OD with anaerobic/RTV at that spot, or fill with epoxy",
-          "detail": "Only needed if the chip took out part of the groove wall. Rear edge only: skip this.",
-          "done": false,
-          "done_date": null,
+          "detail": "The broken-off piece was JB Welded back onto the block.",
+          "done": true,
+          "done_date": "2026-11-13",
           "est_min": 45,
           "est_guess": true,
           "needs_parts": [
             "chip-repair-epoxy"
           ],
           "needs_tools": [],
-          "confirm": true
+          "confirm": false
+        },
+        {
+          "id": "sand-jb-weld",
+          "text": "Sand the JB Weld repair flush, and check that the seal groove and seal OD area are smooth",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [
+            "sandpaper-crocus"
+          ],
+          "needs_tools": [],
+          "confirm": false
         }
       ]
     },
@@ -487,6 +487,20 @@
       ],
       "tasks": [
         {
+          "id": "label-caps-and-shells",
+          "text": "Rod caps, main caps and bearing shells laid out in order and marked",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [
+            "paint-pen-punches"
+          ],
+          "confirm": true
+        },
+        {
           "id": "fingernail-test-nicks",
           "text": "Fingernail test on each nick; if it catches, take the crank to a machine shop",
           "detail": "",
@@ -573,7 +587,7 @@
       "id": "bearings",
       "title": "Main and rod bearings",
       "status": "blocked",
-      "blocked_by": "Crank journal measurements (micrometer not here yet).",
+      "blocked_by": "Journal measurements. The micrometer is ordered and on its way.",
       "goal": "New main and rod bearings installed with healthy oil clearance and endplay.",
       "summary": "Replacing all main and rod bearings; size depends on the micrometer readings. #3 main is the thrust bearing.",
       "files": [
@@ -661,14 +675,15 @@
       "id": "front",
       "title": "Timing cover, water pump and timing set",
       "status": "blocked",
-      "blocked_by": "Order after the bearing order, which waits on the journal measurements.",
+      "blocked_by": "Water pump and timing cover not ordered yet. The old cover is cracked, so a new one is required.",
       "goal": "New timing cover, correct water pump and front seal installed; chain checked.",
       "summary": "New timing cover and cast-iron water pump, ordered after the bearings. New front seal. Check chain wear.",
       "files": [
         "files/engine-302/diagrams/03-timing-dots-dot-to-dot.png"
       ],
       "notes": [
-        "The Mustang is a 1966 with a 1968 302 from a Fairlane, so confirm the pump against the engine: inlet side, length and rotation."
+        "The Mustang is a 1966 with a 1968 302 from a Fairlane, so confirm the pump against the engine: inlet side, length and rotation.",
+        "2026-11-13: the old timing cover is cracked in one spot. Replace it; don't reuse it."
       ],
       "tasks": [
         {
@@ -1042,20 +1057,20 @@
           "id": "place-summit-order",
           "text": "Place the Summit order (micrometer, gaskets, assembly lube, ZDDP)",
           "detail": "The micrometer is on its way, so an order was placed; whether it included the gaskets, lube and ZDDP isn't recorded.",
-          "done": false,
-          "done_date": null,
+          "done": true,
+          "done_date": "2026-11-13",
           "est_min": 15,
           "est_guess": true,
           "needs_parts": [],
           "needs_tools": [],
-          "confirm": true
+          "confirm": false
         },
         {
           "id": "add-seal-and-pan-gasket",
           "text": "Add the rear main seal and oil pan gasket to the order",
           "detail": "",
-          "done": false,
-          "done_date": null,
+          "done": true,
+          "done_date": "2026-11-13",
           "est_min": 15,
           "est_guess": true,
           "needs_parts": [
@@ -1114,8 +1129,8 @@
           "id": "arrange-damper-tool",
           "text": "Arrange a damper puller and installer (parts-store loaner, or Powerbuilt 648637)",
           "detail": "",
-          "done": false,
-          "done_date": null,
+          "done": true,
+          "done_date": "2026-11-13",
           "est_min": 15,
           "est_guess": true,
           "needs_parts": [],
@@ -1142,7 +1157,7 @@
     {
       "id": "assembly-lube",
       "name": "Assembly lube",
-      "status": "in_cart",
+      "status": "ordered",
       "qty": 1,
       "vendor": "Summit Racing",
       "part_number": "",
@@ -1153,7 +1168,7 @@
     {
       "id": "fuel-pump-gasket",
       "name": "Fuel pump gasket",
-      "status": "in_cart",
+      "status": "ordered",
       "qty": 1,
       "vendor": "Summit Racing",
       "part_number": "",
@@ -1164,7 +1179,7 @@
     {
       "id": "oil-pump-gasket",
       "name": "Oil pump gasket",
-      "status": "in_cart",
+      "status": "ordered",
       "qty": 1,
       "vendor": "Summit Racing",
       "part_number": "",
@@ -1175,7 +1190,7 @@
     {
       "id": "water-pump-gasket",
       "name": "Water pump gasket",
-      "status": "in_cart",
+      "status": "ordered",
       "qty": 1,
       "vendor": "Summit Racing",
       "part_number": "",
@@ -1186,7 +1201,7 @@
     {
       "id": "timing-cover-gasket",
       "name": "Timing cover gasket",
-      "status": "in_cart",
+      "status": "ordered",
       "qty": 1,
       "vendor": "Summit Racing",
       "part_number": "",
@@ -1208,7 +1223,7 @@
     {
       "id": "rear-main-seal",
       "name": "Two-piece rear main seal, 289/302",
-      "status": "needed",
+      "status": "ordered",
       "qty": 1,
       "vendor": "",
       "part_number": "",
@@ -1219,7 +1234,7 @@
     {
       "id": "oil-pan-gasket-set",
       "name": "Oil pan gasket set",
-      "status": "needed",
+      "status": "ordered",
       "qty": 1,
       "vendor": "",
       "part_number": "",
@@ -1230,7 +1245,7 @@
     {
       "id": "front-crank-seal",
       "name": "Front crank seal",
-      "status": "needed",
+      "status": "ordered",
       "qty": 1,
       "vendor": "",
       "part_number": "",
@@ -1241,7 +1256,7 @@
     {
       "id": "oil-pump-pickup-gasket",
       "name": "Oil pump pickup gasket",
-      "status": "needed",
+      "status": "ordered",
       "qty": 1,
       "vendor": "",
       "part_number": "",
@@ -1313,7 +1328,7 @@
       "part_number": "",
       "price": null,
       "url": "",
-      "notes": "Order after measuring the crank (after the bearing order)."
+      "notes": "Order after measuring the crank (after the bearing order). The old cover is cracked in one spot, so a new one is required."
     },
     {
       "id": "sandpaper-crocus",
@@ -1340,7 +1355,7 @@
     {
       "id": "thermostat-gasket",
       "name": "Thermostat and housing gasket",
-      "status": "needed",
+      "status": "ordered",
       "qty": 1,
       "vendor": "",
       "part_number": "",
@@ -1351,7 +1366,7 @@
     {
       "id": "valve-cover-gaskets",
       "name": "Valve cover gaskets",
-      "status": "needed",
+      "status": "ordered",
       "qty": 1,
       "vendor": "",
       "part_number": "",
@@ -1417,7 +1432,7 @@
     {
       "id": "chip-repair-epoxy",
       "name": "Epoxy / JB Weld (chip repair)",
-      "status": "needed",
+      "status": "installed",
       "qty": 1,
       "vendor": "",
       "part_number": "",
@@ -1442,8 +1457,8 @@
     {
       "id": "damper-puller-installer",
       "name": "Damper puller and installer",
-      "status": "needed",
-      "notes": "Hub-bolt type only, never a jaw puller. Powerbuilt 648637 (Kit 12) does both and is often a parts-store loaner. OMT flange kit removes only. Fallback installer: grade 8 threaded rod, nut, hardened washers."
+      "status": "have",
+      "notes": "Borrowed from a friend. Return it after the damper is back on."
     },
     {
       "id": "micrometer-tool",
@@ -1466,7 +1481,7 @@
     {
       "id": "hose-pieces",
       "name": "5/16 in. hose pieces, about 3 in. long",
-      "status": "needed",
+      "status": "have",
       "notes": "Over the rod bolts."
     },
     {
@@ -1502,13 +1517,13 @@
     {
       "id": "trans-support",
       "name": "Floor jack or jack stand with a 2x4 pad (transmission support)",
-      "status": "needed",
+      "status": "have",
       "notes": "Holds the C4 level while the engine is out. Don't press on the thin stamped pan directly."
     },
     {
       "id": "converter-strap",
       "name": "Torque converter retaining strap (or bracket and bolts)",
-      "status": "needed",
+      "status": "have",
       "notes": "Keeps the converter seated on the front pump."
     }
   ],
