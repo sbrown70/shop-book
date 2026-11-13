@@ -693,6 +693,18 @@
       "text": "",
       "task": "crank/label-caps-and-shells",
       "auto": true
+    },
+    {
+      "id": "2026-11-13-pick-upper-seal-half",
+      "date": "2026-11-13",
+      "kind": "work",
+      "project": "engine-302",
+      "subproject": "rear-main-seal",
+      "area": "engine",
+      "title": "Pick the stuck upper seal half out of the block groove",
+      "text": "",
+      "task": "rear-main-seal/pick-upper-seal-half",
+      "auto": true
     }
   ]
 }
