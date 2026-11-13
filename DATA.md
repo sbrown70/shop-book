@@ -119,7 +119,8 @@ Field rules:
 - Task fields:
   - `est_min` is the estimated minutes. `est_guess: true` means someone guessed it and the owner hasn't confirmed it.
   - `confirm: true` means a chat marked the task's state as uncertain.
-  - `needs_parts` and `needs_tools` hold part and tool ids from the same project. A task counts as "waiting" while any part it needs isn't `on_hand` or `installed`.
+    - A task that turned out not to be needed gets `done: true` and `skipped: true`, with the reason in `detail`. It counts as closed and shows as "Skipped".
+- `needs_parts` and `needs_tools` hold part and tool ids from the same project. A task counts as "waiting" while any part it needs isn't `on_hand` or `installed`.
 - Part `status`: `needed`, `in_cart`, `ordered`, `on_hand`, `installed`, `skip`.
 - Tool `status`: `needed`, `have`, `borrow`, `rent`.
 - Specs:
@@ -157,6 +158,7 @@ Field rules:
 
 - `kind` is one of `work` (did something), `measurement`, `finding` (learned something), `incident` (something went wrong), `purchase`, `note`.
 - `task` is `"subproject-id/task-id"` when the entry came from finishing a task.
+- A measurement's `value` is a number when it's numeric. Pass/fail checks use a short string such as `"continuity"`, `"open"` or `"pass"`, with an empty `unit`.
 - `spec_ref` is the `item` name of a spec in the same project. When it's set, or when `min`/`max` are set, the site marks the reading in or out of spec.
 - Entries can be in any order. The site sorts them.
 

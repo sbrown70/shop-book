@@ -1,4 +1,6 @@
 from_chats/
 proposals/
-.claude/
+.claude/*
+!.claude/skills/
 *.zip
+__pycache__/

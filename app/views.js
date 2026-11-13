@@ -21,7 +21,8 @@ export function taskRow(p, s, t, { context = false } = {}) {
   if (context) subs.push(`<span>${esc(s.title)}</span>`);
   if (wait.length) subs.push(`<span class="wait">Waiting: ${esc(wait.map(x => x.name).join(', '))}</span>`);
   if (t.confirm) subs.push('<span class="conf">Confirm on the car</span>');
-  if (t.done && t.done_date) subs.push(`<span>Done ${fmtDate(t.done_date)}</span>`);
+  if (t.skipped) subs.push('<span>Skipped: not needed</span>');
+  else if (t.done && t.done_date) subs.push(`<span>Done ${fmtDate(t.done_date)}</span>`);
   return `<div class="task${t.done ? ' done' : ''}">
     <button class="tick" data-act="toggle-task" data-p="${esc(p.id)}" data-s="${esc(s.id)}" data-t="${esc(t.id)}" aria-label="${t.done ? 'Mark not done' : 'Mark done'}: ${esc(t.text)}"><span>${t.done ? '✓' : ''}</span></button>
     <div class="txt" data-act="edit-task" data-p="${esc(p.id)}" data-s="${esc(s.id)}" data-t="${esc(t.id)}"><span>${esc(t.text)}</span>${subs.length ? `<div class="sub">${subs.join('')}</div>` : ''}</div>

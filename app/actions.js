@@ -282,7 +282,7 @@ export const actions = {
     const p = P(d.p), s = sub(d.p, d.s), t = task(d);
     if (!t) return;
     if (t.done) {
-      t.done = false; t.done_date = null;
+      t.done = false; t.done_date = null; delete t.skipped;
       const auto = S.log.entries.filter(e => e.task === `${s.id}/${t.id}` && e.auto && !e.text && !e.measurements?.length && !e.photos?.length);
       for (const e of auto) deleteLogEntry(e.id);
       await saveProject(p, `Reopen task: ${t.text.slice(0, 60)}`);
