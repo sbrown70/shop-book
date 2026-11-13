@@ -215,14 +215,14 @@
         {
           "label": "Front suspension",
           "value": "Unknown",
-          "notes": "Stock or modified? Note springs, shocks and any upgrades.",
+          "notes": "Front shocks have been replaced (date and brand not recorded). Stock or modified? Note springs, shocks and any upgrades.",
           "updated": "2026-11-13",
           "history": []
         },
         {
           "label": "Rear suspension",
           "value": "Unknown",
-          "notes": "Stock leaf springs or modified? Note shocks and any traction aids.",
+          "notes": "Stock-style leaf springs. New rear shocks and shackles are on hand, not yet installed (see the Rear shocks project). Stock leaf springs or modified? Note shocks and any traction aids.",
           "updated": "2026-11-13",
           "history": []
         },

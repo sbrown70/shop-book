@@ -1,0 +1,261 @@
+{
+  "status": "active",
+  "started": "2026-11-13",
+  "updated": "2026-11-13",
+  "links": [],
+  "files": [],
+  "tools": [],
+  "specs": [],
+  "decisions": [],
+  "sources": [],
+  "id": "rear-suspension",
+  "title": "Rear shocks and leaf-spring shackles",
+  "area": "suspension-steering",
+  "goal": "New rear shocks and spring shackles installed and tightened at ride height, matching the new front shocks.",
+  "summary": "The front shocks are already replaced. The rear shocks and shackles were put off for the engine and wiring projects. All the parts are on hand; this is just the labor. The car doesn't need to run for this, so it can be done while the engine is out. Do it at the same time as the tire swap, because the rear wheels have to come off anyway.",
+  "next_step": "Soak the rear shock nuts and shackle nuts with penetrating oil a day ahead, then get the rear on jack stands with the wheels off.",
+  "subprojects": [
+    {
+      "id": "setup",
+      "title": "Lift and support the rear",
+      "status": "todo",
+      "goal": "Rear on stands, wheels off, axle supported by a floor jack.",
+      "summary": "",
+      "blocked_by": "",
+      "depends_on": [],
+      "files": [],
+      "notes": [],
+      "tasks": [
+        {
+          "id": "soak-fasteners",
+          "text": "Spray penetrating oil on the shock nuts (top and bottom) and the shackle nuts, a day or two ahead",
+          "done": false,
+          "done_date": null,
+          "est_min": 10,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false,
+          "detail": "Do it again just before you start. The upper shock nuts are usually reached from inside the trunk on these cars; check yours."
+        },
+        {
+          "id": "lift-rear",
+          "text": "Chock the front wheels, jack the rear and set stands on the frame rails ahead of the front spring hangers",
+          "done": false,
+          "done_date": null,
+          "est_min": 20,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false,
+          "detail": "Stands go on the body/frame, not the axle, so the axle can move freely. Keep a floor jack under the axle center to raise or lower it as you go."
+        },
+        {
+          "id": "rear-wheels-off",
+          "text": "Remove both rear wheels",
+          "done": false,
+          "done_date": null,
+          "est_min": 10,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false,
+          "detail": "Take them to the tire shop with the fronts (tires project)."
+        }
+      ]
+    },
+    {
+      "id": "rear-shocks",
+      "title": "Replace the rear shocks",
+      "status": "todo",
+      "goal": "Both rear shocks replaced with the new ones.",
+      "summary": "",
+      "blocked_by": "",
+      "depends_on": [
+        "setup"
+      ],
+      "files": [],
+      "notes": [],
+      "tasks": [
+        {
+          "id": "old-shocks-out",
+          "text": "Remove the old rear shocks: lower nut at the spring plate, upper nut(s) from inside the trunk",
+          "done": false,
+          "done_date": null,
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false,
+          "detail": "If a stud spins or seizes, cutting the old shock is fine since it's being replaced. Lift the axle slightly with the jack to unload the shock."
+        },
+        {
+          "id": "new-shocks-in",
+          "text": "Install the new rear shocks with their new bushings and washers; snug the nuts only",
+          "done": false,
+          "done_date": null,
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [
+            "rear-shocks"
+          ],
+          "needs_tools": [],
+          "confirm": false,
+          "detail": "Final tightening happens with the car's weight on the suspension (Finish sub-project)."
+        }
+      ]
+    },
+    {
+      "id": "shackles",
+      "title": "Replace the spring shackles",
+      "status": "todo",
+      "goal": "New shackles and bushings at the rear eye of both leaf springs.",
+      "summary": "",
+      "blocked_by": "",
+      "depends_on": [
+        "setup"
+      ],
+      "files": [],
+      "notes": [],
+      "tasks": [
+        {
+          "id": "inspect-bushings",
+          "text": "Inspect the front spring-eye bushings and the frame-hanger bushings while you're there",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": true,
+          "detail": "If the front eye bushings are cracked or squashed, plan to replace them too (needs a part)."
+        },
+        {
+          "id": "shackle-left",
+          "text": "Driver side: support the axle and spring, remove the old shackle and bushings, install the new shackle kit; snug only",
+          "done": false,
+          "done_date": null,
+          "est_min": 60,
+          "est_guess": true,
+          "needs_parts": [
+            "shackle-kit"
+          ],
+          "needs_tools": [],
+          "confirm": false,
+          "detail": "Do one side at a time so the axle stays located. Old rubber bushings may need to be pushed, cut or burned out; wear eye protection and keep flame away from the fuel tank and lines."
+        },
+        {
+          "id": "shackle-right",
+          "text": "Passenger side: same as the driver side; snug only",
+          "done": false,
+          "done_date": null,
+          "est_min": 60,
+          "est_guess": true,
+          "needs_parts": [
+            "shackle-kit"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        }
+      ]
+    },
+    {
+      "id": "finish",
+      "title": "Torque at ride height and check",
+      "status": "todo",
+      "goal": "Everything tightened with the car's weight on the springs.",
+      "summary": "",
+      "blocked_by": "",
+      "depends_on": [
+        "rear-shocks",
+        "shackles"
+      ],
+      "files": [],
+      "notes": [],
+      "tasks": [
+        {
+          "id": "ride-height",
+          "text": "Put the weight back on the rear suspension: wheels on and car lowered, or jack under the axle until the body just lifts off the stands",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false,
+          "detail": "Rubber bushings tightened with the suspension hanging get pre-twisted and wear out early."
+        },
+        {
+          "id": "final-torque",
+          "text": "Tighten the shackle nuts and shock nuts with the weight on, to the spec in the kits' instructions",
+          "done": false,
+          "done_date": null,
+          "est_min": 20,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": true,
+          "detail": "Record the torque values from the kit instructions here once you look them up."
+        },
+        {
+          "id": "clearance-check",
+          "text": "Check that the shocks and shackles clear the body, exhaust and fuel tank, and that nothing rubs",
+          "done": false,
+          "done_date": null,
+          "est_min": 10,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "retorque-later",
+          "text": "Recheck the shackle and shock nuts after the first ~100 miles of driving",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        }
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "rear-shocks",
+      "name": "Rear shocks (pair)",
+      "status": "on_hand",
+      "qty": 2,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Brand and part number not recorded yet."
+    },
+    {
+      "id": "shackle-kit",
+      "name": "Rear leaf-spring shackle kit (shackles, bushings, hardware)",
+      "status": "on_hand",
+      "qty": 2,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Confirm the kit includes bushings."
+    }
+  ],
+  "open_questions": [
+    {
+      "text": "What brand and part number are the new rear shocks (and do they match the fronts)?",
+      "resolved": false,
+      "answer": ""
+    },
+    {
+      "text": "Does the shackle kit include new bushings, and do the front spring-eye bushings need replacing too?",
+      "resolved": false,
+      "answer": ""
+    }
+  ]
+}

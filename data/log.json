@@ -705,6 +705,36 @@
       "text": "",
       "task": "rear-main-seal/pick-upper-seal-half",
       "auto": true
+    },
+    {
+      "id": "2026-11-13-rear-suspension-parts-on-hand",
+      "date": "2026-11-13",
+      "kind": "note",
+      "project": "rear-suspension",
+      "subproject": null,
+      "area": "suspension-steering",
+      "title": "Rear shocks and spring shackles on hand",
+      "text": "New rear shocks and leaf-spring shackles are bought and waiting. The front shocks were already replaced earlier; the rears were put off for the engine and wiring work.",
+      "measurements": [],
+      "photos": [],
+      "cost": null,
+      "odometer": null,
+      "task": null
+    },
+    {
+      "id": "2026-11-13-new-tires-on-hand",
+      "date": "2026-11-13",
+      "kind": "note",
+      "project": "tires",
+      "subproject": null,
+      "area": "wheels-tires",
+      "title": "New tires on hand, not mounted yet",
+      "text": "New tires are bought but not mounted, since the car can't be driven to a shop. Plan: pull the wheels and take them in.",
+      "measurements": [],
+      "photos": [],
+      "cost": null,
+      "odometer": null,
+      "task": null
     }
   ]
 }

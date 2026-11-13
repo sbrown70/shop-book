@@ -1,0 +1,198 @@
+{
+  "status": "active",
+  "started": "2026-11-13",
+  "updated": "2026-11-13",
+  "links": [],
+  "files": [],
+  "tools": [],
+  "specs": [],
+  "decisions": [],
+  "sources": [],
+  "id": "tires",
+  "title": "Mount and install the new tires",
+  "area": "wheels-tires",
+  "goal": "The new tires mounted, balanced and on the car at the right pressure.",
+  "summary": "The new tires are on hand but not mounted, because the car can't be driven to a shop. The fix is to take the wheels to the shop instead of the car: pull them, mount and balance them there, and put them back on. Pair the rears with the rear shock and shackle job.",
+  "next_step": "Read the size and DOT date code off the new tires and the old ones, and check that the size suits the wheels.",
+  "subprojects": [
+    {
+      "id": "check",
+      "title": "Check the tires and wheels",
+      "status": "todo",
+      "goal": "Confirm the new tires fit the wheels and record their details.",
+      "summary": "",
+      "blocked_by": "",
+      "depends_on": [],
+      "files": [],
+      "notes": [],
+      "tasks": [
+        {
+          "id": "read-sidewalls",
+          "text": "Write down the size, brand and load/speed rating from the new tires' sidewalls",
+          "done": false,
+          "done_date": null,
+          "est_min": 10,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "dot-date",
+          "text": "Read the 4-digit DOT date code on each new tire (week and year)",
+          "done": false,
+          "done_date": null,
+          "est_min": 5,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false,
+          "detail": "Tires age even in storage; good to know how old these are."
+        },
+        {
+          "id": "check-wheels",
+          "text": "Check the wheels for cracks, bends and rust at the bead seat, and note their size (stamped inside)",
+          "done": false,
+          "done_date": null,
+          "est_min": 20,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "valve-stems",
+          "text": "Decide on new valve stems; have the shop put them in when mounting",
+          "done": false,
+          "done_date": null,
+          "est_min": 5,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": true,
+          "detail": "Cheap, and the old rubber stems are probably hardened."
+        }
+      ]
+    },
+    {
+      "id": "mount",
+      "title": "Get them mounted and balanced",
+      "status": "todo",
+      "goal": "All four new tires mounted and balanced on the wheels.",
+      "summary": "",
+      "blocked_by": "",
+      "depends_on": [
+        "check"
+      ],
+      "files": [],
+      "notes": [],
+      "tasks": [
+        {
+          "id": "pull-wheels",
+          "text": "Pull the wheels with the car on jack stands; mark which corner each came from",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false,
+          "detail": "Pull the rears together with the rear shock and shackle job. With the engine out the front is light; set stands under the frame, not the suspension."
+        },
+        {
+          "id": "shop-mount",
+          "text": "Take the wheels and tires to a tire shop to mount and balance",
+          "done": false,
+          "done_date": null,
+          "est_min": 90,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        }
+      ]
+    },
+    {
+      "id": "install",
+      "title": "Put them on the car",
+      "status": "todo",
+      "goal": "Wheels back on and torqued, pressures set.",
+      "summary": "",
+      "blocked_by": "",
+      "depends_on": [
+        "mount",
+        "rear-suspension/rear-shocks",
+        "rear-suspension/shackles"
+      ],
+      "files": [],
+      "notes": [],
+      "tasks": [
+        {
+          "id": "wheels-on",
+          "text": "Put the wheels on and tighten the lug nuts in a star pattern, finishing at the torque spec for your wheels and studs",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": true,
+          "detail": "Look up the lug torque for your wheels and record it here."
+        },
+        {
+          "id": "set-pressure",
+          "text": "Set the tire pressures to the door-sticker or tire-shop recommendation",
+          "done": false,
+          "done_date": null,
+          "est_min": 10,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "retorque-lugs",
+          "text": "Re-torque the lug nuts after the first ~50 miles",
+          "done": false,
+          "done_date": null,
+          "est_min": 10,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        }
+      ]
+    }
+  ],
+  "parts": [
+    {
+      "id": "new-tires",
+      "name": "New tires",
+      "status": "on_hand",
+      "qty": 4,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Size, brand and quantity not recorded yet. Is there a spare too?"
+    },
+    {
+      "id": "valve-stems",
+      "name": "Valve stems",
+      "status": "needed",
+      "qty": 4,
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Shop usually supplies these at mounting."
+    }
+  ],
+  "open_questions": [
+    {
+      "text": "What size and brand are the new tires, and is there a fifth for the spare?",
+      "resolved": false,
+      "answer": ""
+    }
+  ]
+}
