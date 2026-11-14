@@ -1043,6 +1043,18 @@
       "text": "",
       "task": "turn-signals/recheck-green-red-jumper",
       "auto": true
+    },
+    {
+      "id": "2026-11-14-identify-driver-front-wires",
+      "date": "2026-11-14",
+      "kind": "work",
+      "project": "wiring",
+      "subproject": "turn-signals",
+      "area": "electrical",
+      "title": "Identify the driver front light's three wires before reconnecting (turn = green-white, ground = black, third = parking); fix any swap made during testing",
+      "text": "",
+      "task": "turn-signals/identify-driver-front-wires",
+      "auto": true
     }
   ]
 }
