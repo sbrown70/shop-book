@@ -971,6 +971,18 @@
       "cost": null,
       "odometer": null,
       "task": "hazard-switch/remove-hazard-harness"
+    },
+    {
+      "id": "2026-11-14-replace-hazard-fuse",
+      "date": "2026-11-14",
+      "kind": "work",
+      "project": "wiring",
+      "subproject": "turn-signals",
+      "area": "electrical",
+      "title": "Replace the blown hazard-circuit fuse (only after the driver front wires are sorted), then confirm the hazard flasher's orange feed has power",
+      "text": "",
+      "task": "turn-signals/replace-hazard-fuse",
+      "auto": true
     }
   ]
 }
