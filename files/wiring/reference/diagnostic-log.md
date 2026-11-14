@@ -55,26 +55,41 @@ Terminals, left to right: **battery stud, S, I, starter stud.**
 
 **Dash light feed:** a blue wire with a three-way splitter. It reads "grounded" with the lights off, through the dash bulbs, and is powered with the lights on, dimmed by the headlight knob. It is **not a ground.** It has a spare unused branch, a good source for the tach light and radio illumination.
 
-## Turn signals (in progress)
+## Turn signals (in progress; rewritten 2026-11-14)
 
-Circuit path, per the Haynes diagram:
+Earlier versions of this section were wrong about two things: the "four-wire connector" was the hazard switch's terminal board, and the flasher tested was the hazard flasher. Corrected below.
 
-- Ignition switch eyelet (297) → **8, orange-yellow** → flasher → **44, blue** → turn-signal switch's **four-wire connector**.
-- That connector carries **44 blue, 10 green-red (brake), 2 white-blue (front), 3 green-white (front).**
-- The rear lights get **5 orange-blue** and **9 green-orange** through a separate **two-pin plug**.
+**Cause found (almost certainly): the factory turn-signal flasher is dead.** It reads open across its terminals. Old thermal flashers are closed when cold, so a good one reads continuous. Swap test and replacement still to do.
 
-Results so far:
+How the system works (1966 factory diagrams):
 
-- **Brake lights work.** That proves the rear wiring, sockets and bulbs, and the switch's brake contacts.
-- **Flasher works.** A jumper test made a rear light blink through it.
-- **Flasher feed works.** Orange (8) jumpered to a rear pin gave a steady light.
-- **Blue (44) works to the car side of the four-wire connector.** A jumper from there to a rear pin blinked.
-- **With the harness connected:** blue reads 12 V at the four-wire connector, but white-blue and green-white read 0 V in every lever position.
-- **Conclusion:** the fault is in the **turn-signal switch** or the **blue pin's contact between the four-wire connector halves.**
-- **Next test:** both switch plugs unplugged, battery disconnected, switch-side halves only. Check continuity from blue to each front and rear pin with the lever left, right and neutral.
-  - Left → one front and one rear pin, right → the other pair: the switch is good, so repair the connector pin.
-  - Otherwise, replace the turn-signal switch.
-- **Open question:** both flasher terminals read 12 V even with the key OFF. Per the diagram, the flasher is fed from the accessory circuit and should be dead in OFF. Not yet explained.
+- **Two flashers.** Cars with hazards have a hazard flasher and a separate turn-signal flasher.
+- **Hazard flasher:** always hot (battery → fuse → orange feed) → blue → hazard switch board. The orange feed is spliced into the cigarette lighter's feed wire.
+- **Turn-signal flasher:** hot with the key on (ignition accessory 297 → orange-yellow 8) → blue (44) → the lever switch's own plug at the column base.
+- **Lever switch plugs:** a six-wire plug (blue 44, green-red 10 brake, green-white front left, white-blue front right, plus two horn wires) and a two-wire plug for the rears (orange-blue 5 left, green-orange 9 right).
+- **Lever switch:** neutral = flasher input to nothing, brake to both rears. Left = flasher to left front + left rear, brake to right rear. Right = the mirror image.
+- **Hazard switch board** (four terminals, switch missing): blue = hazard flasher output in; green-white, white-blue and green-red spliced into the lever switch's left front, right front and brake wires. The switch would connect blue to all three at once.
+
+Results:
+
+- **Timeline:** the blinkers worked on both sides around Nov 11 and stopped after the old accessory wiring came out, before the parking-light crackle.
+- **Brake lights work:** rear wiring, sockets, bulbs and the lever switch's brake contacts are good.
+- **Lever switch continuity (switch side, battery off):** blue to the correct front and rear with the lever; open in neutral; brake to both rears in neutral.
+- **Back-feed jumper tests at the hazard board:** blue → green-white blinks the left rear only with the lever left; blue → white-blue blinks the right rear only with the lever right; blue → green-red blinks both rears in every position. (Unverified: the diagram predicts one rear with the lever over.)
+- **Blue → green-white with the driver front connected:** the driver front blinks constantly in every position. Not a usable fix: the fronts and arrows would blink all the time, even key-off.
+- **Hazard flasher:** continuity across terminals (good). **Turn-signal flasher:** open (dead).
+- **Blown fuse:** swapping wires at the driver front light while live blew the hazard-circuit fuse. Found; replace only after the driver front wires are sorted.
+- **Possible driver front miswire:** it blinked with the green-red jumper.
+
+Next:
+
+1. Tape over the live blue terminal on the hazard board.
+2. Identify the driver front light's three wires (turn green-white, ground black, third = parking) and fix any swap.
+3. Replace the blown fuse; confirm the hazard flasher's feed is back.
+4. Key on: test light on the turn-signal flasher socket; one terminal should light.
+5. Swap test: hazard flasher in the turn-signal socket; lever left and right.
+6. Buy and install a new turn-signal flasher; return the hazard flasher to its socket.
+7. Final check: all four corners and both arrows, lever left/right/neutral, with and without the brake.
 
 ## Heater fan
 

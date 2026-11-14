@@ -5,9 +5,9 @@
   "status": "active",
   "goal": "Remove the accessory wiring added in high school, fix the factory faults found along the way, and install a fused, relay-switched fuse block so the radio, amp and tach each get their own fused circuit.",
   "summary": "The old add-on wiring has been removed and diagnosis of the factory circuits is underway, with the engine out of the car and the ignition switch and headlight switch out of the dash for testing. Found so far: a short to ground on circuit 11 (passenger front parking light), a turn-signal fault in the switch or its blue-pin connector, a heater fan switch that never grounds, and a loose unidentified solid-red wire at the starter relay. The install sheet is the current set of install steps and supersedes the guide's step-by-step section (which still describes a generic separate relay and a 30 A fuse); the guide's circuit plan, connection methods, parts and shopping list are current.",
-  "next_step": "Run the switch-only continuity test on the turn-signal switch (both plugs unplugged, battery off).",
+  "next_step": "Tape over the live blue terminal on the hazard board. Then sort out the driver front light's three wires, replace the blown hazard fuse, and swap-test the turn-signal flasher.",
   "started": "2026-10-26",
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "links": [
     {
       "label": "Guide (Claude)",
@@ -151,66 +151,161 @@
       "id": "turn-signals",
       "title": "Finish diagnosing the turn signals",
       "status": "in_progress",
-      "goal": "Find the turn-signal fault (switch or the blue pin's connector contact) and fix it.",
-      "summary": "Flasher, its feed, the blue (44) wire to the four-wire connector, and the rear wiring/bulbs all test good. Fault is in the turn-signal switch or the blue pin contact in the four-wire connector.",
+      "goal": "Replace the dead turn-signal flasher and get all four corners and both dash arrows working.",
+      "summary": "The factory turn-signal flasher is dead (open circuit). The lever switch, rear wiring, rear bulbs and brake lights are proven good. The four-wire block the earlier tests centered on is the missing hazard switch's terminal board, not part of the turn-signal path. Remaining: confirm with a flasher swap, then replace the flasher.",
       "blocked_by": "",
       "files": [
         "files/wiring/photos/haynes-diagram-turn-signals-rear-lighting.jpg",
         "files/wiring/reference/diagnostic-log.md",
-        "files/wiring/reference/factory-wiring-reference.md"
+        "files/wiring/reference/factory-wiring-reference.md",
+        "files/photos/2026/2026-11-13-hazard-switch-board.jpg"
       ],
       "notes": [
-        "Circuit path per the Haynes diagram: ignition switch eyelet (297) → 8 orange-yellow → flasher → 44 blue → turn-signal switch four-wire connector (44 blue, 10 green-red brake, 2 white-blue front, 3 green-white front). Rear lights get 5 orange-blue and 9 green-orange through a separate two-pin plug.",
-        "Open: both flasher terminals read 12 V with the key OFF, though the diagram says it is fed from accessory circuit 297."
+        "How it works (1966 factory diagrams): there are two flashers. The hazard flasher is always hot (battery → fuse → orange feed) → blue → hazard switch board. The turn-signal flasher is hot with the key on (ignition accessory 297 → orange-yellow 8) → blue (44) → the lever switch's own plug at the column base.",
+        "Lever switch: neutral = flasher input connected to nothing, brake feeds both rears. Left = flasher to left front + left rear, brake to right rear. Right = flasher to right front + right rear, brake to left rear.",
+        "Wire colors: front turn green-white = left (driver), white-blue = right (passenger); brake green-red; rears orange-blue (5) and green-orange (9) on the two-wire plug. Each front light also has a parking wire and a black ground.",
+        "Corrected 2026-11-14: earlier notes treated the four-wire block as the turn-signal switch connector and the hazard flasher as the turn-signal flasher. Both were wrong."
       ],
       "tasks": [
         {
           "id": "switch-side-continuity-test-both-switch",
           "text": "Switch-side continuity test: both switch plugs unplugged, battery off; blue to each front/rear pin with lever left, right, neutral",
-          "detail": "",
-          "done": false,
-          "done_date": null,
+          "detail": "Done 2026-11-13 on the lever switch's own six-wire and two-wire plugs: blue switches to the correct front and rear with the lever, and the brake feed reaches both rears in neutral. The old 'four-wire connector' turned out to be the hazard switch board, so this test as written no longer applies.",
+          "done": true,
+          "done_date": "2026-11-14",
           "est_min": 45,
           "est_guess": true,
           "needs_parts": [],
           "needs_tools": [
             "astroai-digital-multimeter"
           ],
-          "confirm": false
+          "confirm": false,
+          "skipped": true
         },
         {
           "id": "if-the-switch-passes-inspect-clean",
           "text": "If the switch passes: inspect, clean and re-seat the blue (44) pin in both halves of the four-wire connector",
-          "detail": "",
-          "done": false,
-          "done_date": null,
+          "detail": "Not needed: the four-wire block is the hazard switch's terminal board, not part of the turn-signal path.",
+          "done": true,
+          "done_date": "2026-11-14",
           "est_min": 45,
           "est_guess": true,
           "needs_parts": [],
           "needs_tools": [],
-          "confirm": false
+          "confirm": false,
+          "skipped": true
         },
         {
           "id": "if-the-switch-fails-replace-the",
           "text": "If the switch fails: replace the turn-signal switch (steering wheel removal required)",
-          "detail": "",
-          "done": false,
-          "done_date": null,
+          "detail": "Not needed: the lever switch tested good (continuity and back-feed jumper tests).",
+          "done": true,
+          "done_date": "2026-11-14",
           "est_min": 180,
           "est_guess": true,
           "needs_parts": [
             "turn-signal-switch-1966"
           ],
           "needs_tools": [],
-          "confirm": false
+          "confirm": false,
+          "skipped": true
         },
         {
           "id": "explain-why-the-flasher-has-12",
           "text": "Explain why the flasher has 12 V with the key OFF (should be fed from accessory circuit 297)",
+          "detail": "Answered: the flasher with 12 V key-off is the hazard flasher, which is meant to be always hot.",
+          "done": true,
+          "done_date": "2026-11-14",
+          "est_min": 60,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false,
+          "skipped": true
+        },
+        {
+          "id": "identify-driver-front-wires",
+          "text": "Identify the driver front light's three wires before reconnecting (turn = green-white, ground = black, third = parking); fix any swap made during testing",
+          "detail": "The driver front blinked with the hazard-corner (green-red) jumper, which suggests a miswire there if the lever was in neutral.",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "replace-hazard-fuse",
+          "text": "Replace the blown hazard-circuit fuse (only after the driver front wires are sorted), then confirm the hazard flasher's orange feed has power",
+          "detail": "It blew when wires were swapped at the driver front light while live. Replacing it first risks blowing it again.",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [
+            "hazard-circuit-fuse"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "test-flasher-socket-feed",
+          "text": "Key on: test light on each terminal of the turn-signal flasher's socket; one should light (orange-yellow 8)",
+          "detail": "If neither lights, trace the feed back toward the ignition switch accessory circuit (297) and the fuses.",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "flasher-swap-test",
+          "text": "Swap test: plug the good hazard flasher into the turn-signal flasher's socket, all four bulbs connected; pull the lever left and right",
           "detail": "",
           "done": false,
           "done_date": null,
-          "est_min": 60,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "replace-turn-signal-flasher",
+          "text": "Install a new turn-signal flasher and put the hazard flasher back in its own socket",
+          "detail": "Buy after the swap test works. Match the number stamped on the old unit.",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [
+            "turn-signal-flasher"
+          ],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "final-turn-signal-check",
+          "text": "Final check: all four corners and both dash arrows; lever left, right and neutral; with and without the brake pressed",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 20,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "recheck-green-red-jumper",
+          "text": "Only if something's still off: recheck the green-red jumper at the hazard board with the lever in a turn position (one rear or both?)",
+          "detail": "The diagram predicts only one rear; the owner saw both. Low priority.",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
           "est_guess": true,
           "needs_parts": [],
           "needs_tools": [],
@@ -225,6 +320,74 @@
           "est_min": 30,
           "est_guess": true,
           "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        }
+      ]
+    },
+    {
+      "id": "hazard-switch",
+      "title": "Restore the emergency flasher (hazard) switch",
+      "status": "todo",
+      "goal": "Working hazards: all four corners flash with the key off.",
+      "summary": "Optional, and separate from the turn signals. The car has the 1965–66 emergency-flasher system: its own flasher, an always-hot feed, and a four-terminal board spliced into the lever switch's wires. The toggle switch that mounts on the board is missing.",
+      "blocked_by": "",
+      "depends_on": [],
+      "files": [
+        "files/photos/2026/2026-11-13-hazard-switch-board.jpg"
+      ],
+      "notes": [
+        "Board terminals: blue = hazard flasher output (in). Green-white, white-blue and green-red are spliced into the lever switch's left front, right front and brake wires. The switch connects blue to all three at once.",
+        "Ford changed the switch on Mar 1, 1966: before that, a switch on a wiring board; after, a plug-in switch with blade terminals. This board looks like the earlier type."
+      ],
+      "tasks": [
+        {
+          "id": "cap-hazard-blue",
+          "text": "Safety, do now: tape over or cap the exposed blue terminal on the hazard board (always hot and blinking)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 5,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "check-build-date",
+          "text": "Read the build date on the door data plate (before or after Mar 1, 1966?)",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 10,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "find-hazard-switch",
+          "text": "Find a switch that fits the existing four-terminal board; confirm fitment before buying",
+          "detail": "Options: NOS C5AZ-15B590-B (seen on eBay); reproduction kits from CJ Pony Parts (EFS1 / EFS2 / EFS3), Scott Drake and Mac's.",
+          "done": false,
+          "done_date": null,
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "install-hazard-switch",
+          "text": "Mount the switch (originally in the glove box), connect it, and test hazards with the key off; pressing the brake should make the rears go solid",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 60,
+          "est_guess": true,
+          "needs_parts": [
+            "hazard-switch"
+          ],
           "needs_tools": [],
           "confirm": false
         }
@@ -866,7 +1029,7 @@
         {
           "id": "get-a-1966-specific-mustang-wiring",
           "text": "Get a 1966-specific Mustang wiring diagram (current printed set is labeled 1965)",
-          "detail": "",
+          "detail": "Partly done 2026-11-14: the 1966 factory 'Exterior Lighting, Turn Signals and Horns' diagram and the 1966 REV1 exterior-lights diagram are in hand. Other 1966 pages still needed if wanted.",
           "done": false,
           "done_date": null,
           "est_min": 30,
@@ -878,7 +1041,43 @@
         {
           "id": "record-the-loose-red-wire-s",
           "text": "Record the loose red wire's identity and the turn-signal fix once known",
-          "detail": "",
+          "detail": "Partly done 2026-11-14: the turn-signal cause is recorded (dead turn-signal flasher). The loose red wire is still unknown.",
+          "done": false,
+          "done_date": null,
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "rewrite-turn-signal-diagnostic-log",
+          "text": "Rewrite the turn-signal section of the diagnostic log with the corrected findings",
+          "detail": "Done in files/wiring/reference/diagnostic-log.md.",
+          "done": true,
+          "done_date": "2026-11-14",
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "note-two-flashers-in-reference",
+          "text": "Note in the factory wiring reference that 1965–66 cars with hazards have two flashers, and describe the hazard board's four terminals",
+          "detail": "Done in files/wiring/reference/factory-wiring-reference.md.",
+          "done": true,
+          "done_date": "2026-11-14",
+          "est_min": 15,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "save-1966-diagrams",
+          "text": "Save photos of the 1966 diagrams (factory exterior lighting and REV1) to the site",
+          "detail": "They were shared in another chat; add them under files/wiring/photos/.",
           "done": false,
           "done_date": null,
           "est_min": 15,
@@ -1015,13 +1214,46 @@
     {
       "id": "turn-signal-switch-1966",
       "name": "Turn-signal switch (1966)",
-      "status": "needed",
+      "status": "skip",
       "qty": 1,
       "vendor": "TBD",
       "part_number": "",
       "price": null,
       "url": "",
-      "notes": "Only if the switch-side continuity test fails. Optional: maybe."
+      "notes": "Not needed: the lever switch tested good (2026-11-13/14)."
+    },
+    {
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Buy after the swap test confirms. Match the old unit's number.",
+      "id": "turn-signal-flasher",
+      "name": "Turn-signal flasher, 1966 Mustang (thermal, 2-prong)",
+      "status": "needed",
+      "qty": 1
+    },
+    {
+      "vendor": "",
+      "part_number": "",
+      "price": null,
+      "url": "",
+      "notes": "Match the blown one's rating; get a spare. The 1966 REV1 diagram shows fuse #5, 20 A.",
+      "id": "hazard-circuit-fuse",
+      "name": "Fuse for the hazard flasher circuit",
+      "status": "needed",
+      "qty": 2
+    },
+    {
+      "vendor": "",
+      "part_number": "C5AZ-15B590-B (NOS option)",
+      "price": null,
+      "url": "",
+      "notes": "Optional. Confirm fitment to the existing board and the build date first. Repro: CJ Pony Parts EFS1/EFS2/EFS3, Scott Drake, Mac's.",
+      "id": "hazard-switch",
+      "name": "Emergency flasher switch, 1965–66 Mustang",
+      "status": "needed",
+      "qty": 1
     }
   ],
   "tools": [
@@ -1064,13 +1296,17 @@
     {
       "date": "2026-10-26",
       "text": "Dropped the 12 V cigarette-lighter socket from the plan."
+    },
+    {
+      "date": "2026-11-14",
+      "text": "Don't jump the hazard flasher's blue to the front wires as a fix: the fronts and dash arrows would blink all the time, even key-off, and drain the battery. Replace the turn-signal flasher instead."
     }
   ],
   "open_questions": [
     {
       "text": "Why do both flasher terminals read 12 V with the key OFF? Per the diagram the flasher is fed from accessory circuit 297.",
-      "resolved": false,
-      "answer": ""
+      "resolved": true,
+      "answer": "That was the hazard flasher, which is meant to be always hot (battery → fuse → orange feed) so hazards work with the key off."
     },
     {
       "text": "What is the loose solid-red wire at the starter relay, and where does it go?",
@@ -1079,8 +1315,8 @@
     },
     {
       "text": "Is the turn-signal fault the switch or the blue (44) pin contact in the four-wire connector?",
-      "resolved": false,
-      "answer": ""
+      "resolved": true,
+      "answer": "Neither. The four-wire block is the missing hazard switch's terminal board. The lever switch tests good; the turn-signal flasher is dead (open circuit)."
     },
     {
       "text": "What voltage does the electronic ignition module need on coil +? Check before wiring the coil feed.",
@@ -1096,7 +1332,38 @@
       "text": "What is the unused switched 12 V wire under the dash (factory radio feed?), and is the three-prong illumination plug the blue dash-light splitter with the spare branch, or something else?",
       "resolved": false,
       "answer": ""
+    },
+    {
+      "text": "Is the driver front light miswired? It blinked with the hazard-corner (green-red) jumper; check whether the lever was in neutral.",
+      "resolved": false,
+      "answer": ""
+    },
+    {
+      "text": "Was the car built before or after Mar 1, 1966? That decides which hazard switch fits.",
+      "resolved": false,
+      "answer": ""
     }
   ],
-  "sources": []
+  "sources": [
+    {
+      "title": "The Care and Feeding of Ponies: 1965 and 1966 Mustang emergency flashers",
+      "url": "https://thecareandfeedingofponies.blogspot.com/2009/01/emergency-flashers.html"
+    },
+    {
+      "title": "Ford-Trucks.com: turn signal stop working (1966)",
+      "url": "https://www.ford-trucks.com/forums/1027116-turn-signal-stop-working.html"
+    },
+    {
+      "title": "MustangForums: Flashers (1966)",
+      "url": "https://mustangforums.com/forum/classic-mustangs-tech/607895-flashers.html"
+    },
+    {
+      "title": "CJ Pony Parts: Emergency Flasher Switch With Wiring 1965-1966 (EFS1)",
+      "url": "https://www.cjponyparts.com/cj-classics-emergency-flasher-switch-with-wiring-usa-made-1965-1966/p/EFS1/"
+    },
+    {
+      "title": "CJ Pony Parts: Scott Drake Emergency Flasher Switch, 1966 after 3/1/66 (EFS3)",
+      "url": "https://www.cjponyparts.com/scott-drake-emergency-flasher-switch-concours-mustang-1966-built-after-3-1-1966/p/EFS3/"
+    }
+  ]
 }

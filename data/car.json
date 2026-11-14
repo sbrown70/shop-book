@@ -1,7 +1,7 @@
 {
   "name": "1966 Mustang",
   "subtitle": "Blue · 302 V8 · C4 automatic",
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "sections": [
     {
       "id": "overview",
@@ -330,9 +330,21 @@
         },
         {
           "label": "Known faults",
-          "value": "Short on circuit 11 (passenger front parking light), turn-signal fault, dead heater fan switch, loose red wire at the starter relay",
+          "value": "Short on circuit 11 (passenger front parking light), dead turn-signal flasher, emergency flasher switch missing, dead heater fan switch, loose red wire at the starter relay",
           "notes": "Being diagnosed in the wiring project.",
-          "updated": "2026-11-13",
+          "updated": "2026-11-14",
+          "history": [
+            {
+              "date": "2026-11-13",
+              "value": "Short on circuit 11 (passenger front parking light), turn-signal fault, dead heater fan switch, loose red wire at the starter relay"
+            }
+          ]
+        },
+        {
+          "label": "Emergency flashers",
+          "value": "1965–66 factory system: hazard flasher and switch terminal board present; switch missing",
+          "notes": "Two flashers behind the dash: hazard (always hot) and turn signal (key on). The board looks like the pre-Mar-1966 type; check the build date.",
+          "updated": "2026-11-14",
           "history": []
         }
       ]

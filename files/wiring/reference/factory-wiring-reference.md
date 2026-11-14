@@ -1,6 +1,6 @@
 # Factory wiring reference: 1966 Mustang
 
-Drawn from the Haynes manual (36048, 1964½–1973 V8) and a printed set of wiring diagrams labeled **1965 Mustang Exterior Lighting, Turn Signals and Horns** (photos in `../photos/`). The car is a 1966, so confirm colors on the car itself; a '66-specific diagram is on the to-do list.
+Drawn from the Haynes manual (36048, 1964½–1973 V8) and a printed set of wiring diagrams labeled **1965 Mustang Exterior Lighting, Turn Signals and Horns** (photos in `../photos/`). The car is a 1966, so confirm colors on the car itself. The owner now also has the 1966 factory "Exterior Lighting, Turn Signals and Horns" diagram and the 1966 REV1 exterior-lights diagram (not yet saved here).
 
 ## Haynes color code (as printed on the diagram)
 
@@ -36,7 +36,7 @@ Where a line lists two numbers, both are printed on that line of the legend.
 | 8 | Feed into the turn-signal flasher |
 | 44 | Flasher output to the turn-signal switch |
 | 10 | Stoplight switch to the turn-signal switch (brake lights) |
-| 2, 3 | Turn-signal switch to the front turn signals |
+| 2, 3 | Turn-signal switch to the front turn signals: green-white = left (driver), white-blue = right (passenger), per the 1966 factory diagram and the owner's tests |
 | 5, 9 | Turn-signal switch to the rear stop/turn lights (separate two-pin plug) |
 | 11 | Headlight switch to the front parking lights |
 | 14 | Taillights |
@@ -45,6 +45,13 @@ Where a line lists two numbers, both are printed on that line of the legend.
 | 57 | Ground |
 | 140 | Backup lights (through the starter neutral switch) |
 | 460, 461 | Horn |
+
+## Emergency flashers (hazards), 1965–66
+
+- **Cars with hazards have two flashers** behind the dash: the turn-signal flasher (key-on feed, circuit 8 → blue 44 to the lever switch) and a separate **hazard flasher** (always hot: battery → fuse → orange feed; the 1966 REV1 diagram shows fuse #5, 20 A).
+- **Hazard switch terminal board, four terminals:** blue = hazard flasher output (in); green-white, white-blue and green-red are spliced into the lever switch's left front, right front and brake wires. With hazards on, the switch connects blue to all three.
+- **Two switch styles:** before Mar 1, 1966, a switch on a wiring board; after, a plug-in switch with blade terminals.
+- **On this car** the board and the hazard flasher are present but the switch is missing.
 
 ## Starting and ignition (general Ford practice, plus measurements on this car)
 

@@ -415,7 +415,7 @@
       "subproject": "turn-signals",
       "area": "electrical",
       "title": "Brake lights work: rear wiring, sockets and bulbs are good",
-      "text": "Proves the rear wiring, sockets and bulbs, and the turn-signal switch's brake contacts.",
+      "text": "Proves the rear wiring, sockets and bulbs, and the turn-signal switch's brake contacts.\n\n*Corrected 2026-11-14:* still correct. These are the lever switch's brake contacts.",
       "measurements": [],
       "photos": [],
       "cost": null,
@@ -430,8 +430,8 @@
       "project": "wiring",
       "subproject": "turn-signals",
       "area": "electrical",
-      "title": "Flasher confirmed good, and its feed (circuit 8)",
-      "text": "A jumper test made a rear light blink through the flasher. Orange-yellow (8) jumpered to a rear pin gave a steady light, so the flasher feed is confirmed.",
+      "title": "Hazard flasher confirmed good, and its always-hot feed",
+      "text": "A jumper test made a rear light blink through the flasher, and its orange feed jumpered to a rear pin gave a steady light.\n\n*Corrected 2026-11-14:* this was the **hazard flasher**, not the turn-signal flasher. Its orange feed is always hot (battery through a fuse), not circuit 8.",
       "measurements": [],
       "photos": [],
       "cost": null,
@@ -446,8 +446,8 @@
       "project": "wiring",
       "subproject": "turn-signals",
       "area": "electrical",
-      "title": "Blue (44) good to the four-wire connector; fronts read 0 V",
-      "text": "A jumper from the car side of the four-wire connector to a rear pin blinked, so blue (44) is good to that point. With the harness connected, blue reads 12 V at the connector, but white-blue (2) and green-white (3) read 0 V in every lever position. Conclusion: the fault is in the turn-signal switch or the blue pin's contact between the connector halves.",
+      "title": "Hazard flasher blue good to the four-wire block; fronts read 0 V",
+      "text": "A jumper from the blue terminal at the four-wire block to a rear pin blinked. With everything connected, that blue read 12 V but white-blue and green-white read 0 V in every lever position.\n\n*Corrected 2026-11-14:* the four-wire block is the **terminal board of the missing hazard switch**, and its blue is the hazard flasher's output. The turn-signal flasher has its own blue (44) going to the lever switch's plug at the column base. The fronts read 0 V because the hazard switch is missing and the turn-signal flasher is dead.",
       "measurements": [
         {
           "what": "Blue (44)",
@@ -490,8 +490,8 @@
       "project": "wiring",
       "subproject": "turn-signals",
       "area": "electrical",
-      "title": "Flasher terminals read 12 V with the key OFF (unexplained)",
-      "text": "Both flasher terminals read 12 V even with the key off. Per the diagram it is fed from the accessory circuit and should be dead in OFF. Not yet explained.",
+      "title": "Flasher terminals read 12 V with the key OFF (explained: hazard flasher)",
+      "text": "Both flasher terminals read 12 V even with the key off.\n\n*Corrected 2026-11-14:* that is the **hazard flasher**, which is meant to be always hot so hazards work with the key off. Nothing wrong.",
       "measurements": [
         {
           "what": "Flasher terminals",
@@ -730,6 +730,212 @@
       "area": "wheels-tires",
       "title": "New tires on hand, not mounted yet",
       "text": "New tires are bought but not mounted, since the car can't be driven to a shop. Plan: pull the wheels and take them in.",
+      "measurements": [],
+      "photos": [],
+      "cost": null,
+      "odometer": null,
+      "task": null
+    },
+    {
+      "id": "2026-11-13-blinkers-stopped-timeline",
+      "date": "2026-11-13",
+      "kind": "note",
+      "project": "wiring",
+      "subproject": "turn-signals",
+      "area": "electrical",
+      "title": "When the blinkers stopped",
+      "text": "The turn signals worked on both sides around Nov 11. They stopped after the old accessory wiring came out and before the parking-light crackle, so the circuit-11 short didn't cause it.",
+      "measurements": [],
+      "photos": [],
+      "cost": null,
+      "odometer": null,
+      "task": null
+    },
+    {
+      "id": "2026-11-13-lever-switch-continuity",
+      "date": "2026-11-13",
+      "kind": "measurement",
+      "project": "wiring",
+      "subproject": "turn-signals",
+      "area": "electrical",
+      "title": "Lever switch continuity: passes",
+      "text": "Battery off, the lever switch's six-wire plug (four turn-signal wires plus two horn) and two-wire plug unplugged, switch side only. Blue switches to the correct front and rear with the lever; nothing in neutral; green-red (brake) reaches both rears in neutral. The brake-while-signaling check (step 4) wasn't completed.",
+      "measurements": [
+        {
+          "what": "Blue to green-white (left front)",
+          "location": "lever switch plug, lever left",
+          "value": "continuity",
+          "unit": ""
+        },
+        {
+          "what": "Blue to white-blue (right front)",
+          "location": "lever switch plug, lever right",
+          "value": "continuity",
+          "unit": ""
+        },
+        {
+          "what": "Blue to any wire",
+          "location": "lever switch plug, lever neutral",
+          "value": "open",
+          "unit": ""
+        },
+        {
+          "what": "Blue to orange-blue (5)",
+          "location": "lever switch plugs, lever left",
+          "value": "continuity",
+          "unit": ""
+        },
+        {
+          "what": "Blue to green-orange (9)",
+          "location": "lever switch plugs, lever right",
+          "value": "continuity",
+          "unit": ""
+        },
+        {
+          "what": "Green-red to orange-blue and green-orange",
+          "location": "lever switch plugs, lever neutral",
+          "value": "continuity",
+          "unit": ""
+        }
+      ],
+      "photos": [],
+      "cost": null,
+      "odometer": null,
+      "task": null
+    },
+    {
+      "id": "2026-11-13-orange-feed-lighter-splice",
+      "date": "2026-11-13",
+      "kind": "finding",
+      "project": "wiring",
+      "subproject": "turn-signals",
+      "area": "electrical",
+      "title": "Orange flasher feed is spliced into the cigarette lighter's feed",
+      "text": "Following the orange wire from the flasher: instead of going to the ignition switch accessory eyelet (black-green), it is spliced into a blue wire feeding the factory cigarette lighter. Per the 2026-11-14 findings, this was the **hazard flasher's** always-hot feed, so the splice is likely how the hazard flasher gets constant power. Whether it is factory or added later isn't known.",
+      "measurements": [],
+      "photos": [],
+      "cost": null,
+      "odometer": null,
+      "task": null
+    },
+    {
+      "id": "2026-11-14-hazard-board-identified",
+      "date": "2026-11-14",
+      "kind": "finding",
+      "project": "wiring",
+      "subproject": "hazard-switch",
+      "area": "electrical",
+      "title": "The four-wire block is the hazard switch's terminal board (switch missing)",
+      "text": "The four-wire block the earlier tests centered on is the back/terminal board of the 1965–66 emergency-flasher (hazard) switch. The toggle switch is missing, so the block has no mating half. Terminals: blue = hazard flasher output (in); green-white, white-blue and green-red are spliced into the lever switch's left front, right front and brake wires. The 1966 REV1 exterior-lights diagram shows a separate EM flasher (fuse #5, 20 A, from battery) and a hazard warning switch.",
+      "measurements": [],
+      "photos": [
+        "files/photos/2026/2026-11-13-hazard-switch-board.jpg"
+      ],
+      "cost": null,
+      "odometer": null,
+      "task": null
+    },
+    {
+      "id": "2026-11-14-hazard-board-jumper-tests",
+      "date": "2026-11-14",
+      "kind": "measurement",
+      "project": "wiring",
+      "subproject": "turn-signals",
+      "area": "electrical",
+      "title": "Jumper tests at the hazard board prove the lever switch and rears",
+      "text": "Blue jumped to one other terminal at a time. The power back-feeds through the lever switch, which proves its selector contacts, the rear wiring and the rear bulbs. Unverified: the diagram predicts the green-red jumper with the lever in a turn position lights only one rear; both were seen.",
+      "measurements": [
+        {
+          "what": "Blue → green-white: left rear blinks",
+          "location": "hazard board, lever left only",
+          "value": "pass",
+          "unit": ""
+        },
+        {
+          "what": "Blue → white-blue: right rear blinks",
+          "location": "hazard board, lever right only",
+          "value": "pass",
+          "unit": ""
+        },
+        {
+          "what": "Blue → green-red: both rears blink",
+          "location": "hazard board, every lever position",
+          "value": "pass",
+          "unit": ""
+        }
+      ],
+      "photos": [],
+      "cost": null,
+      "odometer": null,
+      "task": null
+    },
+    {
+      "id": "2026-11-14-driver-front-jumper",
+      "date": "2026-11-14",
+      "kind": "finding",
+      "project": "wiring",
+      "subproject": "turn-signals",
+      "area": "electrical",
+      "title": "Jumping hazard blue to the front wire is not a fix",
+      "text": "With the driver front light reconnected, blue jumped to green-white made the driver front blink constantly in every lever position, confirming green-white runs straight to the front light. A permanent jumper would make the fronts and dash arrows blink all the time, even key-off, and drain the battery. The driver front also blinked with the green-red jumper; if the lever was in neutral, that suggests a miswire at that light.",
+      "measurements": [],
+      "photos": [],
+      "cost": null,
+      "odometer": null,
+      "task": null
+    },
+    {
+      "id": "2026-11-14-turn-signal-flasher-dead",
+      "date": "2026-11-14",
+      "kind": "measurement",
+      "project": "wiring",
+      "subproject": "turn-signals",
+      "area": "electrical",
+      "title": "Factory turn-signal flasher reads open: dead",
+      "text": "Found the factory turn-signal flasher (separate from the hazard flasher). Old thermal flashers are closed when cold and should read continuous. It reads open across its terminals; the hazard flasher reads continuous. Next: swap test, then replace.",
+      "measurements": [
+        {
+          "what": "Across terminals",
+          "location": "turn-signal flasher",
+          "value": "open",
+          "unit": ""
+        },
+        {
+          "what": "Across terminals",
+          "location": "hazard flasher",
+          "value": "continuity",
+          "unit": ""
+        }
+      ],
+      "photos": [],
+      "cost": null,
+      "odometer": null,
+      "task": null
+    },
+    {
+      "id": "2026-11-14-hazard-fuse-blown",
+      "date": "2026-11-14",
+      "kind": "incident",
+      "project": "wiring",
+      "subproject": "turn-signals",
+      "area": "electrical",
+      "title": "Blew the hazard-circuit fuse while testing at the driver front light",
+      "text": "Swapping wires at the driver front light while live shorted the circuit. Afterward neither the hazard flasher's blue nor its orange feed had power. The blown fuse has been found. Sort out the driver front wires before replacing it.",
+      "measurements": [],
+      "photos": [],
+      "cost": null,
+      "odometer": null,
+      "task": null
+    },
+    {
+      "id": "2026-11-14-1966-diagrams",
+      "date": "2026-11-14",
+      "kind": "note",
+      "project": "wiring",
+      "subproject": "documentation",
+      "area": "electrical",
+      "title": "Got the 1966 wiring diagrams",
+      "text": "The factory 1966 'Exterior Lighting, Turn Signals and Horns' diagram (averagejoerestoration.com, 66exter1.jpg) and the 1966 REV1 6/10/22 exterior-lights diagram, page 3 of 5 (vintage-mustang.com), which has a 'How the turn switch operates' panel. Shared as images in another chat; not yet saved here.",
       "measurements": [],
       "photos": [],
       "cost": null,
