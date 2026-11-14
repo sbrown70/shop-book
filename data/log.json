@@ -1019,6 +1019,18 @@
       "text": "",
       "task": "turn-signals/replace-turn-signal-flasher",
       "auto": true
+    },
+    {
+      "id": "2026-11-14-final-turn-signal-check",
+      "date": "2026-11-14",
+      "kind": "work",
+      "project": "wiring",
+      "subproject": "turn-signals",
+      "area": "electrical",
+      "title": "Final check: all four corners and both dash arrows; lever left, right and neutral; with and without the brake pressed",
+      "text": "",
+      "task": "turn-signals/final-turn-signal-check",
+      "auto": true
     }
   ]
 }
