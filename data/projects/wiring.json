@@ -5,7 +5,7 @@
   "status": "active",
   "goal": "Remove the accessory wiring added in high school, fix the factory faults found along the way, and install a fused, relay-switched fuse block so the radio, amp and tach each get their own fused circuit.",
   "summary": "The old add-on wiring has been removed and diagnosis of the factory circuits is underway, with the engine out of the car and the ignition switch and headlight switch out of the dash for testing. Found so far: a short to ground on circuit 11 (passenger front parking light), a turn-signal fault in the switch or its blue-pin connector, a heater fan switch that never grounds, and a loose unidentified solid-red wire at the starter relay. The install sheet is the current set of install steps and supersedes the guide's step-by-step section (which still describes a generic separate relay and a 30 A fuse); the guide's circuit plan, connection methods, parts and shopping list are current.",
-  "next_step": "Tape over the live blue terminal on the hazard board. Then sort out the driver front light's three wires, replace the blown hazard fuse, and swap-test the turn-signal flasher.",
+  "next_step": "Sort out the driver front light's three wires, check the blown fuse, then swap-test the turn-signal flasher using the removed hazard flasher.",
   "started": "2026-10-26",
   "updated": "2026-11-14",
   "links": [
@@ -238,7 +238,7 @@
         {
           "id": "replace-hazard-fuse",
           "text": "Replace the blown hazard-circuit fuse (only after the driver front wires are sorted), then confirm the hazard flasher's orange feed has power",
-          "detail": "It blew when wires were swapped at the driver front light while live. Replacing it first risks blowing it again.",
+          "detail": "With the hazard harness out, the point is to find out what else this fuse feeds (lighter?) and replace it if anything still uses it. Do it after the driver front wires are sorted.",
           "done": false,
           "done_date": null,
           "est_min": 15,
@@ -328,9 +328,9 @@
     {
       "id": "hazard-switch",
       "title": "Remove the emergency flasher (hazard) wiring",
-      "status": "todo",
+      "status": "in_progress",
       "goal": "Hazard wiring, its always-hot feed and the hazard flasher removed, with the turn-signal, brake and lighter circuits left intact.",
-      "summary": "Decided 2026-11-14 to remove the hazard system rather than restore it. The car has the 1965–66 emergency-flasher system (its own flasher, an always-hot feed spliced into the lighter wire, and a four-terminal board tied into the lever switch's wires), but the switch is missing. Do this after the turn-signal flasher swap test, which uses the hazard flasher as the known-good unit.",
+      "summary": "The hazard harness, board included, is out of the car and on the bench (removed by 2026-11-14). Left: confirm the orange feed at the lighter and the hazard flasher are out or deal with them, then check the turn signals, brake lights and lighter. Keep the hazard flasher for the turn-signal swap test.",
       "blocked_by": "",
       "depends_on": [],
       "files": [
@@ -345,14 +345,15 @@
         {
           "id": "cap-hazard-blue",
           "text": "Safety, do now: tape over or cap the exposed blue terminal on the hazard board (always hot and blinking)",
-          "detail": "Still needed until the hazard wiring comes out.",
-          "done": false,
-          "done_date": null,
+          "detail": "Not needed: the whole hazard harness, board included, is already out of the car.",
+          "done": true,
+          "done_date": "2026-11-14",
           "est_min": 5,
           "est_guess": true,
           "needs_parts": [],
           "needs_tools": [],
-          "confirm": false
+          "confirm": false,
+          "skipped": true
         },
         {
           "id": "check-build-date",
@@ -398,9 +399,9 @@
         {
           "id": "trace-hazard-wires",
           "text": "Battery off: trace the hazard board's green-white, white-blue and green-red wires to where they end; plug-in harness or spliced taps?",
-          "detail": "Plug-in: the wires end in connectors between the column plug and the car harness.",
-          "done": false,
-          "done_date": null,
+          "detail": "Done before 2026-11-14: the whole hazard harness is out and on the bench. Whether it was plugged in or spliced isn't recorded; if spliced, check the green-white, white-blue and green-red main wires are continuous and sealed.",
+          "done": true,
+          "done_date": "2026-11-14",
           "est_min": 30,
           "est_guess": true,
           "needs_parts": [],
@@ -410,9 +411,9 @@
         {
           "id": "remove-hazard-harness",
           "text": "Remove the hazard board and its three wires: unplug a plug-in harness, or cut each tap off at its splice and seal or repair the main wire",
-          "detail": "Check each main wire is continuous after removing a tap; redo with a crimp or solder and heat shrink if nicked or cut.",
-          "done": false,
-          "done_date": null,
+          "detail": "Done before 2026-11-14: the whole hazard harness is out and on the bench. Whether it was plugged in or spliced isn't recorded; if spliced, check the green-white, white-blue and green-red main wires are continuous and sealed.",
+          "done": true,
+          "done_date": "2026-11-14",
           "est_min": 60,
           "est_guess": true,
           "needs_parts": [],
@@ -422,26 +423,26 @@
         {
           "id": "remove-hazard-feed",
           "text": "Cut the hazard flasher's orange feed off the lighter wire and insulate the lighter wire properly at that spot",
-          "detail": "",
+          "detail": "The harness is out; confirm whether this part came out with it.",
           "done": false,
           "done_date": null,
           "est_min": 20,
           "est_guess": true,
           "needs_parts": [],
           "needs_tools": [],
-          "confirm": false
+          "confirm": true
         },
         {
           "id": "remove-hazard-flasher",
           "text": "Remove the hazard flasher (only after the turn-signal swap test; keep it as a spare)",
-          "detail": "",
+          "detail": "The harness is out; confirm whether this part came out with it.",
           "done": false,
           "done_date": null,
           "est_min": 10,
           "est_guess": true,
           "needs_parts": [],
           "needs_tools": [],
-          "confirm": false
+          "confirm": true
         },
         {
           "id": "check-after-hazard-removal",

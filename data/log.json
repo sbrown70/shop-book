@@ -956,6 +956,21 @@
       "cost": null,
       "odometer": null,
       "task": null
+    },
+    {
+      "id": "2026-11-14-hazard-harness-removed",
+      "date": "2026-11-14",
+      "kind": "work",
+      "project": "wiring",
+      "subproject": "hazard-switch",
+      "area": "electrical",
+      "title": "Hazard harness removed",
+      "text": "The entire hazard (emergency flasher) harness, including the four-terminal board, is out of the car and on the bench. Not recorded: whether it was plugged in or spliced, and whether the orange feed at the lighter splice and the hazard flasher came out with it.",
+      "measurements": [],
+      "photos": [],
+      "cost": null,
+      "odometer": null,
+      "task": "hazard-switch/remove-hazard-harness"
     }
   ]
 }
