@@ -1115,6 +1115,30 @@
       "text": "",
       "task": "passenger-front-parking-wiring/reconnect-both-front-lights-confirm-park",
       "auto": true
+    },
+    {
+      "id": "2026-11-14-clean-and-tighten-the-starter-relay",
+      "date": "2026-11-14",
+      "kind": "work",
+      "project": "wiring",
+      "subproject": "passenger-front-parking-wiring",
+      "area": "electrical",
+      "title": "Clean and tighten the starter-relay mounting bolt ground (it was arcing)",
+      "text": "",
+      "task": "passenger-front-parking-wiring/clean-and-tighten-the-starter-relay",
+      "auto": true
+    },
+    {
+      "id": "2026-11-14-inspect-headlight-switch-terminals-fo",
+      "date": "2026-11-14",
+      "kind": "work",
+      "project": "wiring",
+      "subproject": "passenger-front-parking-wiring",
+      "area": "electrical",
+      "title": "Inspect headlight switch terminals for heat damage; replace the switch if it ever crackles again",
+      "text": "",
+      "task": "passenger-front-parking-wiring/inspect-headlight-switch-terminals-for-heat",
+      "auto": true
     }
   ]
 }
