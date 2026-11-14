@@ -1055,6 +1055,66 @@
       "text": "",
       "task": "turn-signals/identify-driver-front-wires",
       "auto": true
+    },
+    {
+      "id": "2026-11-14-battery-off-bulb-out-ohms-from",
+      "date": "2026-11-14",
+      "kind": "work",
+      "project": "wiring",
+      "subproject": "passenger-front-parking-wiring",
+      "area": "electrical",
+      "title": "Battery off, bulb out: ohms from wire 11 (light side of the wheel-well connector) to ground; find the exact spot",
+      "text": "",
+      "task": "passenger-front-parking-wiring/battery-off-bulb-out-ohms-from",
+      "auto": true
+    },
+    {
+      "id": "2026-11-14-inspect-socket-melted-corroded-crushe",
+      "date": "2026-11-14",
+      "kind": "work",
+      "project": "wiring",
+      "subproject": "passenger-front-parking-wiring",
+      "area": "electrical",
+      "title": "Inspect socket (melted/corroded/crushed contact) and where the pigtail passes through sheet metal",
+      "text": "",
+      "task": "passenger-front-parking-wiring/inspect-socket-melted-corroded-crushed-contact",
+      "auto": true
+    },
+    {
+      "id": "2026-11-14-repair-with-splice-heat-shrink-gromme",
+      "date": "2026-11-14",
+      "kind": "work",
+      "project": "wiring",
+      "subproject": "passenger-front-parking-wiring",
+      "area": "electrical",
+      "title": "Repair with splice + heat-shrink + grommet/loom, or replace the socket/pigtail",
+      "text": "",
+      "task": "passenger-front-parking-wiring/repair-with-splice-heat-shrink-grommet",
+      "auto": true
+    },
+    {
+      "id": "2026-11-14-check-the-turn-signal-wire-in",
+      "date": "2026-11-14",
+      "kind": "work",
+      "project": "wiring",
+      "subproject": "passenger-front-parking-wiring",
+      "area": "electrical",
+      "title": "Check the turn-signal wire in the same socket/pigtail",
+      "text": "",
+      "task": "passenger-front-parking-wiring/check-the-turn-signal-wire-in",
+      "auto": true
+    },
+    {
+      "id": "2026-11-14-reconnect-both-front-lights-confirm-p",
+      "date": "2026-11-14",
+      "kind": "work",
+      "project": "wiring",
+      "subproject": "passenger-front-parking-wiring",
+      "area": "electrical",
+      "title": "Reconnect both front lights; confirm park position lights the fronts with no crackle",
+      "text": "",
+      "task": "passenger-front-parking-wiring/reconnect-both-front-lights-confirm-park",
+      "auto": true
     }
   ]
 }
