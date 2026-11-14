@@ -5,7 +5,7 @@
   "status": "active",
   "goal": "Remove the accessory wiring added in high school, fix the factory faults found along the way, and install a fused, relay-switched fuse block so the radio, amp and tach each get their own fused circuit.",
   "summary": "The old add-on wiring has been removed and diagnosis of the factory circuits is underway, with the engine out of the car and the ignition switch and headlight switch out of the dash for testing. Found so far: a short to ground on circuit 11 (passenger front parking light), a turn-signal fault in the switch or its blue-pin connector, a heater fan switch that never grounds, and a loose unidentified solid-red wire at the starter relay. The install sheet is the current set of install steps and supersedes the guide's step-by-step section (which still describes a generic separate relay and a 30 A fuse); the guide's circuit plan, connection methods, parts and shopping list are current.",
-  "next_step": "Sort out the driver front light's three wires, check the blown fuse, then swap-test the turn-signal flasher using the removed hazard flasher.",
+  "next_step": "Sort out the driver front light's three wires, replace the blown primary switched 12 V fuse, then swap-test the turn-signal flasher using the removed hazard flasher.",
   "started": "2026-10-26",
   "updated": "2026-11-14",
   "links": [
@@ -238,7 +238,7 @@
         {
           "id": "replace-hazard-fuse",
           "text": "Replace the blown hazard-circuit fuse (only after the driver front wires are sorted), then confirm the hazard flasher's orange feed has power",
-          "detail": "With the hazard harness out, the point is to find out what else this fuse feeds (lighter?) and replace it if anything still uses it. Do it after the driver front wires are sorted.",
+          "detail": "This is the car's primary switched 12 V fuse, not a hazard-only fuse. The turn-signal flasher's key-on feed probably runs through it, so replace it before the flasher-socket test. Sort out the driver front wires first so it doesn't blow again.",
           "done": false,
           "done_date": null,
           "est_min": 15,
@@ -330,7 +330,7 @@
       "title": "Remove the emergency flasher (hazard) wiring",
       "status": "in_progress",
       "goal": "Hazard wiring, its always-hot feed and the hazard flasher removed, with the turn-signal, brake and lighter circuits left intact.",
-      "summary": "The hazard harness, board included, is out of the car and on the bench (removed by 2026-11-14). Left: confirm the orange feed at the lighter and the hazard flasher are out or deal with them, then check the turn signals, brake lights and lighter. Keep the hazard flasher for the turn-signal swap test.",
+      "summary": "The hazard harness, board, hazard flasher and orange feed are all out of the car (by 2026-11-14). The constant-12 V lighter feed it was spliced into is taped off. Left: decide on the cigarette lighter and finish that wire, then check the turn signals, brake lights and lighter. Keep the hazard flasher for the turn-signal swap test.",
       "blocked_by": "",
       "depends_on": [],
       "files": [
@@ -423,26 +423,38 @@
         {
           "id": "remove-hazard-feed",
           "text": "Cut the hazard flasher's orange feed off the lighter wire and insulate the lighter wire properly at that spot",
-          "detail": "The harness is out; confirm whether this part came out with it.",
+          "detail": "Orange wire pulled off the constant-12 V wire in the dash; that wire (the cigarette lighter's feed) is taped off for now.",
+          "done": true,
+          "done_date": "2026-11-14",
+          "est_min": 20,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "remove-hazard-flasher",
+          "text": "Remove the hazard flasher (only after the turn-signal swap test; keep it as a spare)",
+          "detail": "Came out with the hazard harness (it was part of it). Kept for the turn-signal swap test.",
+          "done": true,
+          "done_date": "2026-11-14",
+          "est_min": 10,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "decide-cigarette-lighter",
+          "text": "Decide whether to keep the cigarette lighter: reconnect its constant-12 V feed properly, or cap that wire with a heat-shrink end cap (tape is temporary)",
+          "detail": "The wire is always hot, so treat it as live.",
           "done": false,
           "done_date": null,
           "est_min": 20,
           "est_guess": true,
           "needs_parts": [],
           "needs_tools": [],
-          "confirm": true
-        },
-        {
-          "id": "remove-hazard-flasher",
-          "text": "Remove the hazard flasher (only after the turn-signal swap test; keep it as a spare)",
-          "detail": "The harness is out; confirm whether this part came out with it.",
-          "done": false,
-          "done_date": null,
-          "est_min": 10,
-          "est_guess": true,
-          "needs_parts": [],
-          "needs_tools": [],
-          "confirm": true
+          "confirm": false
         },
         {
           "id": "check-after-hazard-removal",
@@ -1303,9 +1315,9 @@
       "part_number": "",
       "price": null,
       "url": "",
-      "notes": "Match the blown one's rating; get a spare. The 1966 REV1 diagram shows fuse #5, 20 A. Check what else this fuse feeds (lighter?); replace it anyway if anything besides the hazard flasher uses it.",
+      "notes": "The car's main switched 12 V fuse. Match the blown one's rating; get a spare.",
       "id": "hazard-circuit-fuse",
-      "name": "Fuse for the hazard flasher circuit",
+      "name": "Primary switched 12 V fuse (blew during driver-front testing)",
       "status": "needed",
       "qty": 2
     },
@@ -1411,6 +1423,11 @@
       "text": "Was the car built before or after Mar 1, 1966? That decides which hazard switch fits.",
       "resolved": true,
       "answer": "No longer matters for the hazards: the hazard system is being removed. The build date is still worth recording in the car's details."
+    },
+    {
+      "text": "Keep the cigarette lighter? Its constant-12 V feed is taped off under the dash.",
+      "resolved": false,
+      "answer": ""
     }
   ],
   "sources": [

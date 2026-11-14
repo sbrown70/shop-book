@@ -342,8 +342,20 @@
         },
         {
           "label": "Emergency flashers",
-          "value": "1965–66 factory system: hazard flasher and switch terminal board present; switch missing",
+          "value": "Removed (harness, board and hazard flasher out, 2026-11-14)",
           "notes": "Two flashers behind the dash: hazard (always hot) and turn signal (key on). The board looks like the pre-Mar-1966 type; check the build date. Owner decided 2026-11-14 to remove the hazard system rather than restore it.",
+          "updated": "2026-11-14",
+          "history": [
+            {
+              "date": "2026-11-14",
+              "value": "1965–66 factory system: hazard flasher and switch terminal board present; switch missing"
+            }
+          ]
+        },
+        {
+          "label": "Cigarette lighter",
+          "value": "Feed disconnected",
+          "notes": "Its constant-12 V feed is taped off under the dash. Keep or remove: undecided.",
           "updated": "2026-11-14",
           "history": []
         }
