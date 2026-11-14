@@ -239,8 +239,8 @@
           "id": "replace-hazard-fuse",
           "text": "Replace the blown hazard-circuit fuse (only after the driver front wires are sorted), then confirm the hazard flasher's orange feed has power",
           "detail": "This is the car's primary switched 12 V fuse, not a hazard-only fuse. The turn-signal flasher's key-on feed probably runs through it, so replace it before the flasher-socket test. Sort out the driver front wires first so it doesn't blow again.",
-          "done": false,
-          "done_date": null,
+          "done": true,
+          "done_date": "2026-11-14",
           "est_min": 15,
           "est_guess": true,
           "needs_parts": [
