@@ -1031,6 +1031,18 @@
       "text": "",
       "task": "turn-signals/final-turn-signal-check",
       "auto": true
+    },
+    {
+      "id": "2026-11-14-recheck-green-red-jumper",
+      "date": "2026-11-14",
+      "kind": "work",
+      "project": "wiring",
+      "subproject": "turn-signals",
+      "area": "electrical",
+      "title": "Only if something's still off: recheck the green-red jumper at the hazard board with the lever in a turn position (one rear or both?)",
+      "text": "",
+      "task": "turn-signals/recheck-green-red-jumper",
+      "auto": true
     }
   ]
 }
