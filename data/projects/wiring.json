@@ -277,8 +277,8 @@
           "id": "replace-turn-signal-flasher",
           "text": "Install a new turn-signal flasher and put the hazard flasher back in its own socket",
           "detail": "Buy after the swap test works. Match the number stamped on the old unit.",
-          "done": false,
-          "done_date": null,
+          "done": true,
+          "done_date": "2026-11-14",
           "est_min": 15,
           "est_guess": true,
           "needs_parts": [
