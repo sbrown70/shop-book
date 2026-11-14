@@ -1007,6 +1007,18 @@
       "text": "",
       "task": "turn-signals/flasher-swap-test",
       "auto": true
+    },
+    {
+      "id": "2026-11-14-replace-turn-signal-flasher",
+      "date": "2026-11-14",
+      "kind": "work",
+      "project": "wiring",
+      "subproject": "turn-signals",
+      "area": "electrical",
+      "title": "Install a new turn-signal flasher and put the hazard flasher back in its own socket",
+      "text": "",
+      "task": "turn-signals/replace-turn-signal-flasher",
+      "auto": true
     }
   ]
 }
