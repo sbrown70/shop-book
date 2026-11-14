@@ -983,6 +983,30 @@
       "text": "",
       "task": "turn-signals/replace-hazard-fuse",
       "auto": true
+    },
+    {
+      "id": "2026-11-14-test-flasher-socket-feed",
+      "date": "2026-11-14",
+      "kind": "work",
+      "project": "wiring",
+      "subproject": "turn-signals",
+      "area": "electrical",
+      "title": "Key on: test light on each terminal of the turn-signal flasher's socket; one should light (orange-yellow 8)",
+      "text": "",
+      "task": "turn-signals/test-flasher-socket-feed",
+      "auto": true
+    },
+    {
+      "id": "2026-11-14-flasher-swap-test",
+      "date": "2026-11-14",
+      "kind": "work",
+      "project": "wiring",
+      "subproject": "turn-signals",
+      "area": "electrical",
+      "title": "Swap test: plug the good hazard flasher into the turn-signal flasher's socket, all four bulbs connected; pull the lever left and right",
+      "text": "",
+      "task": "turn-signals/flasher-swap-test",
+      "auto": true
     }
   ]
 }
