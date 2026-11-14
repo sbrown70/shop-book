@@ -327,10 +327,10 @@
     },
     {
       "id": "hazard-switch",
-      "title": "Restore the emergency flasher (hazard) switch",
+      "title": "Remove the emergency flasher (hazard) wiring",
       "status": "todo",
-      "goal": "Working hazards: all four corners flash with the key off.",
-      "summary": "Optional, and separate from the turn signals. The car has the 1965–66 emergency-flasher system: its own flasher, an always-hot feed, and a four-terminal board spliced into the lever switch's wires. The toggle switch that mounts on the board is missing.",
+      "goal": "Hazard wiring, its always-hot feed and the hazard flasher removed, with the turn-signal, brake and lighter circuits left intact.",
+      "summary": "Decided 2026-11-14 to remove the hazard system rather than restore it. The car has the 1965–66 emergency-flasher system (its own flasher, an always-hot feed spliced into the lighter wire, and a four-terminal board tied into the lever switch's wires), but the switch is missing. Do this after the turn-signal flasher swap test, which uses the hazard flasher as the known-good unit.",
       "blocked_by": "",
       "depends_on": [],
       "files": [
@@ -338,13 +338,14 @@
       ],
       "notes": [
         "Board terminals: blue = hazard flasher output (in). Green-white, white-blue and green-red are spliced into the lever switch's left front, right front and brake wires. The switch connects blue to all three at once.",
-        "Ford changed the switch on Mar 1, 1966: before that, a switch on a wiring board; after, a plug-in switch with blade terminals. This board looks like the earlier type."
+        "Ford changed the switch on Mar 1, 1966: before that, a switch on a wiring board; after, a plug-in switch with blade terminals. This board looks like the earlier type.",
+        "If the board's wires are spliced (not plugged) into the lever switch wires, cut each tap at the splice and make sure the main wire stays continuous; a half-done tap kills that corner's turn signal or brake light."
       ],
       "tasks": [
         {
           "id": "cap-hazard-blue",
           "text": "Safety, do now: tape over or cap the exposed blue terminal on the hazard board (always hot and blinking)",
-          "detail": "",
+          "detail": "Still needed until the hazard wiring comes out.",
           "done": false,
           "done_date": null,
           "est_min": 5,
@@ -356,6 +357,83 @@
         {
           "id": "check-build-date",
           "text": "Read the build date on the door data plate (before or after Mar 1, 1966?)",
+          "detail": "Not needed: the hazard system is being removed, so switch fitment no longer matters.",
+          "done": true,
+          "done_date": "2026-11-14",
+          "est_min": 10,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false,
+          "skipped": true
+        },
+        {
+          "id": "find-hazard-switch",
+          "text": "Find a switch that fits the existing four-terminal board; confirm fitment before buying",
+          "detail": "Not needed: decided to remove the hazard system instead of restoring it.",
+          "done": true,
+          "done_date": "2026-11-14",
+          "est_min": 45,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false,
+          "skipped": true
+        },
+        {
+          "id": "install-hazard-switch",
+          "text": "Mount the switch (originally in the glove box), connect it, and test hazards with the key off; pressing the brake should make the rears go solid",
+          "detail": "Not needed: decided to remove the hazard system instead of restoring it.",
+          "done": true,
+          "done_date": "2026-11-14",
+          "est_min": 60,
+          "est_guess": true,
+          "needs_parts": [
+            "hazard-switch"
+          ],
+          "needs_tools": [],
+          "confirm": false,
+          "skipped": true
+        },
+        {
+          "id": "trace-hazard-wires",
+          "text": "Battery off: trace the hazard board's green-white, white-blue and green-red wires to where they end; plug-in harness or spliced taps?",
+          "detail": "Plug-in: the wires end in connectors between the column plug and the car harness.",
+          "done": false,
+          "done_date": null,
+          "est_min": 30,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "remove-hazard-harness",
+          "text": "Remove the hazard board and its three wires: unplug a plug-in harness, or cut each tap off at its splice and seal or repair the main wire",
+          "detail": "Check each main wire is continuous after removing a tap; redo with a crimp or solder and heat shrink if nicked or cut.",
+          "done": false,
+          "done_date": null,
+          "est_min": 60,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "remove-hazard-feed",
+          "text": "Cut the hazard flasher's orange feed off the lighter wire and insulate the lighter wire properly at that spot",
+          "detail": "",
+          "done": false,
+          "done_date": null,
+          "est_min": 20,
+          "est_guess": true,
+          "needs_parts": [],
+          "needs_tools": [],
+          "confirm": false
+        },
+        {
+          "id": "remove-hazard-flasher",
+          "text": "Remove the hazard flasher (only after the turn-signal swap test; keep it as a spare)",
           "detail": "",
           "done": false,
           "done_date": null,
@@ -366,28 +444,14 @@
           "confirm": false
         },
         {
-          "id": "find-hazard-switch",
-          "text": "Find a switch that fits the existing four-terminal board; confirm fitment before buying",
-          "detail": "Options: NOS C5AZ-15B590-B (seen on eBay); reproduction kits from CJ Pony Parts (EFS1 / EFS2 / EFS3), Scott Drake and Mac's.",
-          "done": false,
-          "done_date": null,
-          "est_min": 45,
-          "est_guess": true,
-          "needs_parts": [],
-          "needs_tools": [],
-          "confirm": false
-        },
-        {
-          "id": "install-hazard-switch",
-          "text": "Mount the switch (originally in the glove box), connect it, and test hazards with the key off; pressing the brake should make the rears go solid",
+          "id": "check-after-hazard-removal",
+          "text": "Check the turn signals (all four corners, both dash arrows), the brake lights and the cigarette lighter",
           "detail": "",
           "done": false,
           "done_date": null,
-          "est_min": 60,
+          "est_min": 20,
           "est_guess": true,
-          "needs_parts": [
-            "hazard-switch"
-          ],
+          "needs_parts": [],
           "needs_tools": [],
           "confirm": false
         }
@@ -1238,7 +1302,7 @@
       "part_number": "",
       "price": null,
       "url": "",
-      "notes": "Match the blown one's rating; get a spare. The 1966 REV1 diagram shows fuse #5, 20 A.",
+      "notes": "Match the blown one's rating; get a spare. The 1966 REV1 diagram shows fuse #5, 20 A. Check what else this fuse feeds (lighter?); replace it anyway if anything besides the hazard flasher uses it.",
       "id": "hazard-circuit-fuse",
       "name": "Fuse for the hazard flasher circuit",
       "status": "needed",
@@ -1249,10 +1313,10 @@
       "part_number": "C5AZ-15B590-B (NOS option)",
       "price": null,
       "url": "",
-      "notes": "Optional. Confirm fitment to the existing board and the build date first. Repro: CJ Pony Parts EFS1/EFS2/EFS3, Scott Drake, Mac's.",
+      "notes": "Not needed: the hazard system is being removed (2026-11-14). Optional. Confirm fitment to the existing board and the build date first. Repro: CJ Pony Parts EFS1/EFS2/EFS3, Scott Drake, Mac's.",
       "id": "hazard-switch",
       "name": "Emergency flasher switch, 1965–66 Mustang",
-      "status": "needed",
+      "status": "skip",
       "qty": 1
     }
   ],
@@ -1300,6 +1364,10 @@
     {
       "date": "2026-11-14",
       "text": "Don't jump the hazard flasher's blue to the front wires as a fix: the fronts and dash arrows would blink all the time, even key-off, and drain the battery. Replace the turn-signal flasher instead."
+    },
+    {
+      "date": "2026-11-14",
+      "text": "Remove the hazard (emergency flasher) system instead of restoring it. Not wanted, and removing it eliminates an always-hot circuit and the exposed live terminal. Keep the hazard flasher until the turn-signal swap test is done."
     }
   ],
   "open_questions": [
@@ -1340,8 +1408,8 @@
     },
     {
       "text": "Was the car built before or after Mar 1, 1966? That decides which hazard switch fits.",
-      "resolved": false,
-      "answer": ""
+      "resolved": true,
+      "answer": "No longer matters for the hazards: the hazard system is being removed. The build date is still worth recording in the car's details."
     }
   ],
   "sources": [

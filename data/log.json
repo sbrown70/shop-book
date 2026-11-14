@@ -941,6 +941,21 @@
       "cost": null,
       "odometer": null,
       "task": null
+    },
+    {
+      "id": "2026-11-14-remove-hazards-decision",
+      "date": "2026-11-14",
+      "kind": "note",
+      "project": "wiring",
+      "subproject": "hazard-switch",
+      "area": "electrical",
+      "title": "Decided to remove the hazard system instead of restoring it",
+      "text": "Hazards aren't wanted. The plan is to remove the hazard board and its wires, the always-hot orange feed at the lighter splice, and the hazard flasher, after the turn-signal flasher swap test (which uses the hazard flasher as the known-good unit). The hazard switch is no longer needed.",
+      "measurements": [],
+      "photos": [],
+      "cost": null,
+      "odometer": null,
+      "task": null
     }
   ]
 }
